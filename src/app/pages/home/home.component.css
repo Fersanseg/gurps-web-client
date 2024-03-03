@@ -1,0 +1,22 @@
+.home-background {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/assets/images/splash-web.jpg');
+    background-position: center;
+}
+
+.backg-1 {
+    background-color: red;
+    height: 100vh;
+}
+.backg-2 {
+    background-color: blue;
+    height: 100vh;
+    
+}
+.backg-3 {
+    background-color: yellow;
+    height: 100vh;
+}
