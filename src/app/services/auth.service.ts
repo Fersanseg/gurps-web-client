@@ -21,8 +21,7 @@ export class AuthService {
     
     return this.http.post<LoginRestResponse>(`${environment.serverUrl}/app/login`, body, { responseType: 'json' })
       .pipe(
-        map(res => this._handleLogin(res)
-      )
+        map(res => this._handleLogin(res))
     );
   }
 
@@ -31,8 +30,6 @@ export class AuthService {
       console.error(res.errorMessage);
       return false;
     }
-
-    console.log(res)
     
     this.storageService.remove("token");
     this.storageService.add("token", res.data.body.idToken);

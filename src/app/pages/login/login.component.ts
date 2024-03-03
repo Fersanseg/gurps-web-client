@@ -2,14 +2,15 @@ import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
+import { InsertComponent } from "../insert/insert.component";
 
 @Component({
-  selector: 'app-login',
-  standalone: true,
-  imports: [RouterLink, RouterLinkActive, CommonModule, FormsModule],
-  templateUrl: './login.component.html',
-  styleUrl: './login.component.css'
+    selector: 'app-login',
+    standalone: true,
+    templateUrl: './login.component.html',
+    styleUrl: './login.component.css',
+    imports: [RouterLink, RouterLinkActive, CommonModule, FormsModule, InsertComponent]
 })
 export class LoginComponent {
   constructor(private _authService: AuthService) {}
