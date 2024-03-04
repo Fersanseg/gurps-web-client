@@ -5,18 +5,9 @@
     height: 100vh;
     background-image: url('/assets/images/splash-web.jpg');
     background-position: center;
+    clip-path: polygon(0 0, 100% 0, 100% 80%, 50% 100%, 0 80%);
 }
 
-.backg-1 {
-    background-color: red;
-    height: 100vh;
-}
-.backg-2 {
-    background-color: blue;
-    height: 100vh;
-    
-}
-.backg-3 {
-    background-color: yellow;
-    height: 100vh;
+.title-shadow {
+    text-shadow: 1px 0 4px rgb(130 130 130), 0 1px 4px rgb(130 130 130),1px 1px 4px rgb(130 130 130), 0 0 4px rgb(130 130 130)
 }
