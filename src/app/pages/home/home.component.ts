@@ -6,18 +6,17 @@ import { fadeInAnimation } from '../../animations/fade';
 import { BehaviorSubject } from 'rxjs';
 
 @Component({
-    selector: 'app-home',
-    standalone: true,
-    templateUrl: './home.component.html',
-    styleUrl: './home.component.css',
-    imports: [RouterLink, RouterLinkActive, CommonModule, InsertComponent],
-    animations: [fadeInAnimation]
+  selector: 'app-home',
+  standalone: true,
+  templateUrl: './home.component.html',
+  styleUrl: './home.component.css',
+  imports: [RouterLink, RouterLinkActive, CommonModule, InsertComponent],
+  animations: [fadeInAnimation]
 })
 export class HomeComponent {
-    public onAfterTitleEnter: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  public onAfterTitleEnter: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
-    onTitleFadeIn() {
-        this.onAfterTitleEnter.next(true);
-    }
-
+  onTitleFadeIn() {
+    this.onAfterTitleEnter.next(true);
+  }
 }

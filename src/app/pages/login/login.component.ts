@@ -6,11 +6,11 @@ import { AuthService } from '../../services/auth.service';
 import { InsertComponent } from "../insert/insert.component";
 
 @Component({
-    selector: 'app-login',
-    standalone: true,
-    templateUrl: './login.component.html',
-    styleUrl: './login.component.css',
-    imports: [RouterLink, RouterLinkActive, CommonModule, FormsModule, InsertComponent]
+  selector: 'app-login',
+  standalone: true,
+  templateUrl: './login.component.html',
+  styleUrl: './login.component.css',
+  imports: [RouterLink, RouterLinkActive, CommonModule, FormsModule, InsertComponent]
 })
 export class LoginComponent {
   constructor(private _authService: AuthService) {}
