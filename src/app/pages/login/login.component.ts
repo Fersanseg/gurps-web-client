@@ -16,6 +16,7 @@ export class LoginComponent {
   constructor(private _authService: AuthService) {}
 
   onSubmit(form: NgForm) {
+    return; // TODO Revert once properly secured
     this._authService.login(form.value.email, form.value.password).subscribe(r => { if (r) console.log("Logged in") });
   }
 }

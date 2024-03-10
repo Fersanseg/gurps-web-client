@@ -19,6 +19,7 @@ export class ServerService {
     const headers = new HttpHeaders({
       "Authorization": `Bearer ${this.localService.get("token") || ""}`
     });
+    return; // TODO Revert once properly secured
     return this.http.post(`${environment.serverUrl}/app/db/insert`, data, {headers, responseType: 'text'})
       .pipe(
         map(res => this._handleInsert(res))

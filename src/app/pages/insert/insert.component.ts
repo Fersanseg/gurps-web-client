@@ -13,6 +13,7 @@ export class InsertComponent {
   constructor(private serverService: ServerService) { }
 
   onSubmit() {
-    this.serverService.createTrait().subscribe(r => console.log("INSERT RESPONSE: ", r));
+    return; // TODO Revert once properly secured
+    this.serverService.createTrait()?.subscribe(r => console.log("INSERT RESPONSE: ", r));
   }
 }

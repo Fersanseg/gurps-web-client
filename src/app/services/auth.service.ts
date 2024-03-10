@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { AuthRequest } from '../utils/auth-request';
 import { LocalService } from './local.service';
 import { LoginRestResponse } from '../utils/rest-response';
-import { Observable, map } from 'rxjs';
+import { Observable, map, of } from 'rxjs';
 import { environment } from '../../environments/environment';
 
 @Injectable({
@@ -19,6 +19,7 @@ export class AuthService {
   public login(email: string, password: string): Observable<boolean> {
     const body: AuthRequest = { email, password };
     
+    return of(false); // TODO Revert once properly secured
     return this.http.post<LoginRestResponse>(`${environment.serverUrl}/app/login`, body, { responseType: 'json' })
       .pipe(
         map(res => this._handleLogin(res))
