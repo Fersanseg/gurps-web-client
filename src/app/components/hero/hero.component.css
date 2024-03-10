@@ -1,0 +1,77 @@
+.slider-l,
+.slider-r {
+  width: 1%;
+  background: #6002ee;
+}
+
+.slider-l{
+  transform: translateY(-100%);
+}
+.slider-r{
+  transform: translateY(100%);
+}
+
+.slider-bg {
+  width: 2%;
+  transform: scaleY(1.1);
+  opacity: 0;
+}
+
+.container-box:hover .slider-l,
+.container-box:hover .slider-r { 
+  width: 50%;
+  transform: translateY(0);
+  transition: background 0.5s 0.51s ease-in-out, transform 0.4s 0s ease-in-out, width 0.5s 0.51s ease-in-out;
+}
+.container-box:hover .slider-l {
+  background: radial-gradient(ellipse 40rem 95% at 100% 50%, transparent 45%, #6002ee); 
+}
+.container-box:hover .slider-r {
+  background: radial-gradient(ellipse 40rem 95% at 0% 50%, transparent 45%, #6002ee);
+}
+.container-box:hover .slider-bg {
+  opacity: 0.9;
+  width: 100%;
+  transition: opacity 0s 0.51s, width 0.5s 0.51s ease-in-out;
+}
+.container-box:hover .slider-bg span {
+  width: 50rem;
+}
+
+.container-box:not(:hover) .slider-l {
+  transform: translateY(-100%);
+}
+.container-box:not(:hover) .slider-r {
+  transform: translateY(100%);
+}
+.container-box:not(:hover) .slider-l,
+.container-box:not(:hover) .slider-r {
+  width: 1%;
+  background: #6002ee;
+  transition: background 0.51s 0s ease-in-out, width 0.5s 0s ease-in-out, transform 0.4s 0.51s ease-in-out;
+}
+.container-box:not(:hover) .slider-bg {
+  opacity: 0;
+  width: 2%;
+  transition: width 0.5s 0s ease-in-out, opacity 0s 0.5s;
+}
+.container-box:not(:hover) .slider-bg span {
+  width: 50rem;
+}
+
+
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #ef00b0;
+  opacity: 0.3;
+  transform: scale(0);
+  animation: ripple 0.5s ease-in;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4.5);
+    opacity: 0;
+  }
+}

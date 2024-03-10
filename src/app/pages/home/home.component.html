@@ -1,16 +1,22 @@
 <div>
   <div class="home-background">
     <div class="flex flex-col items-center pt-48">
-      <h1 class="text-8xl mb-6 title-shadow font-titleFont"
+      <h1 class="text-8xl mb-16 title-shadow font-titleFont"
         [@fadeIn]
         (@fadeIn.done)="onTitleFadeIn()"
       >TIERRAS VELADAS</h1>
-      <h3 *ngIf="onAfterTitleEnter | async" class="text-3xl"
+      <h3 *ngIf="onAfterTitleEnter | async" 
         [@fadeIn]
-      >Sample Text</h3>
+        class="text-4xl title-shadow font-titleFont"
+      >Aventuras y desafíos en tierras inexploradas</h3>
     </div>
   </div>
-  <div class="bg-primary h-screen">
+  <div class="">
+    <app-hero
+      [imgSrc]="'/assets/images/im1.png'"
+      [title]="'La campaña'"
+      [text]="'Info. básica sobre la campaña, el mundo y más'"
+    />
   </div>
 </div>
 
