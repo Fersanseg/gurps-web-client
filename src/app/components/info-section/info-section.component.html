@@ -1,0 +1,8 @@
+
+<div class="w-5/6 mx-auto flex flex-col items-center my-28" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
+  <app-splitter [hovered]="hovered" class="w-2/4"/>
+
+  <ng-content></ng-content>
+
+  <app-splitter [hovered]="hovered" [flipped]=true class="w-2/4"/>
+</div>

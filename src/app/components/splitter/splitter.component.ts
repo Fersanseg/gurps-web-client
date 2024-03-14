@@ -10,4 +10,5 @@ import { Component, Input } from '@angular/core';
 })
 export class SplitterComponent {
   @Input() public flipped = false;
+  @Input() public hovered = false;
 }
