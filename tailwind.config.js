@@ -7,6 +7,7 @@ module.exports = {
     extend: {
       fontFamily: {
         titleFont: ['MedievalSharp', 'sans-serif'],
+        textFont: ['Merriweather', 'sans-serif']
       }
     },
   },

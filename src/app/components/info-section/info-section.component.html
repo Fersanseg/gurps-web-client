@@ -1,8 +1,16 @@
 
-<div class="w-5/6 mx-auto flex flex-col items-center my-28" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()">
-  <app-splitter [hovered]="hovered" class="w-2/4"/>
+<div class="w-5/6 mx-auto flex flex-col items-center my-28 expand" 
+  (click)="toggleExpanded()" (mouseenter)="onMouseEnter()" (mouseleave)="onMouseLeave()"
+>
+  <app-splitter [alternateColor]="hovered || expanded" class="w-2/4"/>
+    <div class="my-3 p-3 w-5/6 flex flex-col items-center cursor-pointer">
 
-  <ng-content></ng-content>
-
-  <app-splitter [hovered]="hovered" [flipped]=true class="w-2/4"/>
+      <ng-content select="[heading]"></ng-content>
+      
+      <div class="w-full" [@expandAnimation]="expanded ? 'expanded' : 'collapsed'">
+        <ng-content></ng-content>
+      </div>
+    
+    </div>
+  <app-splitter [alternateColor]="hovered || expanded" [flipped]=true class="w-2/4"/>
 </div>

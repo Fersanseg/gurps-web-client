@@ -5,7 +5,6 @@ import { InsertComponent } from "../insert/insert.component";
 import { fadeInAnimation } from '../../animations/fade';
 import { BehaviorSubject } from 'rxjs';
 import { HeroComponent } from "../../components/hero/hero.component";
-import { RippleDirective } from '../../directives/ripple.directive';
 
 @Component({
     selector: 'app-home',
