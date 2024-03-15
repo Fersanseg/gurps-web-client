@@ -2,7 +2,9 @@
   <div appRipple class="mt-16 mb-32 mx-auto w-3/4 h-96 
       bg-cover border-4 border-primary cursor-pointer
       overflow-hidden container-box flex justify-center relative" 
-      [style.background-image]="'url(' + imgSrc + ')'">
+      [style.background-image]="'url(' + imgSrc + ')'"
+      (click)="routeTo()"  
+    >
     <div class="slider-l h-full z-[1]"></div>
     <div class="slider-r h-full z-[1]"></div>
     <div class="linkDiv slider-bg absolute h-full flex justify-center items-center overflow-hidden bg-base-100">

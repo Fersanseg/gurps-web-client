@@ -8,6 +8,17 @@
     src: url('./assets/fonts/MedievalSharp-Regular.ttf') format('truetype')
 }
 
+@font-face {
+    font-family: 'Merriweather';
+    src: url('./assets/fonts/Merriweather-Regular.ttf') format('truetype')
+}
+
+@layer components {
+  .bodyText {
+    @apply font-textFont text-lg tracking-wide;
+  }
+}
+
 @layer utilities {
   .hero-polygon {
     clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
