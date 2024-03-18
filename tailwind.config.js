@@ -8,6 +8,9 @@ module.exports = {
       fontFamily: {
         titleFont: ['MedievalSharp', 'sans-serif'],
         textFont: ['Merriweather', 'sans-serif']
+      },
+      boxShadow: {
+        '2xl': '0 0px 8px 5px rgba(255, 255, 255, 0.7)'
       }
     },
   },
