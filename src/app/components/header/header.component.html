@@ -2,17 +2,9 @@
   flex items-center justify-around
 ">
   <app-button
-    [text]="'SAMPLE'"
-    [hasBorder]="true"
-  />
-  <app-button
-    [text]="'SAMPLE'"
-  />
-  <app-button
-    [text]="'SAMPLE'"
-    [hasBorder]="true"
-  />
-  <app-button
-    [text]="'SAMPLE'"
+    *ngFor="let button of buttons"
+    [text]="button.text"
+    [hasBorder]="button.hasBorder"
+    [callback]="button.callback"
   />
 </div>

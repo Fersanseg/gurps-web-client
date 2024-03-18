@@ -11,4 +11,9 @@ import { Component, Input } from '@angular/core';
 export class ButtonComponent {
   @Input() public text: string = "";
   @Input() public hasBorder: boolean = false;
+  @Input() public callback = () => {};
+
+  onClick() {
+    this.callback();
+  }
 }

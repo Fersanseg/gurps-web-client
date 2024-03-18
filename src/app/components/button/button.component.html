@@ -1,6 +1,7 @@
 <button class="py-3 px-5 font-bold text-accent
     transition-all duration-300 hover:border-accent hover:bg-white hover:bg-opacity-60 hover:text-primary hover:shadow-2xl"
     [ngClass]="hasBorder ? 'border-2 border-secondary' : ''"
+    (click)="onClick()"
     >
   {{text | uppercase }}
 </button>
