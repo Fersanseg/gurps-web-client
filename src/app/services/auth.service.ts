@@ -1,8 +1,8 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { AuthRequest } from '../utils/auth-request';
+import { AuthRequest } from '../types/auth-request';
 import { LocalService } from './local.service';
-import { LoginRestResponse } from '../utils/rest-response';
+import { LoginRestResponse } from '../types/rest-response';
 import { Observable, map, of } from 'rxjs';
 import { environment } from '../../environments/environment';
 
