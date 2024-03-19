@@ -1,1 +1,12 @@
-<p>rules-section works!</p>
+<div class="my-4">
+  <div class="flex items-center cursor-pointer">
+    <span class="bodyText px-3">></span>
+    <h1 class="text-4xl font-titleFont">{{sectionTitle}}</h1>
+  </div>
+  <div class="ml-[0.95rem] pl-6 border-l-2 border-primary">
+    <h2 *ngIf="pageRef" class="text-2xl bodyText">Página: B{{pageRef}}</h2>
+    
+    <ng-content/>
+  </div>
+
+</div>

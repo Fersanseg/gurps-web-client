@@ -1,7 +1,7 @@
 <app-header></app-header>
 
 <div class="w-5/6 mx-auto my-24 flex flex-col items-center">
-  <app-splitter [alternateColor]="false" class="w-2/4" />
+  <app-splitter [alternateColor]="true" class="w-2/4" />
   <div class="my-8">
     <p class="bodyText">
       El carácter modular de las reglas de GURPS hace que sólo con el libro de reglas básico se pueda jugar una partida
@@ -16,5 +16,13 @@
       básico que explica dicha regla en mayor profundidad. Si no sabes cómo conseguir una copia del libro, dimelo y lo 
       solucionaremos.
     </p>
+    <app-rules-section
+      [sectionTitle]="'Características'"
+      [pageRef]="'21'"
+    >
+      <p class="bodyText mt-2">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus modi aspernatur quidem inventore voluptate adipisci quod, consectetur hic, totam soluta mollitia impedit dolore fugiat at tempore nemo, cupiditate quae.
+      </p>
+    </app-rules-section>
   </div>
 </div>
