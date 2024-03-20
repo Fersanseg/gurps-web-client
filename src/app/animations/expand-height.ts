@@ -10,4 +10,14 @@ export const expandAnimation = trigger('expandAnimation', [
     opacity: 0
   })),
   transition('collapsed <=> expanded', animate('300ms ease-in-out'))
-])
+]);
+
+export const expandAnimationNoFade = trigger('expandAnimationNoFade', [
+  state('expanded', style({
+    height: '*',
+  })),
+  state('collapsed', style({
+    height: '0',
+  })),
+  transition('collapsed <=> expanded', animate('300ms ease-in-out'))
+]);

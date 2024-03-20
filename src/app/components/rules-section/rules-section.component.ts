@@ -1,6 +1,6 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
-import { expandAnimation } from '../../animations/expand-height';
+import { expandAnimationNoFade } from '../../animations/expand-height';
 import { rotateAnimation } from '../../animations/rotate';
 
 @Component({
@@ -9,7 +9,7 @@ import { rotateAnimation } from '../../animations/rotate';
   imports: [CommonModule],
   templateUrl: './rules-section.component.html',
   styleUrl: './rules-section.component.css',
-  animations: [expandAnimation, rotateAnimation]
+  animations: [expandAnimationNoFade, rotateAnimation]
 })
 export class RulesSectionComponent {
   @Input() public sectionTitle!: string;
