@@ -7,7 +7,7 @@
   </div>
   <div [@expandAnimationNoFade]="isShown ? 'expanded' : 'collapsed'"
     class="ml-[0.95rem] pl-6 border-l-2 border-primary z-[1]">
-    <h2 *ngIf="pageRef" class="text-2xl bodyText">Página: B{{pageRef}}</h2>
+    <h2 *ngIf="pageRef" class="text-2xl bodyText">Página: {{pageRef}}</h2>
 
     <ng-content />
 

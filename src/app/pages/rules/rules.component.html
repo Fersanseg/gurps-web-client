@@ -16,14 +16,72 @@
       qué página se explica dicha regla en mayor profundidad. Si no sabes cómo conseguir una copia del libro, dimelo y
       lo solucionaremos.
     </p>
-    <app-rules-section [sectionTitle]="'Características'" [pageRef]="'21'">
+
+    <app-rules-section [sectionTitle]="'Tiradas de dados'" [pageRef]="'L2'">
       <p class="bodyText mt-2">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur delectus modi aspernatur quidem inventore
-        voluptate adipisci quod, consectetur hic, totam soluta mollitia impedit dolore fugiat at tempore nemo,
-        cupiditate quae.
+        GURPS usa exclusivamente dados de 6 caras. "4d+2" significa "tira 4 dados y suma 2". "3d" significa "tira 3
+        dados".
       </p>
+      <p class="bodyText mt-2">
+        En GURPS, el éxito o fracaso de una acción se determina tomando el valor de una
+        habilidad o característica (llamado <u>habilidad base</u>), añadiendo bonuses o penalizaciones (<u>habilidad
+          efectiva</u>), y tirando 3d. Si la tirada de los dados es <i>igual o menor</i> a la habilidad efectiva, la
+        tirada es un éxito. Si es mayor, es un fallo.
+      </p>
+
+      <app-rules-section [sectionTitle]="'Éxitos y fallos críticos'">
+        <p class="bodyText mt-2">
+          Un éxito crítico es especialmente bueno. El DM determina qué efectos tiene, pero siempre es algo bueno. Una
+          tirada es un éxito crítico cuando:
+        </p>
+        <ul class="bodyText text-base list-disc ml-4">
+          <li>La tirada de dados tiene un resultado de 3 o 4.</li>
+          <li>La tirada de dados tiene un resultado de 5 si la <i>habilidad efectiva</i> es 15.</li>
+          <li>La tirada de dados tiene un resultado de 6 si la <i>habilidad efectiva</i> es 16 o más.</li>
+        </ul>
+        <p class="bodyText">
+          Cuanto menor sea el resultado del dado, mejores efectos tendrá el éxito crítico.
+        </p>
+        <p class="bodyText mt-2">
+          Un fallo crítico funciona de la misma manera, excepto que el efecto será más perjudicial cuanto mayor sea el
+          resultado de los dados. Será un fallo crítico cuando:
+        </p>
+        <ul class="bodyText text-base list-disc ml-4">
+          <li>La tirada de dados tiene un resultado de 18.</li>
+          <li>La tirada de dados tiene un resultado de 17 si tu <i>habilidad efectiva</i> es 15 o menos.</li>
+          <li>Toda tirada con un resultado 10 puntos mayor que tu habilidad efectiva (un 16 en una habilidad de 6, un 15
+            en una habilidad de 5, etc).</li>
+        </ul>
+      </app-rules-section>
+
+      <app-rules-section [sectionTitle]="'Margen de éxito y fallo'">
+        <p class="bodyText mt-2">
+          En algunos casos es importante saber no sólo si la tirada tiene éxito o no, sino también <i>por cuánto</i>. La
+          diferencia entre tu habilidad efectiva y la tirada del dado es el <u>margen de éxito/fallo</u>.
+        </p>
+        <p class="bodyText">Por ejemplo, si tu habilidad efectiva es 18 y tiras un 12, tu margen de éxito es 6. Si tu
+          habilidad efectiva es 7 y tiras un 15, tu márgen de fallo es 8.</p>
+      </app-rules-section>
+
+      <app-rules-section [sectionTitle]="'Tiradas enfrentadas'" [pageRef]="'L3'">
+        <p class="bodyText mt-2">
+          A veces dos personajes deben competir comparando habilidades. Las tiradas enfrentadas son una forma de
+          resolver
+          esta situación. En estos casos, Cada contrincante hace su tirada de dados contra <u>su</u> habilidad efectiva.
+          Si uno tiene éxito y otro
+          falla, el ganador está claro. Si los dos tienen éxito, gana quien tenga más margen de éxito. Si los dos
+          fallan, gana quien tenga menos margen de fallo.
+        </p>
+        <p class="bodyText mt-2">
+          Dependiendo de la situación, puede que sea necesario averiguar el margen de victoria del ganador. Dicho margen
+          es la diferencia entre márgenes de éxito si los dos contrincantes tienen éxito en su tirada (o entre márgenes
+          de fallo si los dos fallan), o la suma del margen de éxito y el margen de fallo si un contrincante tiene éxito
+          en su tirada y el otro no.
+        </p>
+      </app-rules-section>
     </app-rules-section>
+
   </div>
 </div>
 
-<app-books-reference-popup/>
+<app-books-reference-popup />
