@@ -1,6 +1,6 @@
-<div class="my-4 overflow-hidden">
+<div class="my-6 overflow-hidden">
   <div class="flex items-center cursor-pointer z-[2]" (click)="toggleSection()">
-    <span class="bodyText px-3 transition-colors duration-300 ease-in-out" 
+    <span class="bodyText text-2xl px-[0.6rem] mb-1 transition-colors duration-300 ease-in-out" 
       [ngClass]="isShown ? 'text-secondary' : ''"
       [@rotateAnimation]="{value: isShown ? 'active' : 'normal', params: {degrees: 90}}">></span>
     <h1 class="text-4xl font-titleFont">{{sectionTitle}}</h1>
