@@ -6,11 +6,9 @@
   <div class="my-8">
     <p class="bodyText">
       El carácter modular de las reglas de GURPS hace que sólo con el libro de reglas básico se pueda jugar una partida
-      de cualquier género
-      imaginable, desde fantasía hasta ciencia ficción, misterio, horror, etc. Eso significa que para jugar una partida
-      en específico no sólo es
-      recomendable, sino incluso obligatorio, ignorar parte de estas reglas básicas para evitar que el juego se vuelva
-      demasiado pesado como para ser divertido.
+      de cualquier género imaginable, desde fantasía hasta ciencia ficción, misterio, horror, etc. Eso significa que
+      para jugar una partida en específico no sólo es recomendable, sino incluso obligatorio, ignorar parte de estas
+      reglas básicas para evitar que el juego se vuelva demasiado pesado como para ser divertido.
     </p>
     <p class="bodyText">
       En esta página se resumirán las principales reglas, junto con un código de referencia que indica en qué libro y en
@@ -25,7 +23,7 @@
       </p>
       <p class="bodyText mt-2">
         En GURPS, el éxito o fracaso de una acción se determina tomando el valor de una
-        habilidad o característica (llamado <u>habilidad base</u>), añadiendo bonuses o penalizaciones (<u>habilidad
+        habilidad o atributo básico (llamado <u>habilidad base</u>), añadiendo bonuses o penalizaciones (<u>habilidad
           efectiva</u>), y tirando 3d. Si la tirada de los dados es <i>igual o menor</i> a la habilidad efectiva, la
         tirada es un éxito. Si es mayor, es un fallo.
       </p>
@@ -67,11 +65,10 @@
       <app-rules-section [sectionTitle]="'Tiradas enfrentadas'" [pageRef]="'L3'">
         <p class="bodyText mt-2">
           A veces dos personajes deben competir comparando habilidades. Las tiradas enfrentadas son una forma de
-          resolver
-          esta situación. En estos casos, Cada contrincante hace su tirada de dados contra <u>su</u> habilidad efectiva.
-          Si uno tiene éxito y otro
-          falla, el ganador está claro. Si los dos tienen éxito, gana quien tenga más margen de éxito. Si los dos
-          fallan, gana quien tenga menos margen de fallo.
+          resolver esta situación. En estos casos, Cada contrincante hace su tirada de dados contra <u>su</u> habilidad
+          efectiva.
+          Si uno tiene éxito y otro falla, el ganador está claro. Si los dos tienen éxito, gana quien tenga más margen
+          de éxito. Si los dos fallan, gana quien tenga menos margen de fallo.
         </p>
         <p class="bodyText mt-2">
           Dependiendo de la situación, puede que sea necesario averiguar el margen de victoria del ganador. Dicho margen
@@ -79,6 +76,112 @@
           de fallo si los dos fallan), o la suma del margen de éxito y el margen de fallo si un contrincante tiene éxito
           en su tirada y el otro no.
         </p>
+      </app-rules-section>
+    </app-rules-section>
+
+    <app-rules-section [sectionTitle]="'Personajes'" [pageRef]="'L4'">
+      <text [class]="'mt-2'">
+        GURPS es diferente de otros juegos ya que para crear un personaje no eliges una "clase" que decide qué cosas
+        puede y no puede hacer, y no se crece por medio de "niveles" que mejoren los atributos del personaje y
+        desbloqueen nuevas habilidades.
+        En su lugar, los personajes se crean "comprando" habilidades y mejoras con <i>Puntos de Personaje</i> (PP). De
+        la misma manera, en vez de "puntos de experiencia" como en un juego tradicional, se otorgan PP para simular el
+        crecimiento de un personaje en su vida como aventurero. De esta manera, uno puede crear el personaje que quiera,
+        sin ceñirse a estrictas restricciones (¿quién dijo que un mago tiene que ser irremediablemente incompetente en
+        combate cuerpo a cuerpo? ¿O que un guerrero tiene únicamente el suficiente cerebro para blandir una espada sin
+        olvidarse de respirar?).
+      </text>
+      <text [class]="'mt-2'">
+        <a href="/characters" class="text-secondary underline" (click)="stopPropagation($event)">
+          Más información
+        </a>
+        sobre la creación de personajes.
+      </text>
+
+      <app-rules-section [sectionTitle]="'Atributos básicos'">
+        <text [class]="'mt-2'">
+          Las capacidades básicas de un personaje son determinadas por cuatro <i>atributos básicos</i>: Fuerza (ST),
+          Destreza (DX), Inteligencia (IQ), y Salud (HT).
+          Todo personaje tiene una puntuación de 10 en todos los atributos básicos. Aumentar estas puntuaciones cuesta
+          PP, y reducirlas otorga PP que se puede usar en otras cosas.
+        </text>
+        <text>
+          Generalmente, estos atributos tendrán una puntuación entre 1 y 20. En condiciones normales, ninguna puntuación
+          podrá ser superior a 20. A modo de referencia, la gran mayoría de humanos normales (NPCs varios) tienen
+          puntuaciones entre 8 y 12 (aunque un aventurero experimentado puede fácilmente superar estos rangos). A
+          grandes rasgos, esto es lo que significa cada puntuación:
+        </text>
+        <ul class="bodyText text-base list-disc ml-4 mt-4">
+          <li>
+            <u>6 o menos:</u>
+            <text [class]="'text-base'">
+              <i> Incapacitante</i>. Un atributo así de malo perjudica severamente tu estilo de vida.
+            </text>
+          </li>
+          <li>
+            <u>7:</u>
+            <text [class]="'text-base'">
+              <i> Pobre</i>. Tus limitaciones son inmediatamente evidentes para cualquiera que te vea. Esta es la mínima
+              puntuación que se puede tener sin que sea considerado una discapacidad.
+            </text>
+          </li>
+          <li>
+            <u>8 o 9:</u>
+            <text [class]="'text-base'">
+              <i> Por debajo de la media</i>. Estas puntuaciones son limitantes, pero dentro de lo normal.
+            </text>
+          </li>
+          <li>
+            <u>10:</u>
+            <text [class]="'text-base'">
+              <i> Media</i>. La mayoría de humanos se desenvuelven perfectamente con una puntuación así.
+            </text>
+          </li>
+          <li>
+            <u>11 o 12:</u>
+            <text [class]="'text-base'">
+              <i> Por encima de la media</i>. Estas puntuaciones son ventajosas, pero dentro de lo normal.
+            </text>
+          </li>
+          <li>
+            <u>13 o 14:</u>
+            <text [class]="'text-base'">
+              <i> Excepcional</i>. Tus capacidades son inmediatamente evidentes para cualquiera que te vea. Grandes
+              músculos, agilidad felina, conversacioń ingeniosa...
+            </text>
+          </li>
+          <li>
+            <u>15 o más:</u>
+            <text [class]="'text-base'">
+              <i> Increíble</i>. Un atributo así de alto llama la atención y es fuente de comentarios y notoriedad.
+            </text>
+          </li>
+        </ul>
+
+        <h2 class="font-titleFont text-3xl mt-6">Fuerza (ST)</h2>
+        <text>
+          ST determina tu fuerza física y tu tamaño. Más ST te permite hacer <i>y recibir</i> más daño en combate cuerpo
+          a cuerpo. Todo aventurero encontrará útil este atributo para levantar y tirar cosas, moverse rápido cargando
+          peso, etc.
+        </text>
+        <h2 class="font-titleFont text-3xl mt-6">Destreza (DX)</h2>
+        <text>
+          DX es una combinación de agilidad, coordinación y habilidad motora fina. DX determina tu capacidad con
+          habilidades atléticas, habilidades de combate, y oficios que requieran un toque delicado. DX también afecta a
+          tu Rapidez y Velocidad de Movimiento.
+        </text>
+        <h2 class="font-titleFont text-3xl mt-6">Inteligencia (IQ)</h2>
+        <text>
+          IQ mide, a grandes rasgos, la capacidad mental, incluyendo creatividad, intuición, memoria, percepción,
+          razonamiento, cordura y fuerza de voluntad. Determina tu capacidad con todas las habilidades "mentales"
+          (magia, interacción social, etc). IQ también determina los atributos secundarios de Voluntad y de Percepción.
+        </text>
+        <h2 class="font-titleFont text-3xl mt-6">Salud (HT)</h2>
+        <text>
+          HT mide energía y vitalidad. Representa tu vigor, resistencia a venenos y enfermedades, y en general tu estado
+          de salud física. HT determina el atributo secundario de Puntos de Fatiga, y ayuda a determinar Rapidez y
+          Velocidad de Movimiento.
+        </text>
       </app-rules-section>
     </app-rules-section>
 
