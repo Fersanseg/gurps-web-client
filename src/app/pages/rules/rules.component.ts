@@ -4,14 +4,13 @@ import { SplitterComponent } from "../../components/splitter/splitter.component"
 import { RulesSectionComponent } from "../../components/rules-section/rules-section.component";
 import { BooksReferencePopupComponent } from "../../components/books-reference-popup/books-reference-popup.component";
 import { stopPropagation } from '../../utils/utils-functions';
-import { TextComponent } from "../../components/text/text.component";
 
 @Component({
     selector: 'app-rules',
     standalone: true,
     templateUrl: './rules.component.html',
     styleUrl: './rules.component.css',
-    imports: [HeaderComponent, SplitterComponent, RulesSectionComponent, BooksReferencePopupComponent, TextComponent]
+    imports: [HeaderComponent, SplitterComponent, RulesSectionComponent, BooksReferencePopupComponent]
 })
 export class RulesComponent {
   public stopPropagation: (e: Event) => void = stopPropagation;

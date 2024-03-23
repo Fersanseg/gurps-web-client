@@ -80,7 +80,7 @@
     </app-rules-section>
 
     <app-rules-section [sectionTitle]="'Personajes'" [pageRef]="'L4'">
-      <text [class]="'mt-2'">
+      <p class="bodyText mt-2">
         GURPS es diferente de otros juegos ya que para crear un personaje no eliges una "clase" que decide qué cosas
         puede y no puede hacer, y no se crece por medio de "niveles" que mejoren los atributos del personaje y
         desbloqueen nuevas habilidades.
@@ -90,98 +90,98 @@
         sin ceñirse a estrictas restricciones (¿quién dijo que un mago tiene que ser irremediablemente incompetente en
         combate cuerpo a cuerpo? ¿O que un guerrero tiene únicamente el suficiente cerebro para blandir una espada sin
         olvidarse de respirar?).
-      </text>
-      <text [class]="'mt-2'">
+      <p>
+      <p class="bodyText mt-2">
         <a href="/characters" class="text-secondary underline" (click)="stopPropagation($event)">
           Más información
         </a>
         sobre la creación de personajes.
-      </text>
+      <p>
 
       <app-rules-section [sectionTitle]="'Atributos básicos'">
-        <text [class]="'mt-2'">
+        <p class="bodyText mt-2">
           Las capacidades básicas de un personaje son determinadas por cuatro <i>atributos básicos</i>: Fuerza (ST),
           Destreza (DX), Inteligencia (IQ), y Salud (HT).
           Todo personaje tiene una puntuación de 10 en todos los atributos básicos. Aumentar estas puntuaciones cuesta
           PP, y reducirlas otorga PP que se puede usar en otras cosas.
-        </text>
-        <text>
+        <p>
+        <p class="bodyText">
           Generalmente, estos atributos tendrán una puntuación entre 1 y 20. En condiciones normales, ninguna puntuación
           podrá ser superior a 20. A modo de referencia, la gran mayoría de humanos normales (NPCs varios) tienen
           puntuaciones entre 8 y 12 (aunque un aventurero experimentado puede fácilmente superar estos rangos). A
           grandes rasgos, esto es lo que significa cada puntuación:
-        </text>
+        <p>
         <ul class="bodyText text-base list-disc ml-4 mt-4">
           <li>
             <u>6 o menos:</u>
-            <text [class]="'text-base'">
+            <span class="bodyText text-base">
               <i> Incapacitante</i>. Un atributo así de malo perjudica severamente tu estilo de vida.
-            </text>
-          </li>
+            <p>
+            </span>
           <li>
             <u>7:</u>
-            <text [class]="'text-base'">
+            <span class="bodyText text-base">
               <i> Pobre</i>. Tus limitaciones son inmediatamente evidentes para cualquiera que te vea. Esta es la mínima
               puntuación que se puede tener sin que sea considerado una discapacidad.
-            </text>
-          </li>
+            <p>
+            </span>
           <li>
             <u>8 o 9:</u>
-            <text [class]="'text-base'">
+            <span class="bodyText text-base">
               <i> Por debajo de la media</i>. Estas puntuaciones son limitantes, pero dentro de lo normal.
-            </text>
+            </span>
           </li>
           <li>
             <u>10:</u>
-            <text [class]="'text-base'">
+            <span class="bodyText text-base">
               <i> Media</i>. La mayoría de humanos se desenvuelven perfectamente con una puntuación así.
-            </text>
+            </span>
           </li>
           <li>
             <u>11 o 12:</u>
-            <text [class]="'text-base'">
+            <span class="bodyText text-base">
               <i> Por encima de la media</i>. Estas puntuaciones son ventajosas, pero dentro de lo normal.
-            </text>
+            </span>
           </li>
           <li>
             <u>13 o 14:</u>
-            <text [class]="'text-base'">
+            <span class="bodyText text-base">
               <i> Excepcional</i>. Tus capacidades son inmediatamente evidentes para cualquiera que te vea. Grandes
               músculos, agilidad felina, conversacioń ingeniosa...
-            </text>
+            </span>
           </li>
           <li>
             <u>15 o más:</u>
-            <text [class]="'text-base'">
+            <span class="bodyText text-base">
               <i> Increíble</i>. Un atributo así de alto llama la atención y es fuente de comentarios y notoriedad.
-            </text>
+            </span>
           </li>
         </ul>
 
         <h2 class="font-titleFont text-3xl mt-6">Fuerza (ST)</h2>
-        <text>
+        <p class="bodyText">
           ST determina tu fuerza física y tu tamaño. Más ST te permite hacer <i>y recibir</i> más daño en combate cuerpo
           a cuerpo. Todo aventurero encontrará útil este atributo para levantar y tirar cosas, moverse rápido cargando
           peso, etc.
-        </text>
+        <p>
         <h2 class="font-titleFont text-3xl mt-6">Destreza (DX)</h2>
-        <text>
+        <p class="bodyText">
           DX es una combinación de agilidad, coordinación y habilidad motora fina. DX determina tu capacidad con
           habilidades atléticas, habilidades de combate, y oficios que requieran un toque delicado. DX también afecta a
           tu Rapidez y Velocidad de Movimiento.
-        </text>
+        <p>
         <h2 class="font-titleFont text-3xl mt-6">Inteligencia (IQ)</h2>
-        <text>
+        <p class="bodyText">
           IQ mide, a grandes rasgos, la capacidad mental, incluyendo creatividad, intuición, memoria, percepción,
           razonamiento, cordura y fuerza de voluntad. Determina tu capacidad con todas las habilidades "mentales"
           (magia, interacción social, etc). IQ también determina los atributos secundarios de Voluntad y de Percepción.
-        </text>
+        <p>
         <h2 class="font-titleFont text-3xl mt-6">Salud (HT)</h2>
-        <text>
+        <p class="bodyText">
           HT mide energía y vitalidad. Representa tu vigor, resistencia a venenos y enfermedades, y en general tu estado
           de salud física. HT determina el atributo secundario de Puntos de Fatiga, y ayuda a determinar Rapidez y
           Velocidad de Movimiento.
-        </text>
+        <p>
       </app-rules-section>
     </app-rules-section>
 
