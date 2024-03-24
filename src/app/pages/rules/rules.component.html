@@ -408,41 +408,62 @@
             <tr>
               <td>Árbol normal</td>
               <td>+5</td>
-              <td>1 m/seg</td>
-              <td>1 m/3 seg</td>
+              <td>30 cm/seg</td>
+              <td>10 cm/seg</td>
             </tr>
             <tr>
               <td>Montaña normal</td>
               <td>0</td>
-              <td>1 m/2 seg</td>
-              <td>10 m/min</td>
+              <td>15 cm/seg</td>
+              <td>3 m/min</td>
             </tr>
             <tr>
               <td>Pared de piedra vertical</td>
               <td>-3</td>
-              <td>1 m/5 seg</td>
-              <td>4 m/min</td>
+              <td>6 cm/seg</td>
+              <td>1.20 m/min</td>
             </tr>
             <tr>
               <td>Edificio de pared lisa</td>
               <td>-3</td>
-              <td>1 /10 seg</td>
-              <td>2 /min</td>
+              <td>3 cm/seg</td>
+              <td>15 cm/min</td>
             </tr>
             <tr>
               <td>Cuerda hacia arriba</td>
               <td>-2</td>
-              <td>1 m/min</td>
-              <td>20 m/min</td>
+              <td>30 cm/seg</td>
+              <td>6 m/min</td>
             </tr>
             <tr>
               <td>Cuerda hacia abajo</td>
               <td>-1</td>
-              <td>2 m/seg</td>
-              <td>30 m/min</td>
+              <td>60 cm/seg</td>
+              <td>9 m/min</td>
             </tr>
           </tbody>
         </table>
+
+        <h2 class="font-titleFont text-3xl mt-6">Saltar</h2>
+        <p class="bodyText">
+          Cuando el obstáculo sea mucho más pequeño que tú no hace falta hacer nada especial: lo saltas con éxito. Si
+          hiciera falta, se puede calcular la distancia que un personaje puede saltar. Aunque usaremos herramientas
+          digitales que calculan este número automáticamente, la fórmula se indica aquí a modo de referencia:
+        </p>
+        <ul class="bodyText text-base list-disc ml-4 mt-4">
+          <li>
+            <i>Salto de altura</i>: (15 x Velocidad de Movimiento) - 25 centímetros (redondeando decimales). Por
+            ejemplo, para una MV de 6 y sin carrerilla, un personaje saltaría 65cm. Si se coge carrerilla, añade los
+            metros de carrerilla a tu VM en esta fórmula (el máximo que se puede saltar de esta manera es el doble de lo
+            que se saltaría desde parado).
+          </li>
+          <li>
+            <i>Salto de longitud</i>: ((2 x Velocidad de Movimiento) - 3) x 30 centímetros. Por ejemplo, para una MV de
+            6 sin carrerilla, un personaje saltaría 270cm. Igual que en el salto de altura, la carrerilla añade +1 a MV
+            en esta fórmula por metro recorrido, y la distancia máxima que se puede saltar es el doble de la distancia
+            que se saltaría desde parado.
+          </li>
+        </ul>
       </app-rules-section>
     </app-rules-section>
   </div>
