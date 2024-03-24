@@ -90,232 +90,361 @@
         sin ceñirse a estrictas restricciones (¿quién dijo que un mago tiene que ser irremediablemente incompetente en
         combate cuerpo a cuerpo? ¿O que un guerrero tiene únicamente el suficiente cerebro para blandir una espada sin
         olvidarse de respirar?).
-      <p>
+      </p>
       <p class="bodyText mt-2">
         <a href="/characters" class="text-secondary underline" (click)="stopPropagation($event)">
           Más información
         </a>
         sobre la creación de personajes.
-      <p>
+      </p>
 
-        <app-rules-section [sectionTitle]="'Atributos básicos'">
-          <p class="bodyText mt-2">
-            Las capacidades básicas de un personaje son determinadas por cuatro <i>atributos básicos</i>: Fuerza (ST),
-            Destreza (DX), Inteligencia (IQ), y Salud (HT).
-            Todo personaje tiene una puntuación de 10 en todos los atributos básicos. Aumentar estas puntuaciones cuesta
-            PP, y reducirlas otorga PP que se puede usar en otras cosas.
-          <p>
-          <p class="bodyText">
-            Generalmente, estos atributos tendrán una puntuación entre 1 y 20. En condiciones normales, ninguna
-            puntuación
-            podrá ser superior a 20. A modo de referencia, la gran mayoría de humanos normales (NPCs varios) tienen
-            puntuaciones entre 8 y 12 (aunque un aventurero experimentado puede fácilmente superar estos rangos). A
-            grandes rasgos, esto es lo que significa cada puntuación:
-          <p>
-          <ul class="bodyText text-base list-disc ml-4 mt-4">
-            <li>
-              <u>6 o menos:</u>
-              <span class="bodyText text-base">
-                <i> Incapacitante</i>. Un atributo así de malo perjudica severamente tu estilo de vida.
-                <p>
-              </span>
-            <li>
-              <u>7:</u>
-              <span class="bodyText text-base">
-                <i> Pobre</i>. Tus limitaciones son inmediatamente evidentes para cualquiera que te vea. Esta es la
-                mínima
-                puntuación que se puede tener sin que sea considerado una discapacidad.
-                <p>
-              </span>
-            <li>
-              <u>8 o 9:</u>
-              <span class="bodyText text-base">
-                <i> Por debajo de la media</i>. Estas puntuaciones son limitantes, pero dentro de lo normal.
-              </span>
-            </li>
-            <li>
-              <u>10:</u>
-              <span class="bodyText text-base">
-                <i> Media</i>. La mayoría de humanos se desenvuelven perfectamente con una puntuación así.
-              </span>
-            </li>
-            <li>
-              <u>11 o 12:</u>
-              <span class="bodyText text-base">
-                <i> Por encima de la media</i>. Estas puntuaciones son ventajosas, pero dentro de lo normal.
-              </span>
-            </li>
-            <li>
-              <u>13 o 14:</u>
-              <span class="bodyText text-base">
-                <i> Excepcional</i>. Tus capacidades son inmediatamente evidentes para cualquiera que te vea. Grandes
-                músculos, agilidad felina, conversacioń ingeniosa...
-              </span>
-            </li>
-            <li>
-              <u>15 o más:</u>
-              <span class="bodyText text-base">
-                <i> Increíble</i>. Un atributo así de alto llama la atención y es fuente de comentarios y notoriedad.
-              </span>
-            </li>
-          </ul>
+      <app-rules-section [sectionTitle]="'Atributos básicos'">
+        <p class="bodyText mt-2">
+          Las capacidades básicas de un personaje son determinadas por cuatro <i>atributos básicos</i>: Fuerza (ST),
+          Destreza (DX), Inteligencia (IQ), y Salud (HT).
+          Todo personaje tiene una puntuación de 10 en todos los atributos básicos. Aumentar estas puntuaciones cuesta
+          PP, y reducirlas otorga PP que se puede usar en otras cosas.
+        </p>
+        <p class="bodyText">
+          Generalmente, estos atributos tendrán una puntuación entre 1 y 20. En condiciones normales, ninguna
+          puntuación
+          podrá ser superior a 20. A modo de referencia, la gran mayoría de humanos normales (NPCs varios) tienen
+          puntuaciones entre 8 y 12 (aunque un aventurero experimentado puede fácilmente superar estos rangos). A
+          grandes rasgos, esto es lo que significa cada puntuación:
+        </p>
+        <ul class="bodyText text-base list-disc ml-4 mt-4">
+          <li>
+            <u>6 o menos:</u>
+            <span class="bodyText text-base">
+              <i> Incapacitante</i>. Un atributo así de malo perjudica severamente tu estilo de vida.
+              <p>
+            </span>
+          <li>
+            <u>7:</u>
+            <span class="bodyText text-base">
+              <i> Pobre</i>. Tus limitaciones son inmediatamente evidentes para cualquiera que te vea. Esta es la
+              mínima
+              puntuación que se puede tener sin que sea considerado una discapacidad.
+              <p>
+            </span>
+          <li>
+            <u>8 o 9:</u>
+            <span class="bodyText text-base">
+              <i> Por debajo de la media</i>. Estas puntuaciones son limitantes, pero dentro de lo normal.
+            </span>
+          </li>
+          <li>
+            <u>10:</u>
+            <span class="bodyText text-base">
+              <i> Media</i>. La mayoría de humanos se desenvuelven perfectamente con una puntuación así.
+            </span>
+          </li>
+          <li>
+            <u>11 o 12:</u>
+            <span class="bodyText text-base">
+              <i> Por encima de la media</i>. Estas puntuaciones son ventajosas, pero dentro de lo normal.
+            </span>
+          </li>
+          <li>
+            <u>13 o 14:</u>
+            <span class="bodyText text-base">
+              <i> Excepcional</i>. Tus capacidades son inmediatamente evidentes para cualquiera que te vea. Grandes
+              músculos, agilidad felina, conversacioń ingeniosa...
+            </span>
+          </li>
+          <li>
+            <u>15 o más:</u>
+            <span class="bodyText text-base">
+              <i> Increíble</i>. Un atributo así de alto llama la atención y es fuente de comentarios y notoriedad.
+            </span>
+          </li>
+        </ul>
 
-          <h2 class="font-titleFont text-3xl mt-6">Fuerza (ST)</h2>
-          <p class="bodyText">
-            ST determina tu fuerza física y tu tamaño. Más ST te permite hacer <i>y recibir</i> más daño en combate
-            cuerpo a cuerpo. Todo aventurero encontrará útil este atributo para levantar y tirar cosas, moverse rápido
-            cargando peso, etc.
-          <p>
-          <h2 class="font-titleFont text-3xl mt-6">Destreza (DX)</h2>
-          <p class="bodyText">
-            DX es una combinación de agilidad, coordinación y habilidad motora fina. DX determina tu capacidad con
-            habilidades atléticas, habilidades de combate, y oficios que requieran un toque delicado. DX también afecta
-            a tu Rapidez y Velocidad de Movimiento.
-          <p>
-          <h2 class="font-titleFont text-3xl mt-6">Inteligencia (IQ)</h2>
-          <p class="bodyText">
-            IQ mide, a grandes rasgos, la capacidad mental, incluyendo creatividad, intuición, memoria, percepción,
-            razonamiento, cordura y fuerza de voluntad. Determina tu capacidad con todas las habilidades "mentales"
-            (magia, interacción social, etc). IQ también determina los atributos secundarios de Voluntad y de
-            Percepción.
-          <p>
-          <h2 class="font-titleFont text-3xl mt-6">Salud (HT)</h2>
-          <p class="bodyText">
-            HT mide energía y vitalidad. Representa tu vigor, resistencia a venenos y enfermedades, y en general tu
-            estado
-            de salud física. HT determina el atributo secundario de Puntos de Fatiga, y ayuda a determinar Rapidez y
-            Velocidad de Movimiento.
-          <p>
-        </app-rules-section>
+        <h2 class="font-titleFont text-3xl mt-6">Fuerza (ST)</h2>
+        <p class="bodyText">
+          ST determina tu fuerza física y tu tamaño. Más ST te permite hacer <i>y recibir</i> más daño en combate
+          cuerpo a cuerpo. Todo aventurero encontrará útil este atributo para levantar y tirar cosas, moverse rápido
+          cargando peso, etc.
+        </p>
+        <h2 class="font-titleFont text-3xl mt-6">Destreza (DX)</h2>
+        <p class="bodyText">
+          DX es una combinación de agilidad, coordinación y habilidad motora fina. DX determina tu capacidad con
+          habilidades atléticas, habilidades de combate, y oficios que requieran un toque delicado. DX también afecta
+          a tu Rapidez y Velocidad de Movimiento.
+        </p>
+        <h2 class="font-titleFont text-3xl mt-6">Inteligencia (IQ)</h2>
+        <p class="bodyText">
+          IQ mide, a grandes rasgos, la capacidad mental, incluyendo creatividad, intuición, memoria, percepción,
+          razonamiento, cordura y fuerza de voluntad. Determina tu capacidad con todas las habilidades "mentales"
+          (magia, interacción social, etc). IQ también determina los atributos secundarios de Voluntad y de
+          Percepción.
+        </p>
+        <h2 class="font-titleFont text-3xl mt-6">Salud (HT)</h2>
+        <p class="bodyText">
+          HT mide energía y vitalidad. Representa tu vigor, resistencia a venenos y enfermedades, y en general tu
+          estado
+          de salud física. HT determina el atributo secundario de Puntos de Fatiga, y ayuda a determinar Rapidez y
+          Velocidad de Movimiento.
+        </p>
+      </app-rules-section>
 
-        <app-rules-section [sectionTitle]="'Atributos secundarios'" [pageRef]="'L6'">
-          <p class="bodyText mt-2">
-            Los atributos secundarios son características que dependen de los atributos básicos. Al contrario que los
-            atributos básicos, estos no pueden aumentarse o disminuirse directamente:
-          </p>
-          <ul class="bodyText text-base list-disc ml-4">
-            <li>
-              <u>Puntos de Vida (PV)</u>: representan la capacidad de tu cuerpo para resistir lesiones. Tienes PV igual
-              a tu ST.
-            </li>
-            <li>
-              <u>Voluntad</u>: mide tu capacidad para resistir el estrés psicológico (lavado de cerebro, miedo,
-              hipnotismo, interrogatorio, seducción, tortura, etc) y tu resistencia a ataques sobrenaturales (magia,
-              etc).
-            </li>
-            <li>
-              <u>Percepción (Per)</u>: Representa tu alerta general. El DM hace una "tirada de Sentidos" contra tu Per
-              para determinar si notas algo. Per es igual a IQ.
-            </li>
-            <li>
-              <u>Puntos de Fatiga (PF)</u>: Representan el "suministro de energía" de tu cuerpo. Tienes PF igual a tu
-              HT.
-            </li>
-            <li>
-              <u>Rapidez</u>: es una medida de tus reflejos y rapidez física general. Ayuda a determinar tu velocidad de
-              carrera, tu posibilidad de esquivar un ataque y el orden en el que actúas en combate (una alta Rapidez te
-              permitirá "reaccionar más rápido" que tus enemigos). Para calcular la Velocidad Básica, suma tu
-              HT y DX juntos, y luego divide el total por 4. No lo redondees.
-            </li>
-            <li>
-              <u>Esquiva</u>: Tu defensa de Esquiva (ver Dodge, B28) es igual a Rapidez + 3, eliminando
-              todas las fracciones. Por ejemplo, si tu Rapidez es 5.25, tu Esquiva es 8. Debes sacar menos que
-              tu Esquiva en 3d para esquivar un ataque.
-            </li>
-            <li>
-              <u>Velocidad de Movimiento</u>: Es tu velocidad en metros por segundo. Así es como de rápido puedes correr
-              (aunque puedes ir un poco más rápido si "corres" en línea recta; ver L23). LA Velocidad de Movimiento
-              comienza igual a la Rapidez, menos cualquier fracción; por ejemplo, Rapidez 5.75 otorga
-              Velocidad de Movimiento 5. Una persona promedio tiene Velocidad de Movimiento 5; por lo tanto, puede
-              correr alrededor de 5 metros por segundo si no está cargado.
-            </li>
-            <li>
-              <u>Daño (DMG)</u>:
-              Tu ST determina cuánto daño haces en combate cuerpo a cuerpo o con un arma de combate cuerpo a cuerpo. Dos
-              tipos de daño derivan de ST:
-              Daño de estocada (abreviado como “thrust” o "thr" en libros oficiales de GURPS) es tu daño básico con un
-              golpe, patada o mordida, o un
-              ataque con un arma de estocada como una lanza o un estoque.
-              Daño de golpe (abreviado como "swing" o "sw" en libros oficiales de GURPS) es tu daño básico con un arma
-              balanceada, como un hacha, maza
-              o espada, cualquier cosa que actúe como una palanca para multiplicar tu ST.
-              Consulta la siguiente tabla para determinar tu daño básico:
-            </li>
-          </ul>
-          <table class="m3-4 mt-2 table table-xs">
-            <tr> <!-- ST -->
-              <th>ST</th>
-              <td>1</td>
-              <td>2</td>
-              <td>3</td>
-              <td>4</td>
-              <td>5</td>
-              <td>6</td>
-              <td>7</td>
-              <td>8</td>
-              <td>9</td>
-              <td>10</td>
-              <td>11</td>
-              <td>12</td>
-              <td>13</td>
-              <td>14</td>
-              <td>15</td>
-              <td>16</td>
-              <td>17</td>
-              <td>18</td>
-              <td>19</td>
-              <td>20</td>
-            </tr>
-            <tr> <!-- Thrust -->
-              <th>Thrust</th>
-              <td>1d-6</td>
-              <td>1d-6</td>
-              <td>1d-5</td>
-              <td>1d-5</td>
-              <td>1d-4</td>
-              <td>1d-4</td>
-              <td>1d-3</td>
-              <td>1d-3</td>
-              <td>1d-2</td>
-              <td>1d-2</td>
-              <td>1d-1</td>
-              <td>1d-1</td>
-              <td>1d</td>
-              <td>1d</td>
-              <td>1d+1</td>
-              <td>1d+1</td>
-              <td>1d+2</td>
-              <td>1d+2</td>
-              <td>2d-1</td>
-              <td>2d-1</td>
-            </tr>
-            <tr> <!-- Swing -->
-              <th>Swing</th>
-              <td>1d-5</td>
-              <td>1d-5</td>
-              <td>1d-4</td>
-              <td>1d-4</td>
-              <td>1d-3</td>
-              <td>1d-3</td>
-              <td>1d-2</td>
-              <td>1d-2</td>
-              <td>1d-1</td>
-              <td>1d</td>
-              <td>1d+1</td>
-              <td>1d+2</td>
-              <td>2d-1</td>
-              <td>2d</td>
-              <td>2d+1</td>
-              <td>2d+2</td>
-              <td>3d-1</td>
-              <td>3d</td>
-              <td>3d+1</td>
-              <td>3d+2</td>
-            </tr>
-          </table>
-        </app-rules-section>
+      <app-rules-section [sectionTitle]="'Atributos secundarios'" [pageRef]="'L6'">
+        <p class="bodyText mt-2">
+          Los atributos secundarios son características que dependen de los atributos básicos. Al contrario que los
+          atributos básicos, estos no pueden aumentarse o disminuirse directamente:
+        </p>
+        <ul class="bodyText text-base list-disc ml-4">
+          <li>
+            <u>Puntos de Vida (PV)</u>: representan la capacidad de tu cuerpo para resistir lesiones. Tienes PV igual
+            a tu ST.
+          </li>
+          <li>
+            <u>Voluntad</u>: mide tu capacidad para resistir el estrés psicológico (lavado de cerebro, miedo,
+            hipnotismo, interrogatorio, seducción, tortura, etc) y tu resistencia a ataques sobrenaturales (magia,
+            etc).
+          </li>
+          <li>
+            <u>Percepción (Per)</u>: Representa tu alerta general. El DM hace una "tirada de Sentidos" contra tu Per
+            para determinar si notas algo. Per es igual a IQ.
+          </li>
+          <li>
+            <u>Puntos de Fatiga (PF)</u>: Representan el "suministro de energía" de tu cuerpo. Tienes PF igual a tu
+            HT.
+          </li>
+          <li>
+            <u>Rapidez</u>: es una medida de tus reflejos y rapidez física general. Ayuda a determinar tu velocidad de
+            carrera, tu posibilidad de esquivar un ataque y el orden en el que actúas en combate (una alta Rapidez te
+            permitirá "reaccionar más rápido" que tus enemigos). Para calcular la Velocidad Básica, suma tu
+            HT y DX juntos, y luego divide el total por 4. No lo redondees.
+          </li>
+          <li>
+            <u>Esquiva</u>: Tu defensa de Esquiva (ver Dodge, B28) es igual a Rapidez + 3, eliminando
+            todas las fracciones. Por ejemplo, si tu Rapidez es 5.25, tu Esquiva es 8. Debes sacar menos que
+            tu Esquiva en 3d para esquivar un ataque.
+          </li>
+          <li>
+            <u>Velocidad de Movimiento</u>: Es tu velocidad en metros por segundo. Así es como de rápido puedes correr
+            (aunque puedes ir un poco más rápido si "corres" en línea recta; ver L23). LA Velocidad de Movimiento
+            comienza igual a la Rapidez, menos cualquier fracción; por ejemplo, Rapidez 5.75 otorga
+            Velocidad de Movimiento 5. Una persona promedio tiene Velocidad de Movimiento 5; por lo tanto, puede
+            correr alrededor de 5 metros por segundo si no está cargado.
+          </li>
+          <li>
+            <u>Daño (DMG)</u>:
+            Tu ST determina cuánto daño haces en combate cuerpo a cuerpo o con un arma de combate cuerpo a cuerpo. Dos
+            tipos de daño derivan de ST:
+            Daño de estocada (abreviado como “thrust” o "thr" en libros oficiales de GURPS) es tu daño básico con un
+            golpe, patada o mordida, o un
+            ataque con un arma de estocada como una lanza o un estoque.
+            Daño de golpe (abreviado como "swing" o "sw" en libros oficiales de GURPS) es tu daño básico con un arma
+            balanceada, como un hacha, maza
+            o espada, cualquier cosa que actúe como una palanca para multiplicar tu ST.
+            Consulta la siguiente tabla para determinar tu daño básico:
+          </li>
+        </ul>
+        <table class="m3-4 mt-2 table table-xs">
+          <tr> <!-- ST -->
+            <th>ST</th>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+            <td>6</td>
+            <td>7</td>
+            <td>8</td>
+            <td>9</td>
+            <td>10</td>
+            <td>11</td>
+            <td>12</td>
+            <td>13</td>
+            <td>14</td>
+            <td>15</td>
+            <td>16</td>
+            <td>17</td>
+            <td>18</td>
+            <td>19</td>
+            <td>20</td>
+          </tr>
+          <tr> <!-- Thrust -->
+            <th>Thrust</th>
+            <td>1d-6</td>
+            <td>1d-6</td>
+            <td>1d-5</td>
+            <td>1d-5</td>
+            <td>1d-4</td>
+            <td>1d-4</td>
+            <td>1d-3</td>
+            <td>1d-3</td>
+            <td>1d-2</td>
+            <td>1d-2</td>
+            <td>1d-1</td>
+            <td>1d-1</td>
+            <td>1d</td>
+            <td>1d</td>
+            <td>1d+1</td>
+            <td>1d+1</td>
+            <td>1d+2</td>
+            <td>1d+2</td>
+            <td>2d-1</td>
+            <td>2d-1</td>
+          </tr>
+          <tr> <!-- Swing -->
+            <th>Swing</th>
+            <td>1d-5</td>
+            <td>1d-5</td>
+            <td>1d-4</td>
+            <td>1d-4</td>
+            <td>1d-3</td>
+            <td>1d-3</td>
+            <td>1d-2</td>
+            <td>1d-2</td>
+            <td>1d-1</td>
+            <td>1d</td>
+            <td>1d+1</td>
+            <td>1d+2</td>
+            <td>2d-1</td>
+            <td>2d</td>
+            <td>2d+1</td>
+            <td>2d+2</td>
+            <td>3d-1</td>
+            <td>3d</td>
+            <td>3d+1</td>
+            <td>3d+2</td>
+          </tr>
+        </table>
+      </app-rules-section>
     </app-rules-section>
 
+    <app-rules-section [sectionTitle]="'Equipamiento'" [pageRef]="'L19'">
+      <h2 class="font-titleFont text-3xl mt-6">Armaduras</h2>
+      <p class="bodyText">
+        Llevar armadura es extremadamente útil en combate, ya que <u>reduce</u> el daño de un ataque certero. Cualquier
+        tipo de armadura es útil -puede significar la diferencia entre caer inconsciente o seguir en pie. Lógicamente,
+        cuanto más pesada la armadura, más resistencia ofrece. Pero cuanto más peso carga un personaje, menos ágil es y
+        más torpes son sus movimientos (ver "Carga").
+      </p>
+      <h2 class="font-titleFont text-3xl mt-6">Escudos</h2>
+      <p class="bodyText">
+        Los escudos son muy valiosos en un mundo de fantasía, ya que permiten Bloquear (una forma de defensa activa ante
+        un ataque, ver "Blocking" L28) y otorga un bonus a <i>todas</i> las otras tiradas de defensa activa.
+      </p>
+      <p class="bodyText">
+        Normalmente un escudo se lleva atado a un brazo. Esa mano no puede <i>blandir</i> un arma (lo que impide usar
+        armas a dos manos), pero permite <i>sujetar</i> un objeto.
+      </p>
+      <h2 class="font-titleFont text-3xl mt-6">Carga</h2>
+      <p class="bodyText">
+        La carga ("encumbrance" en libros oficiales) es una medida del peso que un personaje está cargando, relativo a
+        su ST. Es importante llevar un registro del inventario de un personaje, ya que ir sobrecargado tiene efectos
+        reales: cuanto más peso, más se reduce la Velocidad de Movimiento y la Esquiva de un personaje.
+      </p>
+      <p class="bodyText">
+        Afortunadamente, usaremos herramientas digitales que agilizan el cálculo de mecánicas "tediosas" como esta. A
+        modo de referencia, estos son los "puntos de corte" en los que la carga de un personaje afecta a su Velocidad de
+        Movimiento y su Esquiva. Si la Velocidad de Movimiento resultante es decimal, se elimina (NO redondea) la
+        fracción. La carga nunca puede reducir la VM o Esquiva por debajo de 1.
+      </p>
+      <ul class="bodyText text-base list-disc ml-4 mt-4">
+        <li>
+          <i>Sin carga</i>: Peso hasta tu BL*. Sin efectos.
+        </li>
+        <li>
+          <i>Carga ligera</i>: Peso hasta 2xBL*. Velocidad de movimiento x 0.8 | Esquiva -1
+        </li>
+        <li>
+          <i>Carga mediana</i>: Peso hasta 3xBL*. Velocidad de movimiento x 0.6 | Esquiva -2
+        </li>
+        <li>
+          <i>Carga Pesada</i>: Peso hasta 6xBL*. Velocidad de movimiento x 0.4 | Esquiva -3
+        </li>
+        <li>
+          <i>Carga Ultra-Pesada</i>: Peso hasta 10xBL*. Velocidad de movimiento x 0.2 | Esquiva -4
+        </li>
+      </ul>
+      <p class="bodyText text-base mt-2">
+        *: BL ("Basic Lift" en libros oficiales) es (STxST)/10 kg.
+      </p>
+    </app-rules-section>
+
+    <app-rules-section [sectionTitle]="'Acciones'" [pageRef]="'L22'">
+      <p class="bodyText mt-2">
+        A continuación se listan algunas actividades comunes que surgen de vez en cuando a lo largo de una aventura.
+      </p>
+      <app-rules-section [sectionTitle]="'Acciones físicas'">
+        <h2 class="font-titleFont text-3xl mt-6">Escalar</h2>
+        <p class="bodyText">
+          Escalar cualquier cosa más difícil que subir por una escalera de mano requiere una tirada contra Escalada. Los
+          modificadores a la tirada dependen de la dificultad de lo que se quiera escalar (referencias abajo). Además,
+          se resta el nivel de Carga de la tirada.
+        </p>
+        <p class="bodyText">
+          Se hace una tirada al empezar la escalada y otra cada 5 minutos. Fallar esta tirada significa caerse (si te
+          aseguraste de atarte bien con una cuerda, caes sólo hasta el final de la cuerda a menos que saques un fallo
+          crítico).
+        </p>
+        <table class="table table-xs w-1/2">
+          <thead>
+            <tr>
+              <th>Tipo de escalada</th>
+              <th>Modificador</th>
+              <th>Vel. en combate</th>
+              <th>Vel. normalmente</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Escalera hacia arriba</td>
+              <td>Sin tirada</td>
+              <td>3 peldaños/seg</td>
+              <td>1 peldaño/seg</td>
+            </tr>
+            <tr>
+              <td>Escalera hacia abajo</td>
+              <td>Sin tirada</td>
+              <td>2 peldaños/seg</td>
+              <td>1 peldaño/seg</td>
+            </tr>
+            <tr>
+              <td>Árbol normal</td>
+              <td>+5</td>
+              <td>1 m/seg</td>
+              <td>1 m/3 seg</td>
+            </tr>
+            <tr>
+              <td>Montaña normal</td>
+              <td>0</td>
+              <td>1 m/2 seg</td>
+              <td>10 m/min</td>
+            </tr>
+            <tr>
+              <td>Pared de piedra vertical</td>
+              <td>-3</td>
+              <td>1 m/5 seg</td>
+              <td>4 m/min</td>
+            </tr>
+            <tr>
+              <td>Edificio de pared lisa</td>
+              <td>-3</td>
+              <td>1 /10 seg</td>
+              <td>2 /min</td>
+            </tr>
+            <tr>
+              <td>Cuerda hacia arriba</td>
+              <td>-2</td>
+              <td>1 m/min</td>
+              <td>20 m/min</td>
+            </tr>
+            <tr>
+              <td>Cuerda hacia abajo</td>
+              <td>-1</td>
+              <td>2 m/seg</td>
+              <td>30 m/min</td>
+            </tr>
+          </tbody>
+        </table>
+      </app-rules-section>
+    </app-rules-section>
   </div>
 </div>
 
