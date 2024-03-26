@@ -516,6 +516,142 @@
           que la velocidad de sprint. A cambio, es menos cansado: la tirada contra HT se hace cada minuto, en vez de
           cada 15 segundos.
         </p>
+
+        <h2 class="font-titleFont text-3xl mt-6">Nadar</h2>
+        <p class="bodyText">
+          En la mayoría de los casos no hace falta tirar para nadar, a menos que sean situaciones excepcionales, como
+          aguas bravas o cruzando una extensión de agua a la carrera huyendo de algo o alguien. En esos casos, hay que
+          tirar contra la habilidad de Nadar al entrar al agua, y cada 5 minutos después. Si fallas, empiezas a
+          ahogarte, pierdes 1 PF y debes tirar de nuevo cada 5 segundos hasta que tengas éxito en una tirada, te
+          rescaten, o llegues a 0 PF y te ahogues. Si tienes éxito en esta tirada, recuperas el control y vuelves a
+          tirar cada 5 minutos.
+        </p>
+        <p class="bodyText">
+          La mayoría de criaturas terrestres tienen una velocidad <i>máxima</i> nadando igual a su Velocidad de
+          Movimiento / 5 (redondeando hacia abajo), y una velocidad mínima de 1 metro/segundo. Si nadas a velocidad
+          máxima, la tirada de PF se hace cada minuto, en vez de cada 5.
+        </p>
+        <p class="bodyText">
+          Si caes por debajo de 1/3 Puntos de Fatiga, tu velocidad de nado se reduce a la mitad.
+        </p>
+
+        <h2 class="font-titleFont text-3xl mt-6">Lanzar cosas</h2>
+        <p class="bodyText">
+          Puedes lanzar cualquier cosa que seas capaz de levantar (ver "Levantar peso"). Tirar un objeto en combate
+          (tenga intención de ser un ataque o no) requiere una tirada de Ataque. Puedes tirar objetos que pesen hasta 2
+          x BL kg con una mano (algo más pesado requiere dos manos). Tira contra DX-3 si apuntas a un objetivo concreto,
+          o contra DX si sólo apuntas a un área general.
+        </p>
+        <p class="bodyText">
+          Normalmente, para evitar tener que interrumpir la partida para hacer matemáticas, el DM permitirá cualquier
+          lanzamiento que considere razonable. Pero si es <i>estrictamente necesario</i> saber la distancia máxima a la
+          que un personaje puede lanzar algo, se puede usar el siguiente procedimiento:
+        </p>
+        <ul class="bodyText text-base list-disc ml-4 mt-4">
+          <li>
+            Divide el peso del objeto por tu BL para encontrar el "ratio".
+          </li>
+          <li>
+            Busca ese ratio en la columna "Ratio de la siguiente tabla". Si ese resultado está entre dos valores en la
+            tabla, usa el mayor.
+          </li>
+          <li>
+            Anota el "modificador de distancia" de ese ratio.
+          </li>
+          <li>
+            Multiplica tu ST por el modificador de distancia anterior. El resultado es la distancia máxima en metros que
+            tu personaje podrá lanzar ese objeto.
+          </li>
+        </ul>
+
+        <div class="flex">
+          <table class="m3-4 mt-2 w-96 mr-10 table table-xs">
+            <thead>
+              <tr>
+                <th>Ratio</th>
+                <th>Modificador de distancia</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>0.1</td>
+                <td>3.5</td>
+              </tr>
+              <tr>
+                <td>0.2</td>
+                <td>2.5</td>
+              </tr>
+              <tr>
+                <td>0.3</td>
+                <td>2</td>
+              </tr>
+              <tr>
+                <td>0.4</td>
+                <td>1.5</td>
+              </tr>
+              <tr>
+                <td>0.8</td>
+                <td>1</td>
+              </tr>
+              <tr>
+                <td>1</td>
+                <td>0.8</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>0.6</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>0.4</td>
+              </tr>
+            </tbody>
+          </table>
+          <table class="m3-4 mt-2 w-96 table table-xs">
+            <thead>
+              <tr>
+                <th>Ratio</th>
+                <th>Modificador de distancia</th>
+              </tr>
+            </thead>
+            <tbody>        
+              <tr>
+                <td>4</td>
+                <td>0.3</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>0.25</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>0.2</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>0.15</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>0.1</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>0.06</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>0.05</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+
+
+
+
+
       </app-rules-section>
     </app-rules-section>
   </div>
