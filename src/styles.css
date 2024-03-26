@@ -17,6 +17,10 @@
   .bodyText {
     @apply font-textFont text-lg tracking-wide;
   }
+
+  a {
+    @apply text-secondary underline;
+  }
 }
 
 @layer utilities {

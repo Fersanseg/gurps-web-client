@@ -372,286 +372,359 @@
         A continuación se listan algunas actividades comunes que surgen de vez en cuando a lo largo de una aventura.
       </p>
       <app-rules-section [sectionTitle]="'Acciones físicas'">
-        <h2 class="font-titleFont text-3xl mt-6">Escalar</h2>
-        <p class="bodyText">
-          Escalar cualquier cosa más difícil que subir por una escalera de mano requiere una tirada contra Escalada. Los
-          modificadores a la tirada dependen de la dificultad de lo que se quiera escalar (referencias abajo). Además,
-          se resta el nivel de Carga de la tirada.
-        </p>
-        <p class="bodyText">
-          Se hace una tirada al empezar la escalada y otra cada 5 minutos. Fallar esta tirada significa caerse (si te
-          aseguraste de atarte bien con una cuerda, caes sólo hasta el final de la cuerda a menos que saques un fallo
-          crítico).
-        </p>
-        <table class="table table-xs w-1/2">
-          <thead>
-            <tr>
-              <th>Tipo de escalada</th>
-              <th>Modificador</th>
-              <th>Vel. en combate</th>
-              <th>Vel. normalmente</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Escalera hacia arriba</td>
-              <td>Sin tirada</td>
-              <td>3 peldaños/seg</td>
-              <td>1 peldaño/seg</td>
-            </tr>
-            <tr>
-              <td>Escalera hacia abajo</td>
-              <td>Sin tirada</td>
-              <td>2 peldaños/seg</td>
-              <td>1 peldaño/seg</td>
-            </tr>
-            <tr>
-              <td>Árbol normal</td>
-              <td>+5</td>
-              <td>30 cm/seg</td>
-              <td>10 cm/seg</td>
-            </tr>
-            <tr>
-              <td>Montaña normal</td>
-              <td>0</td>
-              <td>15 cm/seg</td>
-              <td>3 m/min</td>
-            </tr>
-            <tr>
-              <td>Pared de piedra vertical</td>
-              <td>-3</td>
-              <td>6 cm/seg</td>
-              <td>1.20 m/min</td>
-            </tr>
-            <tr>
-              <td>Edificio de pared lisa</td>
-              <td>-3</td>
-              <td>3 cm/seg</td>
-              <td>15 cm/min</td>
-            </tr>
-            <tr>
-              <td>Cuerda hacia arriba</td>
-              <td>-2</td>
-              <td>30 cm/seg</td>
-              <td>6 m/min</td>
-            </tr>
-            <tr>
-              <td>Cuerda hacia abajo</td>
-              <td>-1</td>
-              <td>60 cm/seg</td>
-              <td>9 m/min</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h2 class="font-titleFont text-3xl mt-6">Saltar</h2>
-        <p class="bodyText">
-          Cuando el obstáculo sea mucho más pequeño que tú no hace falta hacer nada especial: lo saltas con éxito. Si
-          hiciera falta, se puede calcular la distancia que un personaje puede saltar. Aunque usaremos herramientas
-          digitales que calculan este número automáticamente, la fórmula se indica aquí a modo de referencia:
-        </p>
-        <ul class="bodyText text-base list-disc ml-4 mt-4">
-          <li>
-            <i>Salto de altura</i>: (15 x Velocidad de Movimiento) - 25 centímetros (redondeando decimales). Por
-            ejemplo, para una MV de 6 y sin carrerilla, un personaje saltaría 65cm. Si se coge carrerilla, añade los
-            metros de carrerilla a tu VM en esta fórmula (el máximo que se puede saltar de esta manera es el doble de lo
-            que se saltaría desde parado).
-          </li>
-          <li>
-            <i>Salto de longitud</i>: ((2 x Velocidad de Movimiento) - 3) x 30 centímetros. Por ejemplo, para una MV de
-            6 sin carrerilla, un personaje saltaría 270cm. Igual que en el salto de altura, la carrerilla añade +1 a MV
-            en esta fórmula por metro recorrido, y la distancia máxima que se puede saltar es el doble de la distancia
-            que se saltaría desde parado.
-          </li>
-        </ul>
-
-        <h2 class="font-titleFont text-3xl mt-6">Levantar peso</h2>
-        <p class="bodyText">
-          En el raro caso en el que sea necesario determinar si un personaje es capaz de levantar o mover un peso (por
-          ejemplo, para tirar de un carro o para saber si un bárbaro humano es capaz de levantar y lanzar a su compañero
-          halfling contra sus
-          enemigos como una pelota), se puede consultar la siguiente lista, dependiendo del BL (Basic Lift = (ST x ST) /
-          10 kg) del personaje. En algunos casos varios personajes podrían colaborar, en cuyo caso todos los personajes
-          participantes añaden su BL para esa tarea.
-        </p>
-        <p>
-          La lista presenta varias acciones y el peso máximo de un objeto para que un personaje (o varios, si añaden sus
-          BL) pueda llevarla a cabo. Por ejemplo, un personaje con BL de 10kg podría <i>levantar con una mano</i> un
-          peso de 20 kg, o podría <i>levantar con dos manos</i> un peso de 80 kg.
-        </p>
-        <ul class="bodyText text-base list-disc ml-4 mt-4">
-          <li>
-            <i>Levantar con una mano</i>: 2 x BL (tarda 2 segundos).
-          </li>
-          <li>
-            <i>Levantar con dos manos</i>: 8 x BL (tarda 4 segundos).
-          </li>
-          <li>
-            <i>Empujar y derribar</i>: 12 x BL. 24 x BL con carrerilla. Puede haber bonus adicional para objetos que no
-            estén bien equilibrados.
-          </li>
-          <li>
-            <i>Cargar a la espalda</i>: 15 x BL. Por cada segundo que tu nivel de Carga supere 10 x BL, pierdes 1 Punto
-            de Fatiga.
-          </li>
-          <li>
-            <i>Desplazar levemente</i>: Dependendiendo de tu postura y puntos de apoyo, puede llegar hasta 50 x BL.
-          </li>
-        </ul>
-
-        <h2 class="font-titleFont text-3xl mt-6">Correr</h2>
-        <p class="bodyText">
-          Esprintar utiliza tu Velocidad de Movimiento después de aplicar penalizadores por Carga, si los hubiera. Al
-          esprintar, añade un 20% a tu VM: esa es la distancia que cubres por segundo después de correr durante un
-          segundo (al fin y al cabo, uno necesita acelerar para llegar a su máxima velocidad). Por ejemplo, con una VM
-          de 7, un personaje que quiera esprintar cubriría 7 metros el primer segundo, y 8.4 metros después y hasta que
-          pare.
-        </p>
-        <p class="bodyText">
-          Esprintar es muy cansado. Cada 15 segundos esprintando, haz una tirada contra HT. Si fallas, pierdes 1 Punto
-          de Fatiga. Si bajas por debajo de 1/3 de tus PF, tu Velocidad de Movimiento se reduce a la mitad.
-        </p>
-        <p class="bodyText mt-2">
-          Para recorrer largas distancias hay que controlar el ritmo, y por ello la velocidad en estos casos es la mitad
-          que la velocidad de sprint. A cambio, es menos cansado: la tirada contra HT se hace cada minuto, en vez de
-          cada 15 segundos.
-        </p>
-
-        <h2 class="font-titleFont text-3xl mt-6">Nadar</h2>
-        <p class="bodyText">
-          En la mayoría de los casos no hace falta tirar para nadar, a menos que sean situaciones excepcionales, como
-          aguas bravas o cruzando una extensión de agua a la carrera huyendo de algo o alguien. En esos casos, hay que
-          tirar contra la habilidad de Nadar al entrar al agua, y cada 5 minutos después. Si fallas, empiezas a
-          ahogarte, pierdes 1 PF y debes tirar de nuevo cada 5 segundos hasta que tengas éxito en una tirada, te
-          rescaten, o llegues a 0 PF y te ahogues. Si tienes éxito en esta tirada, recuperas el control y vuelves a
-          tirar cada 5 minutos.
-        </p>
-        <p class="bodyText">
-          La mayoría de criaturas terrestres tienen una velocidad <i>máxima</i> nadando igual a su Velocidad de
-          Movimiento / 5 (redondeando hacia abajo), y una velocidad mínima de 1 metro/segundo. Si nadas a velocidad
-          máxima, la tirada de PF se hace cada minuto, en vez de cada 5.
-        </p>
-        <p class="bodyText">
-          Si caes por debajo de 1/3 Puntos de Fatiga, tu velocidad de nado se reduce a la mitad.
-        </p>
-
-        <h2 class="font-titleFont text-3xl mt-6">Lanzar cosas</h2>
-        <p class="bodyText">
-          Puedes lanzar cualquier cosa que seas capaz de levantar (ver "Levantar peso"). Tirar un objeto en combate
-          (tenga intención de ser un ataque o no) requiere una tirada de Ataque. Puedes tirar objetos que pesen hasta 2
-          x BL kg con una mano (algo más pesado requiere dos manos). Tira contra DX-3 si apuntas a un objetivo concreto,
-          o contra DX si sólo apuntas a un área general.
-        </p>
-        <p class="bodyText">
-          Normalmente, para evitar tener que interrumpir la partida para hacer matemáticas, el DM permitirá cualquier
-          lanzamiento que considere razonable. Pero si es <i>estrictamente necesario</i> saber la distancia máxima a la
-          que un personaje puede lanzar algo, se puede usar el siguiente procedimiento:
-        </p>
-        <ul class="bodyText text-base list-disc ml-4 mt-4">
-          <li>
-            Divide el peso del objeto por tu BL para encontrar el "ratio".
-          </li>
-          <li>
-            Busca ese ratio en la columna "Ratio de la siguiente tabla". Si ese resultado está entre dos valores en la
-            tabla, usa el mayor.
-          </li>
-          <li>
-            Anota el "modificador de distancia" de ese ratio.
-          </li>
-          <li>
-            Multiplica tu ST por el modificador de distancia anterior. El resultado es la distancia máxima en metros que
-            tu personaje podrá lanzar ese objeto.
-          </li>
-        </ul>
-
-        <div class="flex">
-          <table class="m3-4 mt-2 w-96 mr-10 table table-xs">
+        <app-rules-section [sectionTitle]="'Escalar'">
+          <p class="bodyText">
+            Escalar cualquier cosa más difícil que subir por una escalera de mano requiere una tirada contra <a
+              #DUMMYLINK #SKILLS href="/">Escalada</a>.
+            Los
+            modificadores a la tirada dependen de la dificultad de lo que se quiera escalar (referencias abajo). Además,
+            se resta el nivel de Carga de la tirada.
+          </p>
+          <p class="bodyText">
+            Se hace una tirada al empezar la escalada y otra cada 5 minutos. Fallar esta tirada significa caerse (si te
+            aseguraste de atarte bien con una cuerda, caes sólo hasta el final de la cuerda a menos que saques un fallo
+            crítico).
+          </p>
+          <table class="table table-xs w-1/2">
             <thead>
               <tr>
-                <th>Ratio</th>
-                <th>Modificador de distancia</th>
+                <th>Tipo de escalada</th>
+                <th>Modificador</th>
+                <th>Vel. en combate</th>
+                <th>Vel. normalmente</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>0.1</td>
-                <td>3.5</td>
+                <td>Escalera hacia arriba</td>
+                <td>Sin tirada</td>
+                <td>3 peldaños/seg</td>
+                <td>1 peldaño/seg</td>
               </tr>
               <tr>
-                <td>0.2</td>
-                <td>2.5</td>
+                <td>Escalera hacia abajo</td>
+                <td>Sin tirada</td>
+                <td>2 peldaños/seg</td>
+                <td>1 peldaño/seg</td>
               </tr>
               <tr>
-                <td>0.3</td>
-                <td>2</td>
+                <td>Árbol normal</td>
+                <td>+5</td>
+                <td>30 cm/seg</td>
+                <td>10 cm/seg</td>
               </tr>
               <tr>
-                <td>0.4</td>
-                <td>1.5</td>
+                <td>Montaña normal</td>
+                <td>0</td>
+                <td>15 cm/seg</td>
+                <td>3 m/min</td>
               </tr>
               <tr>
-                <td>0.8</td>
-                <td>1</td>
+                <td>Pared de piedra vertical</td>
+                <td>-3</td>
+                <td>6 cm/seg</td>
+                <td>1.20 m/min</td>
               </tr>
               <tr>
-                <td>1</td>
-                <td>0.8</td>
+                <td>Edificio de pared lisa</td>
+                <td>-3</td>
+                <td>3 cm/seg</td>
+                <td>15 cm/min</td>
               </tr>
               <tr>
-                <td>2</td>
-                <td>0.6</td>
+                <td>Cuerda hacia arriba</td>
+                <td>-2</td>
+                <td>30 cm/seg</td>
+                <td>6 m/min</td>
               </tr>
               <tr>
-                <td>3</td>
-                <td>0.4</td>
+                <td>Cuerda hacia abajo</td>
+                <td>-1</td>
+                <td>60 cm/seg</td>
+                <td>9 m/min</td>
               </tr>
             </tbody>
           </table>
-          <table class="m3-4 mt-2 w-96 table table-xs">
-            <thead>
-              <tr>
-                <th>Ratio</th>
-                <th>Modificador de distancia</th>
-              </tr>
-            </thead>
-            <tbody>        
-              <tr>
-                <td>4</td>
-                <td>0.3</td>
-              </tr>
-              <tr>
-                <td>5</td>
-                <td>0.25</td>
-              </tr>
-              <tr>
-                <td>6</td>
-                <td>0.2</td>
-              </tr>
-              <tr>
-                <td>8</td>
-                <td>0.15</td>
-              </tr>
-              <tr>
-                <td>12</td>
-                <td>0.1</td>
-              </tr>
-              <tr>
-                <td>20</td>
-                <td>0.06</td>
-              </tr>
-              <tr>
-                <td>24</td>
-                <td>0.05</td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+        </app-rules-section>
 
+        <app-rules-section [sectionTitle]="'Saltar'" [pageRef]="'L23'">
+          <p class="bodyText">
+            Cuando el obstáculo sea mucho más pequeño que tú no hace falta hacer nada especial: lo saltas con éxito. Si
+            hiciera falta, se puede calcular la distancia que un personaje puede saltar. Aunque usaremos herramientas
+            digitales que calculan este número automáticamente, la fórmula se indica aquí a modo de referencia:
+          </p>
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>
+              <i>Salto de altura</i>: (15 x Velocidad de Movimiento) - 25 centímetros (redondeando decimales). Por
+              ejemplo, para una MV de 6 y sin carrerilla, un personaje saltaría 65cm. Si se coge carrerilla, añade los
+              metros de carrerilla a tu VM en esta fórmula (el máximo que se puede saltar de esta manera es el doble de
+              lo
+              que se saltaría desde parado).
+            </li>
+            <li>
+              <i>Salto de longitud</i>: ((2 x Velocidad de Movimiento) - 3) x 30 centímetros. Por ejemplo, para una MV
+              de
+              6 sin carrerilla, un personaje saltaría 270cm. Igual que en el salto de altura, la carrerilla añade +1 a
+              MV
+              en esta fórmula por metro recorrido, y la distancia máxima que se puede saltar es el doble de la distancia
+              que se saltaría desde parado.
+            </li>
+          </ul>
+        </app-rules-section>
 
+        <app-rules-section [sectionTitle]="'Levantar peso'">
+          <p class="bodyText">
+            En el raro caso en el que sea necesario determinar si un personaje es capaz de levantar o mover un peso (por
+            ejemplo, para tirar de un carro o para saber si un bárbaro humano es capaz de levantar y lanzar a su
+            compañero
+            halfling contra sus
+            enemigos como una pelota), se puede consultar la siguiente lista, dependiendo del BL (Basic Lift = (ST x ST)
+            /
+            10 kg) del personaje. En algunos casos varios personajes podrían colaborar, en cuyo caso todos los
+            personajes
+            participantes añaden su BL para esa tarea.
+          </p>
+          <p>
+            La lista presenta varias acciones y el peso máximo de un objeto para que un personaje (o varios, si añaden
+            sus
+            BL) pueda llevarla a cabo. Por ejemplo, un personaje con BL de 10kg podría <i>levantar con una mano</i> un
+            peso de 20 kg, o podría <i>levantar con dos manos</i> un peso de 80 kg.
+          </p>
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>
+              <i>Levantar con una mano</i>: 2 x BL (tarda 2 segundos).
+            </li>
+            <li>
+              <i>Levantar con dos manos</i>: 8 x BL (tarda 4 segundos).
+            </li>
+            <li>
+              <i>Empujar y derribar</i>: 12 x BL. 24 x BL con carrerilla. Puede haber bonus adicional para objetos que
+              no
+              estén bien equilibrados.
+            </li>
+            <li>
+              <i>Cargar a la espalda</i>: 15 x BL. Por cada segundo que tu nivel de Carga supere 10 x BL, pierdes 1
+              Punto
+              de Fatiga.
+            </li>
+            <li>
+              <i>Desplazar levemente</i>: Dependendiendo de tu postura y puntos de apoyo, puede llegar hasta 50 x BL.
+            </li>
+          </ul>
+        </app-rules-section>
 
+        <app-rules-section [sectionTitle]="'Correr'">
+          <p class="bodyText">
+            Esprintar utiliza tu Velocidad de Movimiento después de aplicar penalizadores por Carga, si los hubiera. Al
+            esprintar, añade un 20% a tu VM: esa es la distancia que cubres por segundo después de correr durante un
+            segundo (al fin y al cabo, uno necesita acelerar para llegar a su máxima velocidad). Por ejemplo, con una VM
+            de 7, un personaje que quiera esprintar cubriría 7 metros el primer segundo, y 8.4 metros después y hasta
+            que
+            pare.
+          </p>
+          <p class="bodyText">
+            Esprintar es muy cansado. Cada 15 segundos esprintando, haz una tirada contra HT. Si fallas, pierdes 1 Punto
+            de Fatiga. Si bajas por debajo de 1/3 de tus PF, tu Velocidad de Movimiento se reduce a la mitad.
+          </p>
+          <p class="bodyText mt-2">
+            Para recorrer largas distancias hay que controlar el ritmo, y por ello la velocidad en estos casos es la
+            mitad
+            que la velocidad de sprint. A cambio, es menos cansado: la tirada contra HT se hace cada minuto, en vez de
+            cada 15 segundos.
+          </p>
+        </app-rules-section>
 
+        <app-rules-section [sectionTitle]="'Nadar'">
+          <p class="bodyText">
+            En la mayoría de los casos no hace falta tirar para nadar, a menos que sean situaciones excepcionales, como
+            aguas bravas o cruzando una extensión de agua a la carrera huyendo de algo o alguien. En esos casos, hay que
+            tirar contra la habilidad de <a #DUMMYLINK #SKILLS href="/">Nadar</a> al entrar al agua, y cada 5 minutos
+            después. Si fallas, empiezas a
+            ahogarte, pierdes 1 PF y debes tirar de nuevo cada 5 segundos hasta que tengas éxito en una tirada, te
+            rescaten, o llegues a 0 PF y te ahogues. Si tienes éxito en esta tirada, recuperas el control y vuelves a
+            tirar cada 5 minutos.
+          </p>
+          <p class="bodyText">
+            La mayoría de criaturas terrestres tienen una velocidad <i>máxima</i> nadando igual a su Velocidad de
+            Movimiento / 5 (redondeando hacia abajo), y una velocidad mínima de 1 metro/segundo. Si nadas a velocidad
+            máxima, la tirada de PF se hace cada minuto, en vez de cada 5.
+          </p>
+          <p class="bodyText">
+            Si caes por debajo de 1/3 Puntos de Fatiga, tu velocidad de nado se reduce a la mitad.
+          </p>
+        </app-rules-section>
 
+        <app-rules-section [sectionTitle]="'Lazar cosas'">
+          <h2 class="font-titleFont text-3xl mt-6">Lanzar cosas</h2>
+          <p class="bodyText">
+            Puedes lanzar cualquier cosa que seas capaz de levantar (ver "Levantar peso"). Tirar un objeto en combate
+            (tenga intención de ser un ataque o no) requiere una tirada de Ataque. Puedes tirar objetos que pesen hasta
+            2
+            x BL kg con una mano (algo más pesado requiere dos manos). Tira contra DX-3 si apuntas a un objetivo
+            concreto,
+            o contra DX si sólo apuntas a un área general.
+          </p>
+          <p class="bodyText">
+            Normalmente, para evitar tener que interrumpir la partida para hacer matemáticas, el DM permitirá cualquier
+            lanzamiento que considere razonable. Pero si es <i>estrictamente necesario</i> saber la distancia máxima a
+            la
+            que un personaje puede lanzar algo, se puede usar el siguiente procedimiento:
+          </p>
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>
+              Divide el peso del objeto por tu BL para encontrar el "ratio".
+            </li>
+            <li>
+              Busca ese ratio en la columna "Ratio de la siguiente tabla". Si ese resultado está entre dos valores en la
+              tabla, usa el mayor.
+            </li>
+            <li>
+              Anota el "modificador de distancia" de ese ratio.
+            </li>
+            <li>
+              Multiplica tu ST por el modificador de distancia anterior. El resultado es la distancia máxima en metros
+              que
+              tu personaje podrá lanzar ese objeto.
+            </li>
+          </ul>
 
+          <div class="flex">
+            <table class="m3-4 mt-2 w-96 mr-10 table table-xs">
+              <thead>
+                <tr>
+                  <th>Ratio</th>
+                  <th>Modificador de distancia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>0.1</td>
+                  <td>3.5</td>
+                </tr>
+                <tr>
+                  <td>0.2</td>
+                  <td>2.5</td>
+                </tr>
+                <tr>
+                  <td>0.3</td>
+                  <td>2</td>
+                </tr>
+                <tr>
+                  <td>0.4</td>
+                  <td>1.5</td>
+                </tr>
+                <tr>
+                  <td>0.8</td>
+                  <td>1</td>
+                </tr>
+                <tr>
+                  <td>1</td>
+                  <td>0.8</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>0.6</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>0.4</td>
+                </tr>
+              </tbody>
+            </table>
+            <table class="m3-4 mt-2 w-96 table table-xs">
+              <thead>
+                <tr>
+                  <th>Ratio</th>
+                  <th>Modificador de distancia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>4</td>
+                  <td>0.3</td>
+                </tr>
+                <tr>
+                  <td>5</td>
+                  <td>0.25</td>
+                </tr>
+                <tr>
+                  <td>6</td>
+                  <td>0.2</td>
+                </tr>
+                <tr>
+                  <td>8</td>
+                  <td>0.15</td>
+                </tr>
+                <tr>
+                  <td>12</td>
+                  <td>0.1</td>
+                </tr>
+                <tr>
+                  <td>20</td>
+                  <td>0.06</td>
+                </tr>
+                <tr>
+                  <td>24</td>
+                  <td>0.05</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </app-rules-section>
+      </app-rules-section>
+
+      <app-rules-section [sectionTitle]="'Acciones mentales'" [pageRef]="'L24'">
+        <h2 class="font-titleFont text-3xl mt-6">Detectar</h2>
+        <p class="bodyText">
+          Las tiradas de Detección ("Sense" en libros oficiales) son una grupo de tiradas que se hacen cuando se intenta
+          usar uno de los sentidos para detectar o percibir algo. Incluye tiradas de Visión, de Oído, y de Gusto/Olfato.
+          Para todas estas tiradas se usa el atributo secundario "Percepción", pero puede ser que determinados efectos
+          influyan o modifiquen una tirada en concreto pero las otras no, con lo que es importante mantener una
+          distinción entre las tres.
+        </p>
+        <p class="bodyText mt-2">
+          Una tirada de Detección exitosa significa que te das cuenta de algo, pero en ocasiones el DM puede exigir una
+          segunda tirada para <i>entender</i> qué es lo que has percibido (por ejemplo, para darte cuenta de que ese
+          "canto de pájaro" es en realidad el aviso que una tribu primitiva de cazadores se hace entre sí para coordinar
+          una emboscada). Esta tirada es contra IQ para detalles que cualquiera podría deducir, o contra una habilidad
+          apropiada si es necesario ser un experto para entenderlo.
+        </p>
+        <p class="bodyText mt-2">
+          Si tienes la ventaja <a #DUMMYLINK #ADVANTAGE href="/">"Sentido de Peligro"</a> y fallas una tirada de
+          Detección o comprensión para notar
+          algo peligroso, el DM hará secretamente una tirada de Percepción por ti. Si tiene éxito, percibirás el
+          peligro de todos modos.
+        </p>
+
+        <app-rules-section [sectionTitle]="'Visión'">
+          <p class="bodyText">
+            Haz una tirada de Visión siempre que sea importante que veas algo.
+            Cuando intentes detectar algo que está deliberadamente oculto, el DM puede tratar esta tirada como una
+            tirada enfrentada contra una habilidad de ocultamiento (<a #DUMMYLINK #SKILLS href="/">Camuflaje</a>, <a
+              #DUMMYLINK #SKILLS href="/">Ocultar</a>, etc), y puede permitir —o
+            requerir— que una habilidad como Observación o Búsqueda reemplace a Percepción para la tirada.
+          </p>
+        </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Oído'">
+          <p class="bodyText">
+            Haz una tirada de Oído siempre que sea importante que oigas algo.
+            El DM a menudo requerirá una tirada de comprensión adicional para entender una conversación, sobre todo si
+            es en un idioma extranjero
+          </p>
+          <p class="bodyText">
+            Cuando intentes oír a alguien que está intentando moverse silenciosamente, el DM puede tratar esta tirada
+            como una tirada enfrentada contra su habilidad de <a #DUMMYLINK #SKILLS href="/">Sigilo</a>. Si estás
+            intentando escuchar de forma <i>activa</i>, el DM puede permitirte utilizar la habilidad de <a #DUMMYLINK
+              #SKILLS href="/">Observación</a> en vez de Percepción.
+          </p>
+        </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Gusto/Olfato'">
+          <p class="bodyText">
+            Son dos caras de la misma moneda. Haz una tirada de Gusto para detectar sabores, y Olfato para detectar olores.
+          </p>
+        </app-rules-section>
       </app-rules-section>
     </app-rules-section>
   </div>
