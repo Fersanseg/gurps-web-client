@@ -473,7 +473,7 @@
           primer turno), se considera que tu maniobra elegida es No hacer nada.
         </p>
 
-        <app-rules-section [sectionTitle]="'Apuntar'">
+        <app-rules-section [sectionTitle]="'Apuntar'" [pageRef]="'L25'">
           <p class="bodyText">
             Esta maniobra se utiliza para apuntar con un arma a distancia (o un dispositivo como un telescopio). Debes
             elegir un objetivo específico. No puedes apuntar a algo que no puedas ver o detectar de alguna otra manera.
@@ -494,7 +494,7 @@
           </p>
         </app-rules-section>
 
-        <app-rules-section [sectionTitle]="'Atacar'">
+        <app-rules-section [sectionTitle]="'Atacar'" [pageRef]="'L26'">
           <p class="bodyText">
             Utiliza esta maniobra para realizar un ataque armado o desarmado en combate cuerpo a cuerpo, o para usar un
             arma arrojadiza o a distancia en combate a distancia. Para usar un arma para atacar, esta debe estar lista
@@ -507,7 +507,7 @@
           </p>
         </app-rules-section>
 
-        <app-rules-section [sectionTitle]="'Ataque total'">
+        <app-rules-section [sectionTitle]="'Ataque total'" [pageRef]="'L26'">
           <p class="bodyText">
             Atacas a un enemigo con un arma preparada con todo lo que tienes, sin importar tus defensas. Si haces un
             ataque a distancia, obtienes un bonus de +1 para dar. Si el ataque es cuerpo a cuerpo, debes elegir una de
@@ -529,6 +529,77 @@
               daño de golpe basados en ST.
             </li>
           </ul>
+        </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Cambiar postura'" [pageRef]="'L25'">
+          <p class="bodyText">
+            Con esta maniobra puedes cambiar tu postura o posición (tumbado, arrodillado, etc). Diferentes posturas
+            tienen
+            diferentes efectos. Cambiar de una postura a otra tarda un segundo (es decir, al contrario que las reglas
+            oficiales, se puede cambiar de cualquier postura a cualquier otra con una sola maniobra de Cambiar postura).
+            La única excepción a esto es la posición "tumbado": para ponerse de pie desde esta postura, primero hay que
+            cambiar a otra.
+          </p>
+          <p class="bodyText mt-2">
+            La siguiente tabla indica los efectos de cada postura (el modificador cuando <i>haces</i> un ataque en esa
+            postura, el modificador a todas las tiradas de defensa, el modificador para <i>darte</i> con un ataque a
+            distancia, y el modificador a tu Velocidad de Movimiento)
+          </p>
+          <table class="mt-2 table table-xs max-w-[44rem]">
+            <thead>
+              <tr>
+                <th>Postura</th>
+                <th>Ataque</th>
+                <th>Defensa</th>
+                <th>vs ataque a distancia</th>
+                <th>Movimiento</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>De pie</td>
+                <td>Normal</td>
+                <td>Normal</td>
+                <td>Normal</td>
+                <td>Normal; puede esprintar</td>
+              </tr>
+              <tr>
+                <td>Agachado</td>
+                <td>-2</td>
+                <td>Normal</td>
+                <td>-2</td>
+                <td>2/3</td>
+              </tr>
+              <tr>
+                <td>Arrodillado</td>
+                <td>-2</td>
+                <td>-2</td>
+                <td>-2</td>
+                <td>1/3</td>
+              </tr>
+              <tr>
+                <td>Gateando</td>
+                <td>-4</td>
+                <td>-3</td>
+                <td>-2</td>
+                <td>1/3</td>
+              </tr>
+              <tr>
+                <td>Sentado</td>
+                <td>-2</td>
+                <td>-2</td>
+                <td>-2</td>
+                <td>0</td>
+              </tr>
+              <tr>
+                <td>Tumbado</td>
+                <td>-4</td>
+                <td>-3</td>
+                <td>-2</td>
+                <td>1 m/seg</td>
+              </tr>
+            </tbody>
+          </table>
         </app-rules-section>
 
       </app-rules-section>
