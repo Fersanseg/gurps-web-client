@@ -493,6 +493,44 @@
             recibes un bono adicional: +1 por dos segundos de Apuntar en total, o +2 por tres o más segundos.
           </p>
         </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Atacar'">
+          <p class="bodyText">
+            Utiliza esta maniobra para realizar un ataque armado o desarmado en combate cuerpo a cuerpo, o para usar un
+            arma arrojadiza o a distancia en combate a distancia. Para usar un arma para atacar, esta debe estar lista
+            (ver maniobra "Preparar").
+            Si estás usando un arma cuerpo a cuerpo o un ataque desarmado, tu objetivo debe estar al alcance. Resuelve
+            el ataque como se explica en Ataques Cuerpo a Cuerpo.
+            Si estás usando un arma a distancia, tu objetivo debe estar dentro del Rango Máximo del arma. Resuelve el
+            ataque de acuerdo a los Ataques a Distancia. Si realizaste una maniobra de Apuntar el turno
+            pasado, tendrás un bonus para dar.
+          </p>
+        </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Ataque total'">
+          <p class="bodyText">
+            Atacas a un enemigo con un arma preparada con todo lo que tienes, sin importar tus defensas. Si haces un
+            ataque a distancia, obtienes un bonus de +1 para dar. Si el ataque es cuerpo a cuerpo, debes elegir una de
+            estas tres opciones para tu ataque:
+          </p>
+
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>
+              <i>Ataque determinado</i>: Haz un ataque con un bonus de +4 a dar.
+            </li>
+            <li>
+              <i>Ataque doble</i>: Haz dos ataques contra el mismo objetivo <i>sólo si</i> blandes dos armas preparadas
+              o un arma que no debe ser preparada después de cada uso. Los ataques con un arma en la "mano mala" sufren
+              un -4 a dar a menos que tengas la Ventaja <a #DUMMYLINK #ADVANTAGE href="/">Ambidiestro</a>.
+            </li>
+            <li>
+              <i>Ataque fuerte</i>: Haz un ataque normal. Si aciertas, tienes un +2 a daño (o +1 por cada dado de daño
+              del arma, lo que sea mejor). Esto sólo se aplica a ataques cuerpo a cuerpo que hagan daño de estocada o
+              daño de golpe basados en ST.
+            </li>
+          </ul>
+        </app-rules-section>
+
       </app-rules-section>
     </app-rules-section>
 
