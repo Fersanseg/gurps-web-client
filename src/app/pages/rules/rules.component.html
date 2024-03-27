@@ -673,56 +673,57 @@
       </app-rules-section>
 
       <app-rules-section [sectionTitle]="'Acciones mentales'" [pageRef]="'L24'">
-        <h2 class="font-titleFont text-3xl">Detectar</h2>
-        <p class="bodyText">
-          Las tiradas de Detección ("Sense" en libros oficiales) son una grupo de tiradas que se hacen cuando se intenta
-          usar uno de los sentidos para detectar o percibir algo. Incluye tiradas de Visión, de Oído, y de Gusto/Olfato.
-          Para todas estas tiradas se usa el atributo secundario "Percepción", pero puede ser que determinados efectos
-          influyan o modifiquen una tirada en concreto pero las otras no, con lo que es importante mantener una
-          distinción entre las tres.
-        </p>
-        <p class="bodyText mt-2">
-          Una tirada de Detección exitosa significa que te das cuenta de algo, pero en ocasiones el DM puede exigir una
-          segunda tirada para <i>entender</i> qué es lo que has percibido (por ejemplo, para darte cuenta de que ese
-          "canto de pájaro" es en realidad el aviso que una tribu primitiva de cazadores se hace entre sí para coordinar
-          una emboscada). Esta tirada es contra IQ para detalles que cualquiera podría deducir, o contra una habilidad
-          apropiada si es necesario ser un experto para entenderlo.
-        </p>
-        <p class="bodyText mt-2">
-          Si tienes la ventaja <a #DUMMYLINK #ADVANTAGE href="/">"Sentido de Peligro"</a> y fallas una tirada de
-          Detección o comprensión para notar
-          algo peligroso, el DM hará secretamente una tirada de Percepción por ti. Si tiene éxito, percibirás el
-          peligro de todos modos.
-        </p>
-
-        <app-rules-section [sectionTitle]="'Visión'">
+        <app-rules-section [sectionTitle]="'Detectar'">
           <p class="bodyText">
-            Haz una tirada de Visión siempre que sea importante que veas algo.
-            Cuando intentes detectar algo que está deliberadamente oculto, el DM puede tratar esta tirada como una
-            tirada enfrentada contra una habilidad de ocultamiento (<a #DUMMYLINK #SKILLS href="/">Camuflaje</a>, <a
-              #DUMMYLINK #SKILLS href="/">Ocultar</a>, etc), y puede permitir —o
-            requerir— que una habilidad como Observación o Búsqueda reemplace a Percepción para la tirada.
+            Las tiradas de Detección ("Sense" en libros oficiales) son una grupo de tiradas que se hacen cuando se intenta
+            usar uno de los sentidos para detectar o percibir algo. Incluye tiradas de Visión, de Oído, y de Gusto/Olfato.
+            Para todas estas tiradas se usa el atributo secundario "Percepción", pero puede ser que determinados efectos
+            influyan o modifiquen una tirada en concreto pero las otras no, con lo que es importante mantener una
+            distinción entre las tres.
           </p>
-        </app-rules-section>
-
-        <app-rules-section [sectionTitle]="'Oído'">
-          <p class="bodyText">
-            Haz una tirada de Oído siempre que sea importante que oigas algo.
-            El DM a menudo requerirá una tirada de comprensión adicional para entender una conversación, sobre todo si
-            es en un idioma extranjero
+          <p class="bodyText mt-2">
+            Una tirada de Detección exitosa significa que te das cuenta de algo, pero en ocasiones el DM puede exigir una
+            segunda tirada para <i>entender</i> qué es lo que has percibido (por ejemplo, para darte cuenta de que ese
+            "canto de pájaro" es en realidad el aviso que una tribu primitiva de cazadores se hace entre sí para coordinar
+            una emboscada). Esta tirada es contra IQ para detalles que cualquiera podría deducir, o contra una habilidad
+            apropiada si es necesario ser un experto para entenderlo.
           </p>
-          <p class="bodyText">
-            Cuando intentes oír a alguien que está intentando moverse silenciosamente, el DM puede tratar esta tirada
-            como una tirada enfrentada contra su habilidad de <a #DUMMYLINK #SKILLS href="/">Sigilo</a>. Si estás
-            intentando escuchar de forma <i>activa</i>, el DM puede permitirte utilizar la habilidad de <a #DUMMYLINK
-              #SKILLS href="/">Observación</a> en vez de Percepción.
+          <p class="bodyText mt-2">
+            Si tienes la ventaja <a #DUMMYLINK #ADVANTAGE href="/">"Sentido de Peligro"</a> y fallas una tirada de
+            Detección o comprensión para notar
+            algo peligroso, el DM hará secretamente una tirada de Percepción por ti. Si tiene éxito, percibirás el
+            peligro de todos modos.
           </p>
-        </app-rules-section>
-
-        <app-rules-section [sectionTitle]="'Gusto/Olfato'">
-          <p class="bodyText">
-            Son dos caras de la misma moneda. Haz una tirada de Gusto para detectar sabores, y Olfato para detectar olores.
-          </p>
+  
+          <app-rules-section [sectionTitle]="'Visión'">
+            <p class="bodyText">
+              Haz una tirada de Visión siempre que sea importante que veas algo.
+              Cuando intentes detectar algo que está deliberadamente oculto, el DM puede tratar esta tirada como una
+              tirada enfrentada contra una habilidad de ocultamiento (<a #DUMMYLINK #SKILLS href="/">Camuflaje</a>, <a
+                #DUMMYLINK #SKILLS href="/">Ocultar</a>, etc), y puede permitir —o
+              requerir— que una habilidad como Observación o Búsqueda reemplace a Percepción para la tirada.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Oído'">
+            <p class="bodyText">
+              Haz una tirada de Oído siempre que sea importante que oigas algo.
+              El DM a menudo requerirá una tirada de comprensión adicional para entender una conversación, sobre todo si
+              es en un idioma extranjero
+            </p>
+            <p class="bodyText">
+              Cuando intentes oír a alguien que está intentando moverse silenciosamente, el DM puede tratar esta tirada
+              como una tirada enfrentada contra su habilidad de <a #DUMMYLINK #SKILLS href="/">Sigilo</a>. Si estás
+              intentando escuchar de forma <i>activa</i>, el DM puede permitirte utilizar la habilidad de <a #DUMMYLINK
+                #SKILLS href="/">Observación</a> en vez de Percepción.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Gusto/Olfato'">
+            <p class="bodyText">
+              Son dos caras de la misma moneda. Haz una tirada de Gusto para detectar sabores, y Olfato para detectar olores.
+            </p>
+          </app-rules-section>
         </app-rules-section>
       </app-rules-section>
     </app-rules-section>
