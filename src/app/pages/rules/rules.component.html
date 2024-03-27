@@ -77,6 +77,75 @@
           en su tirada y el otro no.
         </p>
       </app-rules-section>
+
+      <app-rules-section [sectionTitle]="'Tiradas de reacción'">
+        <p class="bodyText">
+          Esta es una regla más para el DM que para los jugadores, pero se incluye por transparencia.
+        </p>
+        <p class="bodyText">
+          Cuando los PCs se encuentran con un NPC cuya reacción/primeras impresiones a ellos no está predeterminada por
+          motivos narrativos, el DM puede hacer una "tirada de reacción" con 3d. Esta tirada es diferente: en este caso,
+          cuanto mayor sea la tirada, mejor. Tampoco hay un "número objetivo" que hay que superar, y por tanto, los
+          modificadores que se apliquen aquí se hacen directamente sobre la tirada, en vez de sobre el número objetivo
+          como se hace normalmente.
+        </p>
+        <p class="bodyText">
+          Esta tirada la hace el DM <u>en secreto</u>, y no revelará su resultado a los jugadores. No tiene gracia que
+          el granjero parezca amable y dispuesto a ayudar, pero que los jugadores sepan que está mintiendo porque la
+          tirada de reacción ha sido baja!
+        </p>
+        <p class="bodyText mt-2">
+          Hay varios factores que pueden modificar la tirada, como la apariencia de los PCs (especialmente el encargado
+          de hablar), sus modales, labia, etc. También pueden afectar sesgos y manías del NPC en concreto (p. ej. un
+          mercader cuya familia fue asesinada por goblins cuando era niño tenderá a tener una peor impresión de
+          cualquier goblin), e incluso <i>la interpretación del jugador</i>. Si el jugador que hace de interlocutor
+          interpreta especialmente bien a su personaje y hace un esfuerzo por rolear la interacción, el DM puede
+          recompensar a los jugadores añadiendo un bonus a la tirada de reacción (y lo mismo puede pasar si el jugador
+          es abiertamente hostil o maleducado!).
+        </p>
+        <p class="bodyText">
+          A modo de referencia, se incluye una tabla con recomendaciones para los diferentes resultados de las tiradas
+          de reacción. No son reglas estrictas, sino que es una guía:
+        </p>
+
+        <ul class="bodyText text-base list-disc ml-4 mt-4">
+          <li>
+            <i>0 o menos: Desastroso</i>. El NPC odia a los PCs y actuará en contra de sus intereses lo más posible.
+            Todas las cartas están sobre la mesa: agresiones, traición, ridículo público, ignorar súplicas de vida o
+            muerte...
+          </li>
+          <li>
+            <i>1 a 3: Muy malo</i>. Los personajes desagradan al NPC, que actuará en su contra si es conveniente
+            hacerlo: atacando, ofreciendo términos injustos en una transacción, etc.
+          </li>
+          <li>
+            <i>4 a 6: Malo</i>. El NPC no siente nada por los personajes y actuará en su contra (como se mencionó
+            anteriormente), si puede obtener beneficios al hacerlo.
+          </li>
+          <li>
+            <i>7 a 9: Pobre</i>. El NPC no está impresionado. Puede hacer amenazas, exigir un soborno antes de ofrecer
+            ayuda, o algo similar.
+          </li>
+          <li>
+            <i>10 a 12: Neutral</i>. El NPC ignora a los personajes tanto como sea posible. Está totalmente
+            desinteresado. Las transacciones se llevarán a cabo de manera suave y rutinaria, siempre que se respeten los
+            protocolos.
+          </li>
+          <li>
+            <i>13 a 15: Bueno</i>. El NPC simpatiza con los personajes y será útil dentro de límites normales y
+            cotidianos. Se concederán solicitudes razonables.
+          </li>
+          <li>
+            <i>16 a 18: Muy bueno</i>. El NPC piensa muy bien de los personajes y será muy servicial y amigable,
+            ofreciendo ayuda y términos favorables libremente en la mayoría de las cosas.
+          </li>
+          <li>
+            <i>19 o más: Excelente</i>. El NPC está extremadamente impresionado por los personajes y actuará en su mejor
+            interés en todo momento, dentro de los límites de su propia capacidad, incluso arriesgando su vida, riqueza
+            o reputación.
+          </li>
+        </ul>
+      </app-rules-section>
     </app-rules-section>
 
     <app-rules-section [sectionTitle]="'Personajes'" [pageRef]="'L4'">
@@ -675,16 +744,20 @@
       <app-rules-section [sectionTitle]="'Acciones mentales'" [pageRef]="'L24'">
         <app-rules-section [sectionTitle]="'Detectar'">
           <p class="bodyText">
-            Las tiradas de Detección ("Sense" en libros oficiales) son una grupo de tiradas que se hacen cuando se intenta
-            usar uno de los sentidos para detectar o percibir algo. Incluye tiradas de Visión, de Oído, y de Gusto/Olfato.
+            Las tiradas de Detección ("Sense" en libros oficiales) son una grupo de tiradas que se hacen cuando se
+            intenta
+            usar uno de los sentidos para detectar o percibir algo. Incluye tiradas de Visión, de Oído, y de
+            Gusto/Olfato.
             Para todas estas tiradas se usa el atributo secundario "Percepción", pero puede ser que determinados efectos
             influyan o modifiquen una tirada en concreto pero las otras no, con lo que es importante mantener una
             distinción entre las tres.
           </p>
           <p class="bodyText mt-2">
-            Una tirada de Detección exitosa significa que te das cuenta de algo, pero en ocasiones el DM puede exigir una
+            Una tirada de Detección exitosa significa que te das cuenta de algo, pero en ocasiones el DM puede exigir
+            una
             segunda tirada para <i>entender</i> qué es lo que has percibido (por ejemplo, para darte cuenta de que ese
-            "canto de pájaro" es en realidad el aviso que una tribu primitiva de cazadores se hace entre sí para coordinar
+            "canto de pájaro" es en realidad el aviso que una tribu primitiva de cazadores se hace entre sí para
+            coordinar
             una emboscada). Esta tirada es contra IQ para detalles que cualquiera podría deducir, o contra una habilidad
             apropiada si es necesario ser un experto para entenderlo.
           </p>
@@ -694,7 +767,7 @@
             algo peligroso, el DM hará secretamente una tirada de Percepción por ti. Si tiene éxito, percibirás el
             peligro de todos modos.
           </p>
-  
+
           <app-rules-section [sectionTitle]="'Visión'">
             <p class="bodyText">
               Haz una tirada de Visión siempre que sea importante que veas algo.
@@ -704,7 +777,7 @@
               requerir— que una habilidad como Observación o Búsqueda reemplace a Percepción para la tirada.
             </p>
           </app-rules-section>
-  
+
           <app-rules-section [sectionTitle]="'Oído'">
             <p class="bodyText">
               Haz una tirada de Oído siempre que sea importante que oigas algo.
@@ -718,12 +791,35 @@
                 #SKILLS href="/">Observación</a> en vez de Percepción.
             </p>
           </app-rules-section>
-  
+
           <app-rules-section [sectionTitle]="'Gusto/Olfato'">
             <p class="bodyText">
-              Son dos caras de la misma moneda. Haz una tirada de Gusto para detectar sabores, y Olfato para detectar olores.
+              Son dos caras de la misma moneda. Haz una tirada de Gusto para detectar sabores, y Olfato para detectar
+              olores.
             </p>
           </app-rules-section>
+        </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Influenciar'">
+          <p class="bodyText">
+            Una tirada de Influencia es un intento <i>deliberado</i> de conseguir una reacción positiva de un NPC (ver
+            "Tiradas de reacción"). Un personaje con una habilidad apropiada (a decisión del DM) puede utilizarla en
+            lugar de una tirada de reacción corriente. Ejemplos de habilidades apropiadas generalmente son
+            <a #DUMMYLINK #SKILLS href="/">Diplomacia</a>, <a #DUMMYLINK #SKILLS href="/">Engatusar</a>,
+            <a #DUMMYLINK #SKILLS href="/">Intimidación</a>, <a #DUMMYLINK #SKILLS href="/">Saber-hacer</a>, o
+            <a #DUMMYLINK #SKILLS href="/">Callejería</a>, aunque el DM puede permitir una habilidad especialmente
+            apropiada en una situación determinada (por ejemplo, <a #DUMMYLINK #SKILLS href="/">Arquitectura</a> para
+            intentar ganarse el favor de un arquitecto influyente).
+          </p>
+          <p class="bodyText mt-2">
+            Haz una tirada enfrentada con la habilidad que vas a usar para influenciar contra la Voluntad del NPC. Si
+            tienes éxito, consigues una reacción Buena del NPC. Pero si fallas, el NPC se resiente de tu intento de
+            manipulación, y la reacción es Mala (Muy Mala si has usado Intimidación).
+          </p>
+          <p class="bodyText">
+            <i>Excepción:</i> Si usas Diplomacia, además de tu tirada de influencia, el DM también hace una tirada de
+            reacción como siempre, y la reacción del NPC será el resultado más favorable para los jugadores.
+          </p>
         </app-rules-section>
       </app-rules-section>
     </app-rules-section>
