@@ -1,4 +1,4 @@
-<div class="my-6 overflow-hidden">
+<div class="my-6 overflow-hidden" [ngClass]="stylesOverrides">
   <div class="flex items-center cursor-pointer z-[2]" (click)="toggleSection()">
     <span class="bodyText text-2xl px-[0.6rem] mb-1 transition-colors duration-300 ease-in-out" 
       [ngClass]="isShown ? 'text-secondary' : ''"

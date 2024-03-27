@@ -14,6 +14,7 @@ import { rotateAnimation } from '../../animations/rotate';
 export class RulesSectionComponent {
   @Input() public sectionTitle!: string;
   @Input() public pageRef?: string;
+  @Input() public stylesOverrides: string = "";
 
   public isShown: boolean = false;
 

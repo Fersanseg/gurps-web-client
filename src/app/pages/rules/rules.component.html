@@ -372,7 +372,7 @@
         A continuación se listan algunas actividades comunes que surgen de vez en cuando a lo largo de una aventura.
       </p>
       <app-rules-section [sectionTitle]="'Acciones físicas'">
-        <app-rules-section [sectionTitle]="'Escalar'">
+        <app-rules-section [sectionTitle]="'Escalar'" [stylesOverrides]="'mt-3'">
           <p class="bodyText">
             Escalar cualquier cosa más difícil que subir por una escalera de mano requiere una tirada contra <a
               #DUMMYLINK #SKILLS href="/">Escalada</a>.
@@ -554,8 +554,7 @@
           </p>
         </app-rules-section>
 
-        <app-rules-section [sectionTitle]="'Lazar cosas'">
-          <h2 class="font-titleFont text-3xl mt-6">Lanzar cosas</h2>
+        <app-rules-section [sectionTitle]="'Lazar cosas'" [stylesOverrides]="'mb-0'">
           <p class="bodyText">
             Puedes lanzar cualquier cosa que seas capaz de levantar (ver "Levantar peso"). Tirar un objeto en combate
             (tenga intención de ser un ataque o no) requiere una tirada de Ataque. Puedes tirar objetos que pesen hasta
@@ -589,7 +588,7 @@
           </ul>
 
           <div class="flex">
-            <table class="m3-4 mt-2 w-96 mr-10 table table-xs">
+            <table class="m3-4 mt-2 w-96 mr-10 table table-xs pb-0">
               <thead>
                 <tr>
                   <th>Ratio</th>
@@ -631,7 +630,7 @@
                 </tr>
               </tbody>
             </table>
-            <table class="m3-4 mt-2 w-96 table table-xs">
+            <table class="m3-4 mt-2 w-96 table table-xs pb-0">
               <thead>
                 <tr>
                   <th>Ratio</th>
@@ -674,7 +673,7 @@
       </app-rules-section>
 
       <app-rules-section [sectionTitle]="'Acciones mentales'" [pageRef]="'L24'">
-        <h2 class="font-titleFont text-3xl mt-6">Detectar</h2>
+        <h2 class="font-titleFont text-3xl">Detectar</h2>
         <p class="bodyText">
           Las tiradas de Detección ("Sense" en libros oficiales) son una grupo de tiradas que se hacen cuando se intenta
           usar uno de los sentidos para detectar o percibir algo. Incluye tiradas de Visión, de Oído, y de Gusto/Olfato.
