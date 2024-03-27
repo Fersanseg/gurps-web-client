@@ -821,6 +821,26 @@
             reacción como siempre, y la reacción del NPC será el resultado más favorable para los jugadores.
           </p>
         </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Voluntad'">
+          <p class="bodyText">
+            El DM puede pedir una tirada contra tu Voluntad cuando te enfrentes a situaciones especialmente estresantes
+            o grandes distracciones. En un éxito puedes actuar con normalidad, pero en un fallo te dejas llevar por el
+            miedo, te distraes, te derrumbas ante la presión, etc.
+          </p>
+
+          <h2 class="font-titleFont text-3xl mt-6">Tirada de Miedo</h2>
+          <p class="bodyText">
+            Es una tirada de Voluntad específica para situaciones especialmente aterradoras. No se hacen tiradas de
+            Miedo para cosas "ordinarias" que asustan, sino para eventos inusuales y especialmente aterradores que
+            podrían aturdir o incluso dejar cicatrices mentales permanentes.
+          </p>
+          <p class="bodyText">
+            Se añaden todos los modificadores pertinentes a la tirada de Miedo. En un fallo, debes tirar 3d y añadirle
+            el margen de fallo y comparar el resultado con la <a #DUMMYLINK #TABLES href="/">tabla de miedo</a> para ver
+            qué te ocurre
+          </p>
+        </app-rules-section>
       </app-rules-section>
     </app-rules-section>
   </div>
