@@ -283,7 +283,7 @@
           <li>
             <u>Rapidez</u>: es una medida de tus reflejos y rapidez física general. Ayuda a determinar tu velocidad de
             carrera, tu posibilidad de esquivar un ataque y el orden en el que actúas en combate (una alta Rapidez te
-            permitirá "reaccionar más rápido" que tus enemigos). Para calcular la Velocidad Básica, suma tu
+            permitirá "reaccionar más rápido" que tus enemigos). Para calcular la Rapidez, suma tu
             HT y DX juntos, y luego divide el total por 4. No lo redondees.
           </li>
           <li>
@@ -434,6 +434,66 @@
       <p class="bodyText text-base mt-2">
         *: BL ("Basic Lift" en libros oficiales) es (STxST)/10 kg.
       </p>
+    </app-rules-section>
+
+    <app-rules-section [sectionTitle]="'Combate'" [pageRef]="'L24'">
+      <p class="bodyText">
+        Cuando una situación de combate es inevitable, la acción pasa a medirse en turnos de 1 segundo de duración.
+        Todos los participantes deciden lo que quieren hacer ese turno y cuando todos hayan actuado, se considera que ha
+        pasado un segundo en la partida. Aunque a nivel del juego la acción se desarrolla secuencialmente (un personaje
+        hace su acción, luego otro, y así sucesivamente), "dentro del juego" la acción se desarrolla al mismo tiempo. Es
+        decir, aunque para nosotros en la vida real las acciones vayan una detrás de otra, para los personajes todo
+        ocurre al mismo tiempo.
+      </p>
+      <p class="bodyText mt-2">
+        El orden de los turnos se determina cuando empieza el combate y no cambia hasta que termine. Los participantes
+        actúan por orden descendiente de Rapidez. Si dos combatientes tienen la misma Rapidez, va antes quien tenga más
+        DX. Si aún así hay empate, se hace una tirada de dados para determinar quién va antes.
+      </p>
+      <p class="bodyText">
+        Para un combatiente, un turno es el período de tiempo de 1 segundo entre que elige una Maniobra y la próxima vez
+        que puede elegir una nueva Maniobra.
+      </p>
+
+      <app-rules-section [sectionTitle]="'Maniobras'" [pageRef]="'L25'">
+        <p class="bodyText">
+          Una Maniobra es una acción que puedes tomar en tu turno. En cada turno debes elegir una de las siguientes
+          maniobras: <i>Apuntar</i>, <i>Atacar</i>, <i>Ataque total</i>, <i>Cambiar postura</i>, <i>Concentrarse</i>,
+          <i>Defensa total</i>, <i>Moverse</i>, <i>Moverse y atacar</i>, <i>No hacer nada</i> o <i>Prepararse</i>. Lo
+          que elijas determina qué haces o puedes hacer en tu turno y decide tus opciones en cuanto a movimiento y
+          defensa activa (tu capacidad para esquivar, bloquear, o desviar un ataque).
+        </p>
+        <p class="bodyText">
+          Para propósitos de defensas activas, tu maniobra se considera que está en efecto hasta que elijas otra en tu
+          siguiente turno. Por ejemplo: si seleccionas Defensa total, sus beneficios se aplican si te atacan después de
+          tu turno y hasta tu siguiente turno.
+        </p>
+        <p class="bodyText">
+          Si te atacan antes de que puedas elegir una maniobra (p. ej. al principio de un combate antes de que llegue tu
+          primer turno), se considera que tu maniobra elegida es No hacer nada.
+        </p>
+
+        <app-rules-section [sectionTitle]="'Apuntar'">
+          <p class="bodyText">
+            Esta maniobra se utiliza para apuntar con un arma a distancia (o un dispositivo como un telescopio). Debes
+            elegir un objetivo específico. No puedes apuntar a algo que no puedas ver o detectar de alguna otra manera.
+          </p>
+          <p class="bodyText">
+            Especifica el arma con la que estás apuntando y tu objetivo. Si después de Apuntar haces un Ataque
+            o un Ataque total, con la misma arma contra el mismo objetivo, obtienes un bonus para dar. Suma la
+            Precisión (Prec) del arma a tu habilidad con el arma con el que vas a atacar.
+          </p>
+          <p class="bodyText mt-2">
+            Si <i>Sujetas firmemente</i> una ballesta, obtienes un extra de +1 a la Precisión. Una ballesta está Sujeta
+            firmemente si puedesapoyarla en un saco de arena, una pared baja, tiene un bípode, etc. Un arma de una mano
+            se considera Sujeta firmemente si se utiliza con ambas manos.
+          </p>
+          <p class="bodyText">
+            Si Apuntas durante más de un segundo (es decir, eliges la maniobra de Apuntar varias veces seguidas),
+            recibes un bono adicional: +1 por dos segundos de Apuntar en total, o +2 por tres o más segundos.
+          </p>
+        </app-rules-section>
+      </app-rules-section>
     </app-rules-section>
 
     <app-rules-section [sectionTitle]="'Acciones'" [pageRef]="'L22'">
@@ -838,7 +898,7 @@
           <p class="bodyText">
             Se añaden todos los modificadores pertinentes a la tirada de Miedo. En un fallo, debes tirar 3d y añadirle
             el margen de fallo y comparar el resultado con la <a #DUMMYLINK #TABLES href="/">tabla de miedo</a> para ver
-            qué te ocurre
+            qué te ocurre.
           </p>
         </app-rules-section>
       </app-rules-section>
