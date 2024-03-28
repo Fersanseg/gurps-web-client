@@ -756,6 +756,55 @@
             hachuelas, dardos, etc. A efectos prácticos, las reglas son las mismas que para un arma a distancia
             convencional.
           </p>
+          <p class="bodyText mt-2">
+            Un ataque a distancia recibe penalizadores dependiendo de lo lejos que esté el obejtivo. Las reglas básicas
+            como se indican en "L28" son bastante complejas y en mi opinión supondrían una importante interrupción del
+            juego cada vez que alguien quiera hacer un ataque a distancia, así que en su lugar se usa la siguiente
+            tabla. Si el objetivo está dentro de uno de estos rangos establecidos, el ataque a distancia obtiene el
+            penalizador indicado.
+          </p>
+          <table class="table table-xs max-w-[30rem]">
+            <thead>
+              <tr>
+                <th>Rango</th>
+                <th>Distancia</th>
+                <th>Penalizador</th>
+                <th>Descripción</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Inmediato</td>
+                <td>0-5 metros</td>
+                <td>0</td>
+                <td>Al alcance de la mano, o casi</td>
+              </tr>
+              <tr>
+                <td>Cercano</td>
+                <td>6-20 metros</td>
+                <td>-3</td>
+                <td>Conversación a volumen normal</td>
+              </tr>
+              <tr>
+                <td>Mediano</td>
+                <td>21-100 metros</td>
+                <td>-7</td>
+                <td>Conversación a gritos</td>
+              </tr>
+              <tr>
+                <td>Lejano</td>
+                <td>101-500 metros</td>
+                <td>-11</td>
+                <td>Conversación casi imposible</td>
+              </tr>
+              <tr>
+                <td>Extremo</td>
+                <td>501+ metros</td>
+                <td>-15</td>
+                <td>Difícil de ver</td>
+              </tr>
+            </tbody>
+          </table>
         </app-rules-section>
 
         <app-rules-section [sectionTitle]="'Modificadores comunes para ataques'">
@@ -809,6 +858,11 @@
             <li>Apuntar más de un turno: +1 por 2 segundos, +2 por 3 o más segundos</li>
             <li>Arma apoyada: +1 estando quieto <u>y</u> tras un turno Apuntando</li>
             <li>Ataque con la mano mala: -4 (sin penalizador si <a #DUMMYLINK #ADVANTAGE href="/">Ambidiestro</a>)</li>
+          </ul>
+
+          <h3 class="text-2xl mt-3 underline">Según situación del objetivo:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Distancia: entre 0 y -15</li>
           </ul>
         </app-rules-section>
       </app-rules-section>
