@@ -601,17 +601,33 @@
         </app-rules-section>
 
         <app-rules-section [sectionTitle]="'Concentrarse'">
-          Te concentras en una tarea principalmente mental (una tirada de Detección para
-          detectar a un guerrero invisible, una tirada de Liderazgo para dar órdenes, conjurar un hechizo y la mayoría
-          de las otras tiradas de habilidades basadas en IQ).
+          <p class="bodyText">
+            Te concentras en una tarea principalmente mental (una tirada de Detección para
+            detectar a un guerrero invisible, una tirada de Liderazgo para dar órdenes, conjurar un hechizo y la mayoría
+            de las otras tiradas de habilidades basadas en IQ).
 
-          Algunas actividades requieren que te concentres durante varios segundos. Si te ves obligado a usar una
-          defensa activa, te derriban, te lesionan o de alguna otra manera te distraen antes de que termines, debes
-          hacer una tirada de Voluntad-3. En caso de fallo, pierdes tu concentración y debes empezar de nuevo.
+            Algunas actividades requieren que te concentres durante varios segundos. Si te ves obligado a usar una
+            defensa activa, te derriban, te lesionan o de alguna otra manera te distraen antes de que termines, debes
+            hacer una tirada de Voluntad-3. En caso de fallo, pierdes tu concentración y debes empezar de nuevo.
+          </p>
         </app-rules-section>
 
         <app-rules-section [sectionTitle]="'Defensa total'">
-
+          <p class="bodyText">
+            Es una maniobra indicada para cuando los enemigos te superan, especialmente cuando te enfrentas a alguno al
+            que le gusta hacer Ataques totales. Elige una de estas dos opciones:
+          </p>
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>
+              <i>Defensa mejorada</i>: Añade +2 a una defensa activa de tu elección (Bloquear, Esquivar, Desviar) hasta
+              el inicio de tu siguiente turno.
+            </li>
+            <li>
+              <i>Defensa doble</i>: Puedes aplicar dos defensas activas contra el mismo ataque. Por ejemplo, puedes
+              intentar bloquear un golpe, y si fallas podrías intentar esquivarlo. Si intentas desviar un ataque con una
+              mano y fallas, intentar desviarlo con la otra mano cuenta como "otra defensa activa".
+            </li>
+          </ul>
         </app-rules-section>
 
         <app-rules-section [sectionTitle]="'Moverse'">
