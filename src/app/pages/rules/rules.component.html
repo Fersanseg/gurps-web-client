@@ -600,7 +600,7 @@
           </table>
         </app-rules-section>
 
-        <app-rules-section [sectionTitle]="'Concentrarse'">
+        <app-rules-section [sectionTitle]="'Concentrarse'" [pageRef]="'L26'">
           <p class="bodyText">
             Te concentras en una tarea principalmente mental (una tirada de Detección para
             detectar a un guerrero invisible, una tirada de Liderazgo para dar órdenes, conjurar un hechizo y la mayoría
@@ -630,14 +630,14 @@
           </ul>
         </app-rules-section>
 
-        <app-rules-section [sectionTitle]="'Moverse'">
+        <app-rules-section [sectionTitle]="'Moverse'" [pageRef]="'L25'">
           <p class="bodyText">
             Puedes moverte pero no puedes hacer otra cosa excepto Acciones Gratuitas. Puedes moverte hasta tantos metros
             como indique tu Velocidad de Movimiento.
           </p>
         </app-rules-section>
 
-        <app-rules-section [sectionTitle]="'Moverse y atacar'">
+        <app-rules-section [sectionTitle]="'Moverse y atacar'" [pageRef]="'L26'">
           <p class="bodyText">
             Puedes moverte igual que en la maniobra "Moverse", pero en algún punto de este movimiento puedes hacer un
             sólo
@@ -648,7 +648,7 @@
           </p>
         </app-rules-section>
 
-        <app-rules-section [sectionTitle]="'No hacer nada'">
+        <app-rules-section [sectionTitle]="'No hacer nada'" [pageRef]="'L25'">
           <p class="bodyText">
             No haces nada en particular. Cualquiera que esté quieto en su sitio se considera que no está haciendo nada.
             Cuando empieza un combate, todos los combatientes se consideran "no haciendo nada" hasta que reciban su
@@ -663,7 +663,7 @@
           </p>
         </app-rules-section>
 
-        <app-rules-section [sectionTitle]="'Prepararse'">
+        <app-rules-section [sectionTitle]="'Prepararse'" [pageRef]="'L26'">
           <p class="bodyText">
             Esta maniobra es para coger o desenvainar algo y prepararlo para su uso (desenfundar una espada, descorchar
             una poción, recargar una ballesta...). En algunos casos, puede que necesites Preparar un arma después de
@@ -680,7 +680,7 @@
         </app-rules-section>
       </app-rules-section>
 
-      <app-rules-section [sectionTitle]="'Acciones gratuitas'">
+      <app-rules-section [sectionTitle]="'Acciones gratuitas'" [pageRef]="'L25'">
         <p class="bodyText">
           Son cosas que puedes hacer durante cualquier maniobra. Por ejemplo, soltar un objeto o hablar (no hay un
           límite fijo sobre cuántas palabras se pueden decir, y tampoco se va a controlar muy estrictamente, pero hay
@@ -689,6 +689,129 @@
         </p>
       </app-rules-section>
 
+      <app-rules-section [sectionTitle]="'Ataques'" [pageRef]="'L26'">
+        <p class="bodyText">
+          Un ataque es cualquier intento de golpear a un enemigo u otro objetivo. El DM tiene el derecho de declarar que
+          un ataque no es posible por alguna razón que tenga que ver con la situación actual (por ejemplo, 10 individuos
+          no podrían atacar a un humano de tamaño normal al mismo tiempo).
+        </p>
+        <p class="bodytext">
+          Un ataque puede ser cuerpo a cuerpo o a distancia. Para poder hacer un ataque cuerpo a cuerpo el objetivo
+          tiene que estar a tu alcance, y para hacer un ataque a distancia tiene que estar dentro del rango del arma.
+        </p>
+        <p class="bodyText">
+          El proceso para resolver un ataque requiere entre una y tres tiradas de dados:
+        </p>
+
+        <ul class="bodyText text-base list-disc ml-4 mt-4">
+          <li>Primero haces una <i>tirada de ataque</i> (o tirada para dar). Si tienes éxito, el ataque es certero.</li>
+          <li>Si el ataque tiene éxito, el objetivo intenta una <i>tirada de defensa</i>. Si tiene éxito, significa que
+            ha podido bloquear o esquivar tu ataque.</li>
+          <li>Si el objetivo falla su tirada de defensa, entonces haces una <i>tirada de daño</i>.</li>
+        </ul>
+
+        <h2 class="font-titleFont text-3xl mt-6">Tirada de ataque</h2>
+        <p class="bodyText">
+          Una tirada de ataque es simplemente una tirada contra una habilidad determinada por el arma que estés usando.
+          Toma tu nivel base con esa habilidad, añadele todos los modificadores pertinentes, y el resultado es el tu
+          "habilidad efectiva", el número
+          a batir con tu tirada (recuerda, es un éxito si sacas igual o menos que el número objetivo).
+        </p>
+        <p class="bodyText">
+          Si sacas un 3 o un 4, da igual tu habilidad efectiva: es un golpe crítico, y el ataque acierta
+          automáticamente. Si sacas un 5 o un 6, también puede ser un crítico (ver "Éxitos y fallos críticos"). En un
+          golpe crítico, el objetivo no tiene derecho a una tirada de defensa. Además, si sacas un 3, tampoco haces una
+          tirada de daño, sino que el ataque hace el máximo daño que podría hacer (es decir, si la tirada de daño
+          normalmente sería 2d+3, el máximo resultado posible es 6 + 6 + 3 = 15).
+        </p>
+
+        <app-rules-section [sectionTitle]="'Ataques cuerpo a cuerpo'" [pageRef]="'L27'">
+          <p class="bodyText">
+            Puedes hacer un ataque cuerpo a cuerpo con cualquier arma cuerpo a cuerpo que tengas preparada (incluyendo
+            "armas naturales" como patadas, mordiscos, etc).
+          </p>
+          <p class="bodyText">
+            Algunas armas pueden ser usadas de varias formas (puedes blandir una espada corta o puedes dar una
+            estocada). Tales armas tienen varias líneas de estadísticas en su tabla correspondiente. Cuando ataques con
+            una de estas armas, debes indicar cómo estás atacando antes de hacer tu tirada de ataque.
+          </p>
+          <p class="bodyText mt-2">
+            Un arma a una mano se considera "preparada" si la tienes sujeta en una mano. Un arma a dos manos debe estar
+            sujeta por las dos manos. Algunas armas muy grandes y pesadas deben ser preparadas tras cada ataque, a menos
+            que seas extremadamente fuerte (ver "L20").
+          </p>
+          <p class="bodyText">
+            Un arma natural se considera siempre preparada a menos que la parte del cuerpo correspondiente esté ocupada
+            o impedida de algún modo (no puedes dar una patada si estás atado de pies y manos).
+          </p>
+        </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Ataques a distancia'">
+          <p class="bodyText">
+            Sólo puedes hacer un ataque a distancia a un objetivo que esté dentro del rango de tu arma.
+          </p>
+          <p class="bodyText">
+            Los ataques a distancia incluyen armas propulsadas como arcos o ballestas, pero también incluyen "armas
+            lanzadas" que tienes que tirar físicamente al objetivo, como piedras, cuchillos arrojadizos, jabalinas,
+            hachuelas, dardos, etc. A efectos prácticos, las reglas son las mismas que para un arma a distancia
+            convencional.
+          </p>
+        </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Modificadores comunes para ataques'">
+          <h2 class="font-titleFont text-3xl mt-6">Modificadores generales</h2>
+          <h3 class="text-2xl mt-1 underline">Según maniobra del atacante:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Moverse y atacar: -4</li>
+          </ul>
+
+          <h3 class="text-2xl mt-3 underline">Según situación del atacante:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Mal apoyo: -2 o más</li>
+            <li>Distracción menor (parte de la ropa ardiendo): -2</li>
+            <li>Distracción mayor (toda la ropa ardiendo): -3 o más</li>
+            <li>ST por debajo de lo requerido por el arma: -1 por cada punto por debajo</li>
+          </ul>
+
+          <h3 class="text-2xl mt-3 underline">Según visibilidad:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Ciego, objetivo completamente invisible o en oscuridad total: -10</li>
+            <li>No puede ver al objetivo: -6 (-4 si sabes su ubicación con un margen de error de 1 metro)</li>
+            <li>Oscuridad parcial, niebla, humo: entre -1 y -9</li>
+          </ul>
+
+
+          <h2 class="font-titleFont text-3xl mt-10">Modificadores ataques cuerpo a cuerpo</h2>
+          <h3 class="text-2xl mt-1 underline">Según maniobra del atacante:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Ataque total (determinado): +4</li>
+          </ul>
+
+          <h3 class="text-2xl mt-3 underline">Según situación del atacante:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Sujetando un gran escudo: -2</li>
+          </ul>
+
+          <h3 class="text-2xl mt-3 underline">Otras acciones del atacante:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Ataque con la mano mala: -4 (sin penalizador si <a #DUMMYLINK #ADVANTAGE href="/">Ambidiestro</a>)</li>
+          </ul>
+
+          <h2 class="font-titleFont text-3xl mt-10">Modificadores ataques a distancia</h2>
+          <h3 class="text-2xl mt-1 underline">Según maniobra del atacante:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Ataque total (determinado): +1</li>
+          </ul>
+
+          <h3 class="text-2xl mt-3 underline">Según situación del atacante:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Apuntar un turno: +Precisión del arma</li>
+            <li>Apuntar más de un turno: +1 por 2 segundos, +2 por 3 o más segundos</li>
+            <li>Arma apoyada: +1 estando quieto <u>y</u> tras un turno Apuntando</li>
+            <li>Ataque con la mano mala: -4 (sin penalizador si <a #DUMMYLINK #ADVANTAGE href="/">Ambidiestro</a>)</li>
+          </ul>
+        </app-rules-section>
+      </app-rules-section>
     </app-rules-section>
 
     <app-rules-section [sectionTitle]="'Acciones'" [pageRef]="'L22'">
