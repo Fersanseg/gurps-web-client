@@ -639,19 +639,41 @@
 
         <app-rules-section [sectionTitle]="'Moverse y atacar'">
           <p class="bodyText">
-            Puedes moverte igual que en la maniobra "Moverse", pero en algún punto de este movimiento puedes hacer un sólo
+            Puedes moverte igual que en la maniobra "Moverse", pero en algún punto de este movimiento puedes hacer un
+            sólo
             ataque impreciso, bien desarmado o bien con un arma preparada. Haz un ataque con un penalizador de -4. Si el
-            ataque es a distancia, pierdes cualquier bonificador por Apuntar. Si es cuerpo a cuerpo, tu nivel de habilidad
+            ataque es a distancia, pierdes cualquier bonificador por Apuntar. Si es cuerpo a cuerpo, tu nivel de
+            habilidad
             después de modificadores no puede ser mayor de 9.
           </p>
         </app-rules-section>
 
         <app-rules-section [sectionTitle]="'No hacer nada'">
-
+          <p class="bodyText">
+            No haces nada en particular. Cualquiera que esté quieto en su sitio se considera que no está haciendo nada.
+            Cuando empieza un combate, todos los combatientes se consideran "no haciendo nada" hasta que reciban su
+            primer
+            turno.
+          </p>
+          <p class="bodyText">
+            Aquellos que estén conscientes pero <a #DUMMYLINK #CONDITIONS href="/">aturdidos</a> o
+            <a #DUMMYLINK #CONDITIONS href="/">sorprendidos</a> deben elegir esta maniobra en su turno. En estos casos,
+            <i>al final de su turno</i>, uno puede intentar una tirada de HT para recuperarse de un aturdimiento físico,
+            o IQ para uno mental. En un éxito, podrá elegir otra maniobra distinta en su siguiente turno.
+          </p>
         </app-rules-section>
 
         <app-rules-section [sectionTitle]="'Prepararse'">
-
+          <p class="bodyText">
+            Esta maniobra es para coger o desenvainar algo y prepararlo para su uso (desenfundar una espada, descorchar
+            una poción, recargar una ballesta...). En algunos casos, puede que necesites Preparar un arma después de cada
+            ataque si dicha arma es muy poco manejable, o para ajustar tu agarre con un arma larga para ajustar el alcance
+            (por ejemplo, agarrar una alabarda más cerca de la hoja para pelear más comodamente en combate cuerpo a
+            cuerpo).
+          </p>
+          <p class="bodyText">
+            Esta maniobra se puede usar para tareas físicas menos violentas (abrir una puerta, cavar, forzar una cerradura...)
+          </p>
         </app-rules-section>
       </app-rules-section>
     </app-rules-section>
