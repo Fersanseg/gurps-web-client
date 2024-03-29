@@ -866,6 +866,133 @@
           </ul>
         </app-rules-section>
       </app-rules-section>
+
+      <app-rules-section [sectionTitle]="'Defensa'" [pageRef]="'L28'">
+        <p class="bodyText">
+          Si un enemigo tiene éxito en su tirada contra ti, no significa necesariamente que sufras una grave herida.
+          Sólo significa que su ataque es suficiente para herirte -<i>sólo si</i> no eres capaz de defenderte.
+        </p>
+        <p class="bodyText">
+          Una defensa activa es un intento deliberado de evitar un ataque en particular, y eso significa que sólo es
+          posible intentarlo si el atacado es consciente del ataque <i>y</i> puede reaccionar apartándose (Esquiva),
+          interponiendo un escudo frente al ataque (Bloquear), o utilizando un arma o una mano para desviar el ataque
+          (Desvío)
+        </p>
+        <p class="bodyText mt-2">
+          Si puedes efectuar una defensa activa debes elegir <i>uno</i> de los tres tipos de defensa (dos, si eliges la
+          maniobra Defensa total (doble) en tu turno anterior). Además, algunas maniobras afectan o incluso restringen
+          alguno de los tipos de defensa.
+        </p>
+        <p class="bodyText">
+          No tienes derecho a defensa activa si no eres consciente del ataque o si estás inconsciente, inmobilizado, y
+          en general si no puedes reaccionar al ataque.
+        </p>
+
+        <h2 class="font-titleFont text-3xl mt-6">La tirada</h2>
+        <p class="bodyText">
+          El atacado tira 3d contra su puntuación de defensa activa (la que haya elegido). Como siempre, si la tirada es
+          igual o menor al número objetivo, la defensa tiene éxito. Una tirada de 3 o 4 siempre tiene éxito, y una
+          tirada de 17 o 18 siempre falla.
+        </p>
+        <p class="bodyText">
+          Si el atacante logra un crítico, el atacado no tiene derecho a defensa activa. Estar <a #DUMMYLINK #CONDITIONS
+            href="/">aturdido</a> impone un -4 a todas las defensas, y si tienes un escudo preparado, añades su Bonus de
+          Defensa (BD) a <u>todas</u> las defensas activas frente a ataques que te vengan de frente o del lado del
+          escudo.
+        </p>
+
+        <app-rules-section [sectionTitle]="'Esquivar'">
+          <p class="bodyText">
+            Esquivar representa apartarse del trayecto de un ataque (o de precedir el trayecto del mismo para saber
+            donde <i>no</i> colocarse).
+          </p>
+          <p class="bodyText">
+            Tu puntuación de Esquiva es igual a tu Rapidez + 3 (ignorando fracciones), menos una penalización igual a tu
+            nivel de Carga. Puedes esquivar cualquier ataque del que seas consciente, pero sólo puedes intentar esquivar
+            un ataque dado una sóla vez (aunque no hay ningún limite al número de ataques <i>diferentes</i> que puedes
+            intentar esquivar en un mismo turno).
+          </p>
+        </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Bloquear'">
+          <p class="bodyText">
+            Representa el intento de interponer un escudo, capa gruesa o un objeto grande similar (lo llamaremos
+            "escudo" por comodidad. Puede ser incluso otra persona, si eres lo suficientemente fuerte como para agarrar
+            y levantar a alguien) entre ti y un ataque. Esto necesita un escudo <i>preparado</i>.
+          </p>
+          <p class="bodyText">
+            Tu puntuación de Bloqueo es 3 + la mitad de tu habilidad de <a #DUMMYLINK #SKILLS href="/">Escudos</a>,
+            ignorando fracciones. Por ejemplo, una habilidad de Escudos-11 daría una puntuación de bloqueo de 3 + (11/2)
+            = 8.5, que quedaría en <u>8</u>.
+          </p>
+          <p class="bodyText mt-2">
+            Sólo puedes intentar bloquear un ataque cada turno.
+          </p>
+        </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Desviar'">
+          <p class="bodyText">
+            Representa intentar desviar un ataque con un arma adecuada o con una mano desnuda. Debes tener el arma
+            preparada (o no tener nada en la mano).
+          </p>
+          <p class="bodyText">
+            Puedes usar la mayoría de armas cuerpo a cuerpo para desviar ataques, pero algunas están hechas
+            especialmente para eso y otorgan un +1 o +2. Tu puntuación de Desvío es 3 + la mitad de tu habilidad con ese
+            arma, ignorando fracciones. Por ejemplo, una habilidad de Espada Corta-13 daría una puntuación de desvío de
+            3 + (13/2) = 9.5, que quedaría finalmente en <u>9</u>.
+          </p>
+          <p class="bodyText mt-2">
+            Sólo se pueden desviar ataques cuerpo a cuerpo o a distancia con armas lanzadas. Se pueden desviar ataques
+            con armas a distancia <u>sólo si</u> el atacante está al alcance del atacado, pero esto no representa
+            desviar el proyectil, sino <i>el arma</i>. Si alguien te dispara una ballesta a bocajarro, podrías utilizar
+            tus manos para golpear el arma justo en el momento del disparo, causando que el virote no acierte.
+          </p>
+          <p class="bodyText">
+            Las armas lanzadas se pueden desviar pero con un penalizador de -1, o -2 si el arma es muy pequeña (dardos,
+            cuchillos, shuriken...)
+          </p>
+          <p class="bodyText mt-2">
+            Si consigues desviar un ataque desarmado con un arma, puedes herir al atacante. Tira inmediatamente contra
+            tu habilidad con ese arma. Si tienes éxito, es como si le hubieras asestado un ataque certero, y no tiene
+            derecho a defensa activa para esto. Tira daño directamente.
+          </p>
+          <p class="bodyText mt-2">
+            Sólo puedes intentar desviar un ataque por turno.
+          </p>
+        </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Modificadores comunes para defensa'" [pageRef]="'L29'">
+          <h3 class="text-2xl mt-1 underline">Según equipamiento del defensor:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Desviar con una daga o cuchillo: -1 a Desvío</li>
+            <li>Desviar con un bastón: 21 a Desvío</li>
+            <li>Desviar un arma estando desarmado: -3 a Desvío</li>
+          </ul>
+
+          <h3 class="text-2xl mt-3 underline">Según maniobra del defensor:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Ataque total: No se puede usar defensa activa</li>
+            <li>Defensa total (mejorada): +2 a <i>una</i> defensa activa</li>
+            <li>Mover y atacar: Esquivar o Bloquear (no se puede Desviar)</li>
+          </ul>
+
+          <h3 class="text-2xl mt-3 underline">Según situación del defensor:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Mal apoyo: -1 o más</li>
+            <li>No puede ver al atacante: -4, y Bloquear o Desviar requiere una tirada de <a #DUMMYLINK #SKILLS href="/">Escucha</a>-2</li>
+            <li>Distracción (ej. ropa ardiendo): -1 o más</li>
+            <li>Sobrecargado: penalizador a Esquiva igual al nivel de Carga</li>
+            <li><a #DUMMYLINK #COONDITIONS href="/">Aturdido</a>: -4</li>
+          </ul>
+
+          <h3 class="text-2xl mt-3 underline">Tipo de ataque:</h3>
+          <ul class="bodyText text-base list-disc ml-4 mt-1">
+            <li>Ataque por detrás: no hay defensa posible</li>
+            <li>Ataque con un mangual: -4 a Desvío, -2 a Bloquear</li>
+            <li>Arma lanzada: -1 a Desvío (-2 si arma muy pequeña: 0.5kg o menos)</li>
+          </ul>
+        </app-rules-section>
+      </app-rules-section>
     </app-rules-section>
 
     <app-rules-section [sectionTitle]="'Acciones'" [pageRef]="'L22'">
