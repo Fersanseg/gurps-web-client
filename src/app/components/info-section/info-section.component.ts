@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { SplitterComponent } from "../splitter/splitter.component";
 import { expandAnimation } from '../../animations/expand-height';
 
@@ -11,19 +11,23 @@ import { expandAnimation } from '../../animations/expand-height';
     animations: [expandAnimation]
 })
 export class InfoSectionComponent {
-  public expanded = false;
+  @Input() public preventEvents = false;
+  @Input() public expanded = false;
   public hovered = false;
   
   toggleExpanded() {
-    this.expanded = !this.expanded;
+    if (!this.preventEvents)
+      this.expanded = !this.expanded;
   }
 
   onMouseEnter() {
-    this.hovered = true;
+    if (!this.preventEvents)
+      this.hovered = true;
   }
 
   onMouseLeave() {
-    this.hovered = false;
+    if (!this.preventEvents)
+      this.hovered = false;
   }
 
 }

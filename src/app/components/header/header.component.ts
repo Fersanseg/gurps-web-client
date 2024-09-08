@@ -17,18 +17,5 @@ export class HeaderComponent implements OnInit {
   constructor(private router: Router) {}
 
   ngOnInit() {
-    this.buttons.push({
-      text: "Reglas",
-      hasBorder: false,
-      callback: () => this.router.navigateByUrl("/rules")
-    });
-    
-    for (let i = 0; i < 3; i++) {
-      this.buttons.push({
-        text: "SAMPLE",
-        hasBorder: i % 2 !== 0,
-        callback: () => {console.log(`CLICKED BUTTON ${i}`)}
-      });
-    }
   }
 }

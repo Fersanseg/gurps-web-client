@@ -1,23 +1,25 @@
 <button onclick="my_modal_3.showModal()"
-  class="h-16 w-16 rounded-full fixed bottom-16 right-16 bg-primary font-bold text-accent text-xl hover:opacity-75 duration-300"
+  class="h-16 w-16 rounded-full fixed bottom-16 right-16 bg-base-100 font-bold border-2 border-primary text-primary text-xl hover:opacity-75 duration-300"
 >?</button>
 <dialog id="my_modal_3" class="modal">
-  <div class="modal-box max-w-5xl rounded-none bg-gradient-to-br from-primary to-neutral text-accent">
-    <form method="dialog">
-      <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-secondary text-xl font-bold">✕</button>
-    </form>
-    <h3 class="font-bold bodyText">Leyenda: Libros y códigos de referencia</h3>
-    <p class="pt-4 bodyText text-base">
-      En muchas partes de la página aparecen códigos que hacen referencia a alguna regla en concreto en un libro determinado, donde se puede consultar
-      información adicional.
-    </p>
-    <p class="bodyText text-base italic">
-      Por ejemplo: "L13" se referiría al libro "GURPS Lite", página 13. "B248" se refiere a "GURPS Basic Set", página 248.
-    </p>
-    <ul class="list-disc pt-4 bodyText text-base ml-6">
-      <li> B: GURPS Basic Set </li>
-      <li> L: GURPS Lite </li>
-    </ul>
+  <div class="modal-box p-2 max-w-5xl rounded-none bg-base-100 border-2 border-primary text-white">
+    <div class="bg-base-100 p-5 border border-primary">
+      <form method="dialog">
+        <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2 text-primary text-xl font-bold">✕</button>
+      </form>
+      <h3 class="font-bold bodyText">Libros y códigos de referencia</h3>
+      <p class="pt-4 bodyText text-base">
+        En muchas partes de la página aparecen códigos que hacen referencia a alguna regla en concreto en un libro determinado, donde se puede consultar
+        información adicional.
+      </p>
+      <p class="bodyText text-base italic">
+        Por ejemplo: "L13" se referiría al libro "GURPS Lite", página 13. "B248" se refiere a "GURPS Basic Set", página 248.
+      </p>
+      <ul class="list-disc pt-4 bodyText text-base ml-6">
+        <li> B: GURPS Basic Set </li>
+        <li> L: GURPS Lite </li>
+      </ul>
+    </div>
   </div>
   <form method="dialog" class="modal-backdrop">
     <button>close</button>

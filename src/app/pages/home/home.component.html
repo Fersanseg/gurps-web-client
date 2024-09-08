@@ -1,28 +1,18 @@
 <div>
-  <div class="home-background">
-    <div class="flex flex-col items-center pt-48">
-      <h1 class="text-8xl mb-16 title-shadow font-titleFont"
+  <div class="">
+    <div class="flex flex-col items-center pt-20">
+      <h1 class="text-8xl title-shadow font-titleFont text-yellow-400"
         [@fadeIn]
         (@fadeIn.done)="onTitleFadeIn()"
-      >TIERRAS VELADAS</h1>
-      <h3 *ngIf="onAfterTitleEnter | async" 
-        [@fadeIn]
-        class="text-4xl title-shadow font-titleFont"
-      >Aventuras y desafíos en tierras inexploradas</h3>
+      >LOS PASILLOS DE ARDEN VUL</h1>
     </div>
   </div>
-  <div class="">
-    <app-hero
-      [imgSrc]="'/assets/images/im1.webp'"
-      [title]="'La campaña'"
-      [text]="'Info. básica sobre la campaña, el mundo y más'"
-      [route]="'/info'"
-    />
+  <div class="pb-48">
+    <app-info-section #gameSection>
+      <a href="/campaign" heading class="text-6xl font-titleFont text-white no-underline">La campaña</a>
+    </app-info-section>
+    <app-info-section #gameSection>
+      <a href="/game" heading class="text-6xl font-titleFont text-white no-underline">El juego</a>
+    </app-info-section>
   </div>
 </div>
-
-<!-- <a routerLink="/login" routerLinkActive="active" ariaCurrentWhenActive="page">LOGIN</a>
-<p>home works!</p>
-
-
-<app-insert></app-insert> -->

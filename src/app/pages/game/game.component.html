@@ -1,0 +1,1453 @@
+<div class="mb-28">
+  <app-info-section #gameSection>
+    <h1 heading class="text-6xl font-titleFont">GURPS</h1>
+    <p class="bodyText">
+      GURPS es un sistema de reglas modular e increíblemente personalizable, ofreciendo la posibilidad de crear cualquier
+      tipo de personaje que a uno se le ocurra. El carácter modular de estas reglas ofrece beneficios sobre otros sitemas
+      de
+      juego más "conocidos": no es un "monolito" en el que quitar o poner una regla personalizada hace que todo el sistema
+      se tambalee (o, como mínimo, requiere de un gran esfuerzo por parte del DM para adaptarlo. Al fin y al cabo, no
+      todos
+      somos diseñadores de juegos), sino que en general se comporta más como un conjunto de bloques de Lego que se pueden
+      quitar y poner para crear el juego ideal.
+    </p>
+    <p class="my-4 bodyText">
+      Esto permite crear un sistema de juego ideal para todos. Puede que al DM le guste la idea de que un combatiente se
+      vuelva menos capaz a medida que sufre heridas, pero que los jugadores lo aborrezcan. En GURPS, es tan fácil como
+      ignorar esa regla, mientras que si fuera otro sistema, probablemente habría que rebalancear el juego de alguna
+      manera porque dicha regla sería una parte integral del "monolito".
+      Esto es importante, porque es mi primera partida con este sistema. Puede que lo que yo considere divertido no lo sea
+      para los demás. En un sistema modular y adaptable como GURPS, se puede hablar y llegar a un acuerdo y en el caso de
+      que haya que modificar algo, el proceso es lo más sencillo posible.
+    </p>
+    <p class="my-4 bodyText">
+      Unas palabras de <span class="text-secondary font-bold">PRECAUCIÓN</span>: GURPS tiende hacia el realismo, y eso también incluye
+      el combate. En la vida real, una
+      confrontación con armas blancas es algo en lo que <u>nadie</u> quiere verse involucrado, es un último recurso ya que
+      todo el mundo valora su vida y un sólo corte en el lugar indicado puede incapacitar a alguien al instante, y en
+      GURPS también.
+    </p>
+    <p class="bodyText">
+      El combate en este juego es <u>letal</u>, y por la naturaleza del propio género de fantasía, en ocasiones es
+      inevitable. Esto NO significa que morir sea una garantía para un personaje de esta campaña (al menos, no
+      necesariamente); el combate es letal <i>si se toma a la ligera</i>. Evitar una pelea es una parte tan importante del
+      juego como lo es la propia pelea, e incluso cuando el conflicto sea inevitable, emplear la táctica y la estrategia
+      para estar en la situación más aventajada posible (utilizar cobertura y posicionarse para anular la del enemigo,
+      flanquear...) mejora significativamente las propabilidades de vivir para contarlo. Incluso huir si las cosas pintan
+      mal suele ser una buena idea.
+    </p>
+    <p class="bodyText">
+      Con esto no quiero decir que el combate debería evitarse a toda cosa (después de todo, es una parte esencial de un
+      juego de rol). Sólamente quiero advertir y generar unas expectativas comunes para que todo el mundo esté en la misma
+      línea. No me gustaría que alguien viniera
+      esperando un combate heroico y cinemático como en D&D donde un personaje de alto nivel puede sufrir cientos de
+      heridas sin inmutarse y se llevara una decepción. No quiero que nadie se sienta "emboscado".
+    </p>
+  </app-info-section>
+
+  <app-info-section #gameSection [expanded]="true" [preventEvents]="true">
+    <h1 heading class="text-6xl font-titleFont">Reglas de juego</h1>
+    <div class="my-8">
+      <p class="bodyText">
+        El carácter modular de las reglas de GURPS hace que sólo con el libro de reglas básico se pueda jugar una partida
+        de cualquier género imaginable, desde fantasía hasta ciencia ficción, misterio, horror, etc. Eso significa que
+        para jugar una partida en específico no sólo es recomendable, sino incluso obligatorio, ignorar parte de estas
+        reglas básicas para evitar que el juego se vuelva demasiado pesado como para ser divertido.
+      </p>
+      <p class="bodyText">
+        En esta página se resumirán las principales reglas, junto con un código de referencia que indica en qué libro y en
+        qué página se explica dicha regla en mayor profundidad. Si no sabes cómo conseguir una copia del libro, dimelo y
+        lo solucionaremos.
+      </p>
+  
+      <app-rules-section [sectionTitle]="'Tiradas de dados'" [pageRef]="'L2'">
+        <p class="bodyText mt-2">
+          GURPS usa exclusivamente dados de 6 caras. "4d+2" significa "tira 4 dados y suma 2". "3d" significa "tira 3
+          dados".
+        </p>
+        <p class="bodyText mt-2">
+          En GURPS, el éxito o fracaso de una acción se determina tomando el valor de una
+          habilidad o atributo básico (llamado <u>habilidad base</u>), añadiendo bonuses o penalizaciones (<u>habilidad
+            efectiva</u>), y tirando 3d. Si la tirada de los dados es <i>igual o menor</i> a la habilidad efectiva, la
+          tirada es un éxito. Si es mayor, es un fallo.
+        </p>
+  
+        <app-rules-section [sectionTitle]="'Éxitos y fallos críticos'">
+          <p class="bodyText mt-2">
+            Un éxito crítico es especialmente bueno. El DM determina qué efectos tiene, pero siempre es algo bueno. Una
+            tirada es un éxito crítico cuando:
+          </p>
+          <ul class="bodyText text-base list-disc ml-4">
+            <li>La tirada de dados tiene un resultado de 3 o 4.</li>
+            <li>La tirada de dados tiene un resultado de 5 si la <i>habilidad efectiva</i> es 15.</li>
+            <li>La tirada de dados tiene un resultado de 6 si la <i>habilidad efectiva</i> es 16 o más.</li>
+          </ul>
+          <p class="bodyText">
+            Cuanto menor sea el resultado del dado, mejores efectos tendrá el éxito crítico.
+          </p>
+          <p class="bodyText mt-2">
+            Un fallo crítico funciona de la misma manera, excepto que el efecto será más perjudicial cuanto mayor sea el
+            resultado de los dados. Será un fallo crítico cuando:
+          </p>
+          <ul class="bodyText text-base list-disc ml-4">
+            <li>La tirada de dados tiene un resultado de 18.</li>
+            <li>La tirada de dados tiene un resultado de 17 si tu <i>habilidad efectiva</i> es 15 o menos.</li>
+            <li>Toda tirada con un resultado 10 puntos mayor que tu habilidad efectiva (un 16 en una habilidad de 6, un 15
+              en una habilidad de 5, etc).</li>
+          </ul>
+        </app-rules-section>
+  
+        <app-rules-section [sectionTitle]="'Margen de éxito y fallo'">
+          <p class="bodyText mt-2">
+            En algunos casos es importante saber no sólo si la tirada tiene éxito o no, sino también <i>por cuánto</i>. La
+            diferencia entre tu habilidad efectiva y la tirada del dado es el <u>margen de éxito/fallo</u>.
+          </p>
+          <p class="bodyText">Por ejemplo, si tu habilidad efectiva es 18 y tiras un 12, tu margen de éxito es 6. Si tu
+            habilidad efectiva es 7 y tiras un 15, tu márgen de fallo es 8.</p>
+        </app-rules-section>
+  
+        <app-rules-section [sectionTitle]="'Tiradas enfrentadas'" [pageRef]="'L3'">
+          <p class="bodyText mt-2">
+            A veces dos personajes deben competir comparando habilidades. Las tiradas enfrentadas son una forma de
+            resolver esta situación. En estos casos, Cada contrincante hace su tirada de dados contra <u>su</u> habilidad
+            efectiva.
+            Si uno tiene éxito y otro falla, el ganador está claro. Si los dos tienen éxito, gana quien tenga más margen
+            de éxito. Si los dos fallan, gana quien tenga menos margen de fallo.
+          </p>
+          <p class="bodyText mt-2">
+            Dependiendo de la situación, puede que sea necesario averiguar el margen de victoria del ganador. Dicho margen
+            es la diferencia entre márgenes de éxito si los dos contrincantes tienen éxito en su tirada (o entre márgenes
+            de fallo si los dos fallan), o la suma del margen de éxito y el margen de fallo si un contrincante tiene éxito
+            en su tirada y el otro no.
+          </p>
+        </app-rules-section>
+  
+        <app-rules-section [sectionTitle]="'Tiradas de reacción'">
+          <p class="bodyText">
+            Esta es una regla más para el DM que para los jugadores, pero se incluye por transparencia.
+          </p>
+          <p class="bodyText">
+            Cuando los PCs se encuentran con un NPC cuya reacción/primeras impresiones a ellos no está predeterminada por
+            motivos narrativos, el DM puede hacer una "tirada de reacción" con 3d. Esta tirada es diferente: en este caso,
+            cuanto mayor sea la tirada, mejor. Tampoco hay un "número objetivo" que hay que superar, y por tanto, los
+            modificadores que se apliquen aquí se hacen directamente sobre la tirada, en vez de sobre el número objetivo
+            como se hace normalmente.
+          </p>
+          <p class="bodyText">
+            Esta tirada la hace el DM <u>en secreto</u>, y no revelará su resultado a los jugadores. No tiene gracia que
+            el granjero parezca amable y dispuesto a ayudar, pero que los jugadores sepan que está mintiendo porque la
+            tirada de reacción ha sido baja!
+          </p>
+          <p class="bodyText mt-2">
+            Hay varios factores que pueden modificar la tirada, como la apariencia de los PCs (especialmente el encargado
+            de hablar), sus modales, labia, etc. También pueden afectar sesgos y manías del NPC en concreto (p. ej. un
+            mercader cuya familia fue asesinada por goblins cuando era niño tenderá a tener una peor impresión de
+            cualquier goblin), e incluso <i>la interpretación del jugador</i>. Si el jugador que hace de interlocutor
+            interpreta especialmente bien a su personaje y hace un esfuerzo por rolear la interacción, el DM puede
+            recompensar a los jugadores añadiendo un bonus a la tirada de reacción (y lo mismo puede pasar si el jugador
+            es abiertamente hostil o maleducado!).
+          </p>
+          <p class="bodyText">
+            A modo de referencia, se incluye una tabla con recomendaciones para los diferentes resultados de las tiradas
+            de reacción. No son reglas estrictas, sino que es una guía:
+          </p>
+  
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>
+              <i>0 o menos: Desastroso</i>. El NPC odia a los PCs y actuará en contra de sus intereses lo más posible.
+              Todas las cartas están sobre la mesa: agresiones, traición, ridículo público, ignorar súplicas de vida o
+              muerte...
+            </li>
+            <li>
+              <i>1 a 3: Muy malo</i>. Los personajes desagradan al NPC, que actuará en su contra si es conveniente
+              hacerlo: atacando, ofreciendo términos injustos en una transacción, etc.
+            </li>
+            <li>
+              <i>4 a 6: Malo</i>. El NPC no siente nada por los personajes y actuará en su contra (como se mencionó
+              anteriormente), si puede obtener beneficios al hacerlo.
+            </li>
+            <li>
+              <i>7 a 9: Pobre</i>. El NPC no está impresionado. Puede hacer amenazas, exigir un soborno antes de ofrecer
+              ayuda, o algo similar.
+            </li>
+            <li>
+              <i>10 a 12: Neutral</i>. El NPC ignora a los personajes tanto como sea posible. Está totalmente
+              desinteresado. Las transacciones se llevarán a cabo de manera suave y rutinaria, siempre que se respeten los
+              protocolos.
+            </li>
+            <li>
+              <i>13 a 15: Bueno</i>. El NPC simpatiza con los personajes y será útil dentro de límites normales y
+              cotidianos. Se concederán solicitudes razonables.
+            </li>
+            <li>
+              <i>16 a 18: Muy bueno</i>. El NPC piensa muy bien de los personajes y será muy servicial y amigable,
+              ofreciendo ayuda y términos favorables libremente en la mayoría de las cosas.
+            </li>
+            <li>
+              <i>19 o más: Excelente</i>. El NPC está extremadamente impresionado por los personajes y actuará en su mejor
+              interés en todo momento, dentro de los límites de su propia capacidad, incluso arriesgando su vida, riqueza
+              o reputación.
+            </li>
+          </ul>
+        </app-rules-section>
+      </app-rules-section>
+  
+      <app-rules-section [sectionTitle]="'Personajes'" [pageRef]="'L4'">
+        <p class="bodyText mt-2">
+          GURPS es diferente de otros juegos ya que para crear un personaje no eliges una "clase" que decide qué cosas
+          puede y no puede hacer, y no se crece por medio de "niveles" que mejoren los atributos del personaje y
+          desbloqueen nuevas habilidades.
+          En su lugar, los personajes se crean "comprando" habilidades y mejoras con <i>Puntos de Personaje</i> (PP). De
+          la misma manera, en vez de "puntos de experiencia" como en un juego tradicional, se otorgan PP para simular el
+          crecimiento de un personaje en su vida como aventurero. De esta manera, uno puede crear el personaje que quiera,
+          sin ceñirse a estrictas restricciones (¿quién dijo que un mago tiene que ser irremediablemente incompetente en
+          combate cuerpo a cuerpo? ¿O que un guerrero tiene únicamente el suficiente cerebro para blandir una espada sin
+          olvidarse de respirar?).
+        </p>
+        <p class="bodyText mt-2">
+          <a href="/characters" class="text-secondary underline" (click)="stopPropagation($event)">
+            Más información
+          </a>
+          sobre la creación de personajes.
+        </p>
+  
+        <app-rules-section [sectionTitle]="'Atributos básicos'">
+          <p class="bodyText mt-2">
+            Las capacidades básicas de un personaje son determinadas por cuatro <i>atributos básicos</i>: Fuerza (ST),
+            Destreza (DX), Inteligencia (IQ), y Salud (HT).
+            Todo personaje tiene una puntuación de 10 en todos los atributos básicos. Aumentar estas puntuaciones cuesta
+            PP, y reducirlas otorga PP que se puede usar en otras cosas.
+          </p>
+          <p class="bodyText">
+            Generalmente, estos atributos tendrán una puntuación entre 1 y 20. En condiciones normales, ninguna
+            puntuación
+            podrá ser superior a 20. A modo de referencia, la gran mayoría de humanos normales (NPCs varios) tienen
+            puntuaciones entre 8 y 12 (aunque un aventurero experimentado puede fácilmente superar estos rangos). A
+            grandes rasgos, esto es lo que significa cada puntuación:
+          </p>
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>
+              <u>6 o menos:</u>
+              <span class="bodyText text-base">
+                <i> Incapacitante</i>. Un atributo así de malo perjudica severamente tu estilo de vida.
+                <p>
+              </span>
+            <li>
+              <u>7:</u>
+              <span class="bodyText text-base">
+                <i> Pobre</i>. Tus limitaciones son inmediatamente evidentes para cualquiera que te vea. Esta es la
+                mínima
+                puntuación que se puede tener sin que sea considerado una discapacidad.
+                <p>
+              </span>
+            <li>
+              <u>8 o 9:</u>
+              <span class="bodyText text-base">
+                <i> Por debajo de la media</i>. Estas puntuaciones son limitantes, pero dentro de lo normal.
+              </span>
+            </li>
+            <li>
+              <u>10:</u>
+              <span class="bodyText text-base">
+                <i> Media</i>. La mayoría de humanos se desenvuelven perfectamente con una puntuación así.
+              </span>
+            </li>
+            <li>
+              <u>11 o 12:</u>
+              <span class="bodyText text-base">
+                <i> Por encima de la media</i>. Estas puntuaciones son ventajosas, pero dentro de lo normal.
+              </span>
+            </li>
+            <li>
+              <u>13 o 14:</u>
+              <span class="bodyText text-base">
+                <i> Excepcional</i>. Tus capacidades son inmediatamente evidentes para cualquiera que te vea. Grandes
+                músculos, agilidad felina, conversacioń ingeniosa...
+              </span>
+            </li>
+            <li>
+              <u>15 o más:</u>
+              <span class="bodyText text-base">
+                <i> Increíble</i>. Un atributo así de alto llama la atención y es fuente de comentarios y notoriedad.
+              </span>
+            </li>
+          </ul>
+  
+          <h2 class="font-titleFont text-3xl mt-6">Fuerza (ST)</h2>
+          <p class="bodyText">
+            ST determina tu fuerza física y tu tamaño. Más ST te permite hacer <i>y recibir</i> más daño en combate
+            cuerpo a cuerpo. Todo aventurero encontrará útil este atributo para levantar y tirar cosas, moverse rápido
+            cargando peso, etc.
+          </p>
+          <h2 class="font-titleFont text-3xl mt-6">Destreza (DX)</h2>
+          <p class="bodyText">
+            DX es una combinación de agilidad, coordinación y habilidad motora fina. DX determina tu capacidad con
+            habilidades atléticas, habilidades de combate, y oficios que requieran un toque delicado. DX también afecta
+            a tu Rapidez y Velocidad de Movimiento.
+          </p>
+          <h2 class="font-titleFont text-3xl mt-6">Inteligencia (IQ)</h2>
+          <p class="bodyText">
+            IQ mide, a grandes rasgos, la capacidad mental, incluyendo creatividad, intuición, memoria, percepción,
+            razonamiento, cordura y fuerza de voluntad. Determina tu capacidad con todas las habilidades "mentales"
+            (magia, interacción social, etc). IQ también determina los atributos secundarios de Voluntad y de
+            Percepción.
+          </p>
+          <h2 class="font-titleFont text-3xl mt-6">Salud (HT)</h2>
+          <p class="bodyText">
+            HT mide energía y vitalidad. Representa tu vigor, resistencia a venenos y enfermedades, y en general tu
+            estado
+            de salud física. HT determina el atributo secundario de Puntos de Fatiga, y ayuda a determinar Rapidez y
+            Velocidad de Movimiento.
+          </p>
+        </app-rules-section>
+  
+        <app-rules-section [sectionTitle]="'Atributos secundarios'" [pageRef]="'L6'">
+          <p class="bodyText mt-2">
+            Los atributos secundarios son características que dependen de los atributos básicos. Al contrario que los
+            atributos básicos, estos no pueden aumentarse o disminuirse directamente:
+          </p>
+          <ul class="bodyText text-base list-disc ml-4">
+            <li>
+              <u>Puntos de Vida (PV)</u>: representan la capacidad de tu cuerpo para resistir lesiones. Tienes PV igual
+              a tu ST.
+            </li>
+            <li>
+              <u>Voluntad</u>: mide tu capacidad para resistir el estrés psicológico (lavado de cerebro, miedo,
+              hipnotismo, interrogatorio, seducción, tortura, etc) y tu resistencia a ataques sobrenaturales (magia,
+              etc).
+            </li>
+            <li>
+              <u>Percepción (Per)</u>: Representa tu alerta general. El DM hace una "tirada de Sentidos" contra tu Per
+              para determinar si notas algo. Per es igual a IQ.
+            </li>
+            <li>
+              <u>Puntos de Fatiga (PF)</u>: Representan el "suministro de energía" de tu cuerpo. Tienes PF igual a tu
+              HT.
+            </li>
+            <li>
+              <u>Rapidez</u>: es una medida de tus reflejos y rapidez física general. Ayuda a determinar tu velocidad de
+              carrera, tu posibilidad de esquivar un ataque y el orden en el que actúas en combate (una alta Rapidez te
+              permitirá "reaccionar más rápido" que tus enemigos). Para calcular la Rapidez, suma tu
+              HT y DX juntos, y luego divide el total por 4. No lo redondees.
+            </li>
+            <li>
+              <u>Esquiva</u>: Tu defensa de Esquiva (ver Dodge, B28) es igual a Rapidez + 3, eliminando
+              todas las fracciones. Por ejemplo, si tu Rapidez es 5.25, tu Esquiva es 8. Debes sacar menos que
+              tu Esquiva en 3d para esquivar un ataque.
+            </li>
+            <li>
+              <u>Velocidad de Movimiento</u>: Es tu velocidad en metros por segundo. Así es como de rápido puedes correr
+              (aunque puedes ir un poco más rápido si "corres" en línea recta; ver L23). LA Velocidad de Movimiento
+              comienza igual a la Rapidez, menos cualquier fracción; por ejemplo, Rapidez 5.75 otorga
+              Velocidad de Movimiento 5. Una persona promedio tiene Velocidad de Movimiento 5; por lo tanto, puede
+              correr alrededor de 5 metros por segundo si no está cargado.
+            </li>
+            <li>
+              <u>Daño (DMG)</u>:
+              Tu ST determina cuánto daño haces en combate cuerpo a cuerpo o con un arma de combate cuerpo a cuerpo. Dos
+              tipos de daño derivan de ST:
+              Daño de estocada (abreviado como “thrust” o "thr" en libros oficiales de GURPS) es tu daño básico con un
+              golpe, patada o mordida, o un
+              ataque con un arma de estocada como una lanza o un estoque.
+              Daño de golpe (abreviado como "swing" o "sw" en libros oficiales de GURPS) es tu daño básico con un arma
+              balanceada, como un hacha, maza
+              o espada, cualquier cosa que actúe como una palanca para multiplicar tu ST.
+              Consulta la siguiente tabla para determinar tu daño básico:
+            </li>
+          </ul>
+          <table class="m3-4 mt-2 table table-xs">
+            <tr> <!-- ST -->
+              <th>ST</th>
+              <td>1</td>
+              <td>2</td>
+              <td>3</td>
+              <td>4</td>
+              <td>5</td>
+              <td>6</td>
+              <td>7</td>
+              <td>8</td>
+              <td>9</td>
+              <td>10</td>
+              <td>11</td>
+              <td>12</td>
+              <td>13</td>
+              <td>14</td>
+              <td>15</td>
+              <td>16</td>
+              <td>17</td>
+              <td>18</td>
+              <td>19</td>
+              <td>20</td>
+            </tr>
+            <tr> <!-- Thrust -->
+              <th>Thrust</th>
+              <td>1d-6</td>
+              <td>1d-6</td>
+              <td>1d-5</td>
+              <td>1d-5</td>
+              <td>1d-4</td>
+              <td>1d-4</td>
+              <td>1d-3</td>
+              <td>1d-3</td>
+              <td>1d-2</td>
+              <td>1d-2</td>
+              <td>1d-1</td>
+              <td>1d-1</td>
+              <td>1d</td>
+              <td>1d</td>
+              <td>1d+1</td>
+              <td>1d+1</td>
+              <td>1d+2</td>
+              <td>1d+2</td>
+              <td>2d-1</td>
+              <td>2d-1</td>
+            </tr>
+            <tr> <!-- Swing -->
+              <th>Swing</th>
+              <td>1d-5</td>
+              <td>1d-5</td>
+              <td>1d-4</td>
+              <td>1d-4</td>
+              <td>1d-3</td>
+              <td>1d-3</td>
+              <td>1d-2</td>
+              <td>1d-2</td>
+              <td>1d-1</td>
+              <td>1d</td>
+              <td>1d+1</td>
+              <td>1d+2</td>
+              <td>2d-1</td>
+              <td>2d</td>
+              <td>2d+1</td>
+              <td>2d+2</td>
+              <td>3d-1</td>
+              <td>3d</td>
+              <td>3d+1</td>
+              <td>3d+2</td>
+            </tr>
+          </table>
+        </app-rules-section>
+      </app-rules-section>
+  
+      <app-rules-section [sectionTitle]="'Equipamiento'" [pageRef]="'L19'">
+        <h2 class="font-titleFont text-3xl mt-6">Armaduras</h2>
+        <p class="bodyText">
+          Llevar armadura es extremadamente útil en combate, ya que <u>reduce</u> el daño de un ataque certero. Cualquier
+          tipo de armadura es útil -puede significar la diferencia entre caer inconsciente o seguir en pie. Lógicamente,
+          cuanto más pesada la armadura, más resistencia ofrece. Pero cuanto más peso carga un personaje, menos ágil es y
+          más torpes son sus movimientos (ver "Carga").
+        </p>
+        <h2 class="font-titleFont text-3xl mt-6">Escudos</h2>
+        <p class="bodyText">
+          Los escudos son muy valiosos en un mundo de fantasía, ya que permiten Bloquear (una forma de defensa activa ante
+          un ataque, ver "Blocking" L28) y otorga un bonus a <i>todas</i> las otras tiradas de defensa activa.
+        </p>
+        <p class="bodyText">
+          Normalmente un escudo se lleva atado a un brazo. Esa mano no puede <i>blandir</i> un arma (lo que impide usar
+          armas a dos manos), pero permite <i>sujetar</i> un objeto.
+        </p>
+        <h2 class="font-titleFont text-3xl mt-6">Carga</h2>
+        <p class="bodyText">
+          La carga ("encumbrance" en libros oficiales) es una medida del peso que un personaje está cargando, relativo a
+          su ST. Es importante llevar un registro del inventario de un personaje, ya que ir sobrecargado tiene efectos
+          reales: cuanto más peso, más se reduce la Velocidad de Movimiento y la Esquiva de un personaje.
+        </p>
+        <p class="bodyText">
+          Afortunadamente, usaremos herramientas digitales que agilizan el cálculo de mecánicas "tediosas" como esta. A
+          modo de referencia, estos son los "puntos de corte" en los que la carga de un personaje afecta a su Velocidad de
+          Movimiento y su Esquiva. Si la Velocidad de Movimiento resultante es decimal, se elimina (NO redondea) la
+          fracción. La carga nunca puede reducir la VM o Esquiva por debajo de 1.
+        </p>
+        <ul class="bodyText text-base list-disc ml-4 mt-4">
+          <li>
+            <i>Sin carga</i>: Peso hasta tu BL*. Sin efectos.
+          </li>
+          <li>
+            <i>Carga ligera</i>: Peso hasta 2xBL*. Velocidad de movimiento x 0.8 | Esquiva -1
+          </li>
+          <li>
+            <i>Carga mediana</i>: Peso hasta 3xBL*. Velocidad de movimiento x 0.6 | Esquiva -2
+          </li>
+          <li>
+            <i>Carga Pesada</i>: Peso hasta 6xBL*. Velocidad de movimiento x 0.4 | Esquiva -3
+          </li>
+          <li>
+            <i>Carga Ultra-Pesada</i>: Peso hasta 10xBL*. Velocidad de movimiento x 0.2 | Esquiva -4
+          </li>
+        </ul>
+        <p class="bodyText text-base mt-2">
+          *: BL ("Basic Lift" en libros oficiales) es (STxST)/10 kg.
+        </p>
+      </app-rules-section>
+  
+      <app-rules-section [sectionTitle]="'Combate'" [pageRef]="'L24'">
+        <p class="bodyText">
+          Cuando una situación de combate es inevitable, la acción pasa a medirse en turnos de 1 segundo de duración.
+          Todos los participantes deciden lo que quieren hacer ese turno y cuando todos hayan actuado, se considera que ha
+          pasado un segundo en la partida. Aunque a nivel del juego la acción se desarrolla secuencialmente (un personaje
+          hace su acción, luego otro, y así sucesivamente), "dentro del juego" la acción se desarrolla al mismo tiempo. Es
+          decir, aunque para nosotros en la vida real las acciones vayan una detrás de otra, para los personajes todo
+          ocurre al mismo tiempo.
+        </p>
+        <p class="bodyText mt-2">
+          El orden de los turnos se determina cuando empieza el combate y no cambia hasta que termine. Los participantes
+          actúan por orden descendiente de Rapidez. Si dos combatientes tienen la misma Rapidez, va antes quien tenga más
+          DX. Si aún así hay empate, se hace una tirada de dados para determinar quién va antes.
+        </p>
+        <p class="bodyText">
+          Para un combatiente, un turno es el período de tiempo de 1 segundo entre que elige una Maniobra y la próxima vez
+          que puede elegir una nueva Maniobra.
+        </p>
+  
+        <app-rules-section [sectionTitle]="'Maniobras'" [pageRef]="'L25'">
+          <p class="bodyText">
+            Una Maniobra es una acción que puedes tomar en tu turno. En cada turno debes elegir una de las siguientes
+            maniobras. Lo que elijas determina qué haces o puedes hacer en tu turno y decide tus opciones en cuanto a
+            movimiento y defensa activa (tu capacidad para esquivar, bloquear, o desviar un ataque).
+          </p>
+          <p class="bodyText">
+            Para propósitos de defensas activas, tu maniobra se considera que está en efecto hasta que elijas otra en tu
+            siguiente turno. Por ejemplo: si seleccionas Defensa total, sus beneficios se aplican si te atacan después de
+            tu turno y hasta tu siguiente turno.
+          </p>
+          <p class="bodyText">
+            Si te atacan antes de que puedas elegir una maniobra (p. ej. al principio de un combate antes de que llegue tu
+            primer turno), se considera que tu maniobra elegida es No hacer nada.
+          </p>
+  
+          <app-rules-section [sectionTitle]="'Apuntar'" [pageRef]="'L25'">
+            <p class="bodyText">
+              Esta maniobra se utiliza para apuntar con un arma a distancia (o un dispositivo como un telescopio). Debes
+              elegir un objetivo específico. No puedes apuntar a algo que no puedas ver o detectar de alguna otra manera.
+            </p>
+            <p class="bodyText">
+              Especifica el arma con la que estás apuntando y tu objetivo. Si después de Apuntar haces un Ataque
+              o un Ataque total, con la misma arma contra el mismo objetivo, obtienes un bonus para dar. Suma la
+              Precisión (Prec) del arma a tu habilidad con el arma con el que vas a atacar.
+            </p>
+            <p class="bodyText mt-2">
+              Si <i>Sujetas firmemente</i> una ballesta, obtienes un extra de +1 a la Precisión. Una ballesta está Sujeta
+              firmemente si puedesapoyarla en un saco de arena, una pared baja, tiene un bípode, etc. Un arma de una mano
+              se considera Sujeta firmemente si se utiliza con ambas manos.
+            </p>
+            <p class="bodyText">
+              Si Apuntas durante más de un segundo (es decir, eliges la maniobra de Apuntar varias veces seguidas),
+              recibes un bono adicional: +1 por dos segundos de Apuntar en total, o +2 por tres o más segundos.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Atacar'" [pageRef]="'L26'">
+            <p class="bodyText">
+              Utiliza esta maniobra para realizar un ataque armado o desarmado en combate cuerpo a cuerpo, o para usar un
+              arma arrojadiza o a distancia en combate a distancia. Para usar un arma para atacar, esta debe estar lista
+              (ver maniobra "Preparar").
+              Si estás usando un arma cuerpo a cuerpo o un ataque desarmado, tu objetivo debe estar al alcance. Resuelve
+              el ataque como se explica en Ataques Cuerpo a Cuerpo.
+              Si estás usando un arma a distancia, tu objetivo debe estar dentro del Rango Máximo del arma. Resuelve el
+              ataque de acuerdo a los Ataques a Distancia. Si realizaste una maniobra de Apuntar el turno
+              pasado, tendrás un bonus para dar.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Ataque total'" [pageRef]="'L26'">
+            <p class="bodyText">
+              Atacas a un enemigo con un arma preparada con todo lo que tienes, sin importar tus defensas. Si haces un
+              ataque a distancia, obtienes un bonus de +1 para dar. Si el ataque es cuerpo a cuerpo, debes elegir una de
+              estas tres opciones para tu ataque:
+            </p>
+  
+            <ul class="bodyText text-base list-disc ml-4 mt-4">
+              <li>
+                <i>Ataque determinado</i>: Haz un ataque con un bonus de +4 a dar.
+              </li>
+              <li>
+                <i>Ataque doble</i>: Haz dos ataques contra el mismo objetivo <i>sólo si</i> blandes dos armas preparadas
+                o un arma que no debe ser preparada después de cada uso. Los ataques con un arma en la "mano mala" sufren
+                un -4 a dar a menos que tengas la Ventaja <a #DUMMYLINK #ADVANTAGE href="/">Ambidiestro</a>.
+              </li>
+              <li>
+                <i>Ataque fuerte</i>: Haz un ataque normal. Si aciertas, tienes un +2 a daño (o +1 por cada dado de daño
+                del arma, lo que sea mejor). Esto sólo se aplica a ataques cuerpo a cuerpo que hagan daño de estocada o
+                daño de golpe basados en ST.
+              </li>
+            </ul>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Cambiar postura'" [pageRef]="'L25'">
+            <p class="bodyText">
+              Con esta maniobra puedes cambiar tu postura o posición (tumbado, arrodillado, etc). Diferentes posturas
+              tienen
+              diferentes efectos. Cambiar de una postura a otra tarda un segundo (es decir, al contrario que las reglas
+              oficiales, se puede cambiar de cualquier postura a cualquier otra con una sola maniobra de Cambiar postura).
+              La única excepción a esto es la posición "tumbado": para ponerse de pie desde esta postura, primero hay que
+              cambiar a otra.
+            </p>
+            <p class="bodyText mt-2">
+              La siguiente tabla indica los efectos de cada postura (el modificador cuando <i>haces</i> un ataque en esa
+              postura, el modificador a todas las tiradas de defensa, el modificador para <i>darte</i> con un ataque a
+              distancia, y el modificador a tu Velocidad de Movimiento)
+            </p>
+            <table class="mt-2 table table-xs max-w-[44rem]">
+              <thead>
+                <tr>
+                  <th>Postura</th>
+                  <th>Ataque</th>
+                  <th>Defensa</th>
+                  <th>vs ataque a distancia</th>
+                  <th>Movimiento</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>De pie</td>
+                  <td>Normal</td>
+                  <td>Normal</td>
+                  <td>Normal</td>
+                  <td>Normal; puede esprintar</td>
+                </tr>
+                <tr>
+                  <td>Agachado</td>
+                  <td>-2</td>
+                  <td>Normal</td>
+                  <td>-2</td>
+                  <td>2/3</td>
+                </tr>
+                <tr>
+                  <td>Arrodillado</td>
+                  <td>-2</td>
+                  <td>-2</td>
+                  <td>-2</td>
+                  <td>1/3</td>
+                </tr>
+                <tr>
+                  <td>Gateando</td>
+                  <td>-4</td>
+                  <td>-3</td>
+                  <td>-2</td>
+                  <td>1/3</td>
+                </tr>
+                <tr>
+                  <td>Sentado</td>
+                  <td>-2</td>
+                  <td>-2</td>
+                  <td>-2</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td>Tumbado</td>
+                  <td>-4</td>
+                  <td>-3</td>
+                  <td>-2</td>
+                  <td>1 m/seg</td>
+                </tr>
+              </tbody>
+            </table>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Concentrarse'" [pageRef]="'L26'">
+            <p class="bodyText">
+              Te concentras en una tarea principalmente mental (una tirada de Detección para
+              detectar a un guerrero invisible, una tirada de Liderazgo para dar órdenes, conjurar un hechizo y la mayoría
+              de las otras tiradas de habilidades basadas en IQ).
+  
+              Algunas actividades requieren que te concentres durante varios segundos. Si te ves obligado a usar una
+              defensa activa, te derriban, te lesionan o de alguna otra manera te distraen antes de que termines, debes
+              hacer una tirada de Voluntad-3. En caso de fallo, pierdes tu concentración y debes empezar de nuevo.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Defensa total'">
+            <p class="bodyText">
+              Es una maniobra indicada para cuando los enemigos te superan, especialmente cuando te enfrentas a alguno al
+              que le gusta hacer Ataques totales. Elige una de estas dos opciones:
+            </p>
+            <ul class="bodyText text-base list-disc ml-4 mt-4">
+              <li>
+                <i>Defensa mejorada</i>: Añade +2 a una defensa activa de tu elección (Bloquear, Esquivar, Desviar) hasta
+                el inicio de tu siguiente turno.
+              </li>
+              <li>
+                <i>Defensa doble</i>: Puedes aplicar dos defensas activas contra el mismo ataque. Por ejemplo, puedes
+                intentar bloquear un golpe, y si fallas podrías intentar esquivarlo. Si intentas desviar un ataque con una
+                mano y fallas, intentar desviarlo con la otra mano cuenta como "otra defensa activa".
+              </li>
+            </ul>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Moverse'" [pageRef]="'L25'">
+            <p class="bodyText">
+              Puedes moverte pero no puedes hacer otra cosa excepto Acciones Gratuitas. Puedes moverte hasta tantos metros
+              como indique tu Velocidad de Movimiento.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Moverse y atacar'" [pageRef]="'L26'">
+            <p class="bodyText">
+              Puedes moverte igual que en la maniobra "Moverse", pero en algún punto de este movimiento puedes hacer un
+              sólo
+              ataque impreciso, bien desarmado o bien con un arma preparada. Haz un ataque con un penalizador de -4. Si el
+              ataque es a distancia, pierdes cualquier bonificador por Apuntar. Si es cuerpo a cuerpo, tu nivel de
+              habilidad
+              después de modificadores no puede ser mayor de 9.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'No hacer nada'" [pageRef]="'L25'">
+            <p class="bodyText">
+              No haces nada en particular. Cualquiera que esté quieto en su sitio se considera que no está haciendo nada.
+              Cuando empieza un combate, todos los combatientes se consideran "no haciendo nada" hasta que reciban su
+              primer
+              turno.
+            </p>
+            <p class="bodyText">
+              Aquellos que estén conscientes pero <a #DUMMYLINK #CONDITIONS href="/">aturdidos</a> o
+              <a #DUMMYLINK #CONDITIONS href="/">sorprendidos</a> deben elegir esta maniobra en su turno. En estos casos,
+              <i>al final de su turno</i>, uno puede intentar una tirada de HT para recuperarse de un aturdimiento físico,
+              o IQ para uno mental. En un éxito, podrá elegir otra maniobra distinta en su siguiente turno.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Prepararse'" [pageRef]="'L26'">
+            <p class="bodyText">
+              Esta maniobra es para coger o desenvainar algo y prepararlo para su uso (desenfundar una espada, descorchar
+              una poción, recargar una ballesta...). En algunos casos, puede que necesites Preparar un arma después de
+              cada
+              ataque si dicha arma es muy poco manejable, o para ajustar tu agarre con un arma larga para ajustar el
+              alcance
+              (por ejemplo, agarrar una alabarda más cerca de la hoja para pelear más comodamente en combate cuerpo a
+              cuerpo).
+            </p>
+            <p class="bodyText">
+              Esta maniobra se puede usar para tareas físicas menos violentas (abrir una puerta, cavar, forzar una
+              cerradura...)
+            </p>
+          </app-rules-section>
+        </app-rules-section>
+  
+        <app-rules-section [sectionTitle]="'Acciones gratuitas'" [pageRef]="'L25'">
+          <p class="bodyText">
+            Son cosas que puedes hacer durante cualquier maniobra. Por ejemplo, soltar un objeto o hablar (no hay un
+            límite fijo sobre cuántas palabras se pueden decir, y tampoco se va a controlar muy estrictamente, pero hay
+            que tener en cuenta que un turno dura un segundo. Si quieres dar órdenes detalladas, eso probablemente
+            requiera una maniobra de Concentración, puede que incluso varias dependiendo de la complejidad).
+          </p>
+        </app-rules-section>
+  
+        <app-rules-section [sectionTitle]="'Ataques'" [pageRef]="'L26'">
+          <p class="bodyText">
+            Un ataque es cualquier intento de golpear a un enemigo u otro objetivo. El DM tiene el derecho de declarar que
+            un ataque no es posible por alguna razón que tenga que ver con la situación actual (por ejemplo, 10 individuos
+            no podrían atacar a un humano de tamaño normal al mismo tiempo).
+          </p>
+          <p class="bodytext">
+            Un ataque puede ser cuerpo a cuerpo o a distancia. Para poder hacer un ataque cuerpo a cuerpo el objetivo
+            tiene que estar a tu alcance, y para hacer un ataque a distancia tiene que estar dentro del rango del arma.
+          </p>
+          <p class="bodyText">
+            El proceso para resolver un ataque requiere entre una y tres tiradas de dados:
+          </p>
+  
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>Primero haces una <i>tirada de ataque</i> (o tirada para dar). Si tienes éxito, el ataque es certero.</li>
+            <li>Si el ataque tiene éxito, el objetivo intenta una <i>tirada de defensa</i>. Si tiene éxito, significa que
+              ha podido bloquear o esquivar tu ataque.</li>
+            <li>Si el objetivo falla su tirada de defensa, entonces haces una <i>tirada de daño</i>.</li>
+          </ul>
+  
+          <h2 class="font-titleFont text-3xl mt-6">Tirada de ataque</h2>
+          <p class="bodyText">
+            Una tirada de ataque es simplemente una tirada contra una habilidad determinada por el arma que estés usando.
+            Toma tu nivel base con esa habilidad, añadele todos los modificadores pertinentes, y el resultado es el tu
+            "habilidad efectiva", el número
+            a batir con tu tirada (recuerda, es un éxito si sacas igual o menos que el número objetivo).
+          </p>
+          <p class="bodyText">
+            Si sacas un 3 o un 4, da igual tu habilidad efectiva: es un golpe crítico, y el ataque acierta
+            automáticamente. Si sacas un 5 o un 6, también puede ser un crítico (ver "Éxitos y fallos críticos"). En un
+            golpe crítico, el objetivo no tiene derecho a una tirada de defensa. Además, si sacas un 3, tampoco haces una
+            tirada de daño, sino que el ataque hace el máximo daño que podría hacer (es decir, si la tirada de daño
+            normalmente sería 2d+3, el máximo resultado posible es 6 + 6 + 3 = 15).
+          </p>
+  
+          <app-rules-section [sectionTitle]="'Ataques cuerpo a cuerpo'" [pageRef]="'L27'">
+            <p class="bodyText">
+              Puedes hacer un ataque cuerpo a cuerpo con cualquier arma cuerpo a cuerpo que tengas preparada (incluyendo
+              "armas naturales" como patadas, mordiscos, etc).
+            </p>
+            <p class="bodyText">
+              Algunas armas pueden ser usadas de varias formas (puedes blandir una espada corta o puedes dar una
+              estocada). Tales armas tienen varias líneas de estadísticas en su tabla correspondiente. Cuando ataques con
+              una de estas armas, debes indicar cómo estás atacando antes de hacer tu tirada de ataque.
+            </p>
+            <p class="bodyText mt-2">
+              Un arma a una mano se considera "preparada" si la tienes sujeta en una mano. Un arma a dos manos debe estar
+              sujeta por las dos manos. Algunas armas muy grandes y pesadas deben ser preparadas tras cada ataque, a menos
+              que seas extremadamente fuerte (ver "L20").
+            </p>
+            <p class="bodyText">
+              Un arma natural se considera siempre preparada a menos que la parte del cuerpo correspondiente esté ocupada
+              o impedida de algún modo (no puedes dar una patada si estás atado de pies y manos).
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Ataques a distancia'">
+            <p class="bodyText">
+              Sólo puedes hacer un ataque a distancia a un objetivo que esté dentro del rango de tu arma.
+            </p>
+            <p class="bodyText">
+              Los ataques a distancia incluyen armas propulsadas como arcos o ballestas, pero también incluyen "armas
+              lanzadas" que tienes que tirar físicamente al objetivo, como piedras, cuchillos arrojadizos, jabalinas,
+              hachuelas, dardos, etc. A efectos prácticos, las reglas son las mismas que para un arma a distancia
+              convencional.
+            </p>
+            <p class="bodyText mt-2">
+              Un ataque a distancia recibe penalizadores dependiendo de lo lejos que esté el obejtivo. Las reglas básicas
+              como se indican en "L28" son bastante complejas y en mi opinión supondrían una importante interrupción del
+              juego cada vez que alguien quiera hacer un ataque a distancia, así que en su lugar se usa la siguiente
+              tabla. Si el objetivo está dentro de uno de estos rangos establecidos, el ataque a distancia obtiene el
+              penalizador indicado.
+            </p>
+            <table class="table table-xs max-w-[30rem]">
+              <thead>
+                <tr>
+                  <th>Rango</th>
+                  <th>Distancia</th>
+                  <th>Penalizador</th>
+                  <th>Descripción</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Inmediato</td>
+                  <td>0-5 metros</td>
+                  <td>0</td>
+                  <td>Al alcance de la mano, o casi</td>
+                </tr>
+                <tr>
+                  <td>Cercano</td>
+                  <td>6-20 metros</td>
+                  <td>-3</td>
+                  <td>Conversación a volumen normal</td>
+                </tr>
+                <tr>
+                  <td>Mediano</td>
+                  <td>21-100 metros</td>
+                  <td>-7</td>
+                  <td>Conversación a gritos</td>
+                </tr>
+                <tr>
+                  <td>Lejano</td>
+                  <td>101-500 metros</td>
+                  <td>-11</td>
+                  <td>Conversación casi imposible</td>
+                </tr>
+                <tr>
+                  <td>Extremo</td>
+                  <td>501+ metros</td>
+                  <td>-15</td>
+                  <td>Difícil de ver</td>
+                </tr>
+              </tbody>
+            </table>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Modificadores comunes para ataques'">
+            <h2 class="font-titleFont text-3xl mt-6">Modificadores generales</h2>
+            <h3 class="text-2xl mt-1 underline">Según maniobra del atacante:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Moverse y atacar: -4</li>
+            </ul>
+  
+            <h3 class="text-2xl mt-3 underline">Según situación del atacante:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Mal apoyo: -2 o más</li>
+              <li>Distracción menor (parte de la ropa ardiendo): -2</li>
+              <li>Distracción mayor (toda la ropa ardiendo): -3 o más</li>
+              <li>ST por debajo de lo requerido por el arma: -1 por cada punto por debajo</li>
+            </ul>
+  
+            <h3 class="text-2xl mt-3 underline">Según visibilidad:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Ciego, objetivo completamente invisible o en oscuridad total: -10</li>
+              <li>No puede ver al objetivo: -6 (-4 si sabes su ubicación con un margen de error de 1 metro)</li>
+              <li>Oscuridad parcial, niebla, humo: entre -1 y -9</li>
+            </ul>
+  
+  
+            <h2 class="font-titleFont text-3xl mt-10">Modificadores ataques cuerpo a cuerpo</h2>
+            <h3 class="text-2xl mt-1 underline">Según maniobra del atacante:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Ataque total (determinado): +4</li>
+            </ul>
+  
+            <h3 class="text-2xl mt-3 underline">Según situación del atacante:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Sujetando un gran escudo: -2</li>
+            </ul>
+  
+            <h3 class="text-2xl mt-3 underline">Otras acciones del atacante:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Ataque con la mano mala: -4 (sin penalizador si <a #DUMMYLINK #ADVANTAGE href="/">Ambidiestro</a>)</li>
+            </ul>
+  
+            <h2 class="font-titleFont text-3xl mt-10">Modificadores ataques a distancia</h2>
+            <h3 class="text-2xl mt-1 underline">Según maniobra del atacante:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Ataque total (determinado): +1</li>
+            </ul>
+  
+            <h3 class="text-2xl mt-3 underline">Según situación del atacante:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Apuntar un turno: +Precisión del arma</li>
+              <li>Apuntar más de un turno: +1 por 2 segundos, +2 por 3 o más segundos</li>
+              <li>Arma apoyada: +1 estando quieto <u>y</u> tras un turno Apuntando</li>
+              <li>Ataque con la mano mala: -4 (sin penalizador si <a #DUMMYLINK #ADVANTAGE href="/">Ambidiestro</a>)</li>
+            </ul>
+  
+            <h3 class="text-2xl mt-3 underline">Según situación del objetivo:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Distancia: entre 0 y -15</li>
+            </ul>
+          </app-rules-section>
+        </app-rules-section>
+  
+        <app-rules-section [sectionTitle]="'Defensa'" [pageRef]="'L28'">
+          <p class="bodyText">
+            Si un enemigo tiene éxito en su tirada contra ti, no significa necesariamente que sufras una grave herida.
+            Sólo significa que su ataque es suficiente para herirte -<i>sólo si</i> no eres capaz de defenderte.
+          </p>
+          <p class="bodyText">
+            Una defensa activa es un intento deliberado de evitar un ataque en particular, y eso significa que sólo es
+            posible intentarlo si el atacado es consciente del ataque <i>y</i> puede reaccionar apartándose (Esquiva),
+            interponiendo un escudo frente al ataque (Bloquear), o utilizando un arma o una mano para desviar el ataque
+            (Desvío)
+          </p>
+          <p class="bodyText mt-2">
+            Si puedes efectuar una defensa activa debes elegir <i>uno</i> de los tres tipos de defensa (dos, si eliges la
+            maniobra Defensa total (doble) en tu turno anterior). Además, algunas maniobras afectan o incluso restringen
+            alguno de los tipos de defensa.
+          </p>
+          <p class="bodyText">
+            No tienes derecho a defensa activa si no eres consciente del ataque o si estás inconsciente, inmobilizado, y
+            en general si no puedes reaccionar al ataque.
+          </p>
+  
+          <h2 class="font-titleFont text-3xl mt-6">La tirada</h2>
+          <p class="bodyText">
+            El atacado tira 3d contra su puntuación de defensa activa (la que haya elegido). Como siempre, si la tirada es
+            igual o menor al número objetivo, la defensa tiene éxito. Una tirada de 3 o 4 siempre tiene éxito, y una
+            tirada de 17 o 18 siempre falla.
+          </p>
+          <p class="bodyText">
+            Si el atacante logra un crítico, el atacado no tiene derecho a defensa activa. Estar <a #DUMMYLINK #CONDITIONS
+              href="/">aturdido</a> impone un -4 a todas las defensas, y si tienes un escudo preparado, añades su Bonus de
+            Defensa (BD) a <u>todas</u> las defensas activas frente a ataques que te vengan de frente o del lado del
+            escudo.
+          </p>
+  
+          <app-rules-section [sectionTitle]="'Esquivar'">
+            <p class="bodyText">
+              Esquivar representa apartarse del trayecto de un ataque (o de precedir el trayecto del mismo para saber
+              donde <i>no</i> colocarse).
+            </p>
+            <p class="bodyText">
+              Tu puntuación de Esquiva es igual a tu Rapidez + 3 (ignorando fracciones), menos una penalización igual a tu
+              nivel de Carga. Puedes esquivar cualquier ataque del que seas consciente, pero sólo puedes intentar esquivar
+              un ataque dado una sóla vez (aunque no hay ningún limite al número de ataques <i>diferentes</i> que puedes
+              intentar esquivar en un mismo turno).
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Bloquear'">
+            <p class="bodyText">
+              Representa el intento de interponer un escudo, capa gruesa o un objeto grande similar (lo llamaremos
+              "escudo" por comodidad. Puede ser incluso otra persona, si eres lo suficientemente fuerte como para agarrar
+              y levantar a alguien) entre ti y un ataque. Esto necesita un escudo <i>preparado</i>.
+            </p>
+            <p class="bodyText">
+              Tu puntuación de Bloqueo es 3 + la mitad de tu habilidad de <a #DUMMYLINK #SKILLS href="/">Escudos</a>,
+              ignorando fracciones. Por ejemplo, una habilidad de Escudos-11 daría una puntuación de bloqueo de 3 + (11/2)
+              = 8.5, que quedaría en <u>8</u>.
+            </p>
+            <p class="bodyText mt-2">
+              Sólo puedes intentar bloquear un ataque cada turno.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Desviar'">
+            <p class="bodyText">
+              Representa intentar desviar un ataque con un arma adecuada o con una mano desnuda. Debes tener el arma
+              preparada (o no tener nada en la mano).
+            </p>
+            <p class="bodyText">
+              Puedes usar la mayoría de armas cuerpo a cuerpo para desviar ataques, pero algunas están hechas
+              especialmente para eso y otorgan un +1 o +2. Tu puntuación de Desvío es 3 + la mitad de tu habilidad con ese
+              arma, ignorando fracciones. Por ejemplo, una habilidad de Espada Corta-13 daría una puntuación de desvío de
+              3 + (13/2) = 9.5, que quedaría finalmente en <u>9</u>.
+            </p>
+            <p class="bodyText mt-2">
+              Sólo se pueden desviar ataques cuerpo a cuerpo o a distancia con armas lanzadas. Se pueden desviar ataques
+              con armas a distancia <u>sólo si</u> el atacante está al alcance del atacado, pero esto no representa
+              desviar el proyectil, sino <i>el arma</i>. Si alguien te dispara una ballesta a bocajarro, podrías utilizar
+              tus manos para golpear el arma justo en el momento del disparo, causando que el virote no acierte.
+            </p>
+            <p class="bodyText">
+              Las armas lanzadas se pueden desviar pero con un penalizador de -1, o -2 si el arma es muy pequeña (dardos,
+              cuchillos, shuriken...)
+            </p>
+            <p class="bodyText mt-2">
+              Si consigues desviar un ataque desarmado con un arma, puedes herir al atacante. Tira inmediatamente contra
+              tu habilidad con ese arma. Si tienes éxito, es como si le hubieras asestado un ataque certero, y no tiene
+              derecho a defensa activa para esto. Tira daño directamente.
+            </p>
+            <p class="bodyText mt-2">
+              Sólo puedes intentar desviar un ataque por turno.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Modificadores comunes para defensa'" [pageRef]="'L29'">
+            <h3 class="text-2xl mt-1 underline">Según equipamiento del defensor:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Desviar con una daga o cuchillo: -1 a Desvío</li>
+              <li>Desviar con un bastón: 21 a Desvío</li>
+              <li>Desviar un arma estando desarmado: -3 a Desvío</li>
+            </ul>
+  
+            <h3 class="text-2xl mt-3 underline">Según maniobra del defensor:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Ataque total: No se puede usar defensa activa</li>
+              <li>Defensa total (mejorada): +2 a <i>una</i> defensa activa</li>
+              <li>Mover y atacar: Esquivar o Bloquear (no se puede Desviar)</li>
+            </ul>
+  
+            <h3 class="text-2xl mt-3 underline">Según situación del defensor:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Mal apoyo: -1 o más</li>
+              <li>No puede ver al atacante: -4, y Bloquear o Desviar requiere una tirada de <a #DUMMYLINK #SKILLS href="/">Escucha</a>-2</li>
+              <li>Distracción (ej. ropa ardiendo): -1 o más</li>
+              <li>Sobrecargado: penalizador a Esquiva igual al nivel de Carga</li>
+              <li><a #DUMMYLINK #CONDITIONS href="/">Aturdido</a>: -4</li>
+            </ul>
+  
+            <h3 class="text-2xl mt-3 underline">Tipo de ataque:</h3>
+            <ul class="bodyText text-base list-disc ml-4 mt-1">
+              <li>Ataque por detrás: no hay defensa posible</li>
+              <li>Ataque con un mangual: -4 a Desvío, -2 a Bloquear</li>
+              <li>Arma lanzada: -1 a Desvío (-2 si arma muy pequeña: 0.5kg o menos)</li>
+            </ul>
+          </app-rules-section>
+        </app-rules-section>
+      </app-rules-section>
+  
+      <app-rules-section [sectionTitle]="'Acciones'" [pageRef]="'L22'">
+        <p class="bodyText mt-2">
+          A continuación se listan algunas actividades comunes que surgen de vez en cuando a lo largo de una aventura.
+        </p>
+        <app-rules-section [sectionTitle]="'Acciones físicas'">
+          <app-rules-section [sectionTitle]="'Escalar'" [stylesOverrides]="'mt-3'">
+            <p class="bodyText">
+              Escalar cualquier cosa más difícil que subir por una escalera de mano requiere una tirada contra <a
+                #DUMMYLINK #SKILLS href="/">Escalada</a>.
+              Los
+              modificadores a la tirada dependen de la dificultad de lo que se quiera escalar (referencias abajo). Además,
+              se resta el nivel de Carga de la tirada.
+            </p>
+            <p class="bodyText">
+              Se hace una tirada al empezar la escalada y otra cada 5 minutos. Fallar esta tirada significa caerse (si te
+              aseguraste de atarte bien con una cuerda, caes sólo hasta el final de la cuerda a menos que saques un fallo
+              crítico).
+            </p>
+            <table class="table table-xs w-1/2">
+              <thead>
+                <tr>
+                  <th>Tipo de escalada</th>
+                  <th>Modificador</th>
+                  <th>Vel. en combate</th>
+                  <th>Vel. normalmente</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Escalera hacia arriba</td>
+                  <td>Sin tirada</td>
+                  <td>3 peldaños/seg</td>
+                  <td>1 peldaño/seg</td>
+                </tr>
+                <tr>
+                  <td>Escalera hacia abajo</td>
+                  <td>Sin tirada</td>
+                  <td>2 peldaños/seg</td>
+                  <td>1 peldaño/seg</td>
+                </tr>
+                <tr>
+                  <td>Árbol normal</td>
+                  <td>+5</td>
+                  <td>30 cm/seg</td>
+                  <td>10 cm/seg</td>
+                </tr>
+                <tr>
+                  <td>Montaña normal</td>
+                  <td>0</td>
+                  <td>15 cm/seg</td>
+                  <td>3 m/min</td>
+                </tr>
+                <tr>
+                  <td>Pared de piedra vertical</td>
+                  <td>-3</td>
+                  <td>6 cm/seg</td>
+                  <td>1.20 m/min</td>
+                </tr>
+                <tr>
+                  <td>Edificio de pared lisa</td>
+                  <td>-3</td>
+                  <td>3 cm/seg</td>
+                  <td>15 cm/min</td>
+                </tr>
+                <tr>
+                  <td>Cuerda hacia arriba</td>
+                  <td>-2</td>
+                  <td>30 cm/seg</td>
+                  <td>6 m/min</td>
+                </tr>
+                <tr>
+                  <td>Cuerda hacia abajo</td>
+                  <td>-1</td>
+                  <td>60 cm/seg</td>
+                  <td>9 m/min</td>
+                </tr>
+              </tbody>
+            </table>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Saltar'" [pageRef]="'L23'">
+            <p class="bodyText">
+              Cuando el obstáculo sea mucho más pequeño que tú no hace falta hacer nada especial: lo saltas con éxito. Si
+              hiciera falta, se puede calcular la distancia que un personaje puede saltar. Aunque usaremos herramientas
+              digitales que calculan este número automáticamente, la fórmula se indica aquí a modo de referencia:
+            </p>
+            <ul class="bodyText text-base list-disc ml-4 mt-4">
+              <li>
+                <i>Salto de altura</i>: (15 x Velocidad de Movimiento) - 25 centímetros (redondeando decimales). Por
+                ejemplo, para una MV de 6 y sin carrerilla, un personaje saltaría 65cm. Si se coge carrerilla, añade los
+                metros de carrerilla a tu VM en esta fórmula (el máximo que se puede saltar de esta manera es el doble de
+                lo
+                que se saltaría desde parado).
+              </li>
+              <li>
+                <i>Salto de longitud</i>: ((2 x Velocidad de Movimiento) - 3) x 30 centímetros. Por ejemplo, para una MV
+                de
+                6 sin carrerilla, un personaje saltaría 270cm. Igual que en el salto de altura, la carrerilla añade +1 a
+                MV
+                en esta fórmula por metro recorrido, y la distancia máxima que se puede saltar es el doble de la distancia
+                que se saltaría desde parado.
+              </li>
+            </ul>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Levantar peso'">
+            <p class="bodyText">
+              En el raro caso en el que sea necesario determinar si un personaje es capaz de levantar o mover un peso (por
+              ejemplo, para tirar de un carro o para saber si un bárbaro humano es capaz de levantar y lanzar a su
+              compañero
+              halfling contra sus
+              enemigos como una pelota), se puede consultar la siguiente lista, dependiendo del BL (Basic Lift = (ST x ST)
+              /
+              10 kg) del personaje. En algunos casos varios personajes podrían colaborar, en cuyo caso todos los
+              personajes
+              participantes añaden su BL para esa tarea.
+            </p>
+            <p>
+              La lista presenta varias acciones y el peso máximo de un objeto para que un personaje (o varios, si añaden
+              sus
+              BL) pueda llevarla a cabo. Por ejemplo, un personaje con BL de 10kg podría <i>levantar con una mano</i> un
+              peso de 20 kg, o podría <i>levantar con dos manos</i> un peso de 80 kg.
+            </p>
+            <ul class="bodyText text-base list-disc ml-4 mt-4">
+              <li>
+                <i>Levantar con una mano</i>: 2 x BL (tarda 2 segundos).
+              </li>
+              <li>
+                <i>Levantar con dos manos</i>: 8 x BL (tarda 4 segundos).
+              </li>
+              <li>
+                <i>Empujar y derribar</i>: 12 x BL. 24 x BL con carrerilla. Puede haber bonus adicional para objetos que
+                no
+                estén bien equilibrados.
+              </li>
+              <li>
+                <i>Cargar a la espalda</i>: 15 x BL. Por cada segundo que tu nivel de Carga supere 10 x BL, pierdes 1
+                Punto
+                de Fatiga.
+              </li>
+              <li>
+                <i>Desplazar levemente</i>: Dependendiendo de tu postura y puntos de apoyo, puede llegar hasta 50 x BL.
+              </li>
+            </ul>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Correr'">
+            <p class="bodyText">
+              Esprintar utiliza tu Velocidad de Movimiento después de aplicar penalizadores por Carga, si los hubiera. Al
+              esprintar, añade un 20% a tu VM: esa es la distancia que cubres por segundo después de correr durante un
+              segundo (al fin y al cabo, uno necesita acelerar para llegar a su máxima velocidad). Por ejemplo, con una VM
+              de 7, un personaje que quiera esprintar cubriría 7 metros el primer segundo, y 8.4 metros después y hasta
+              que
+              pare.
+            </p>
+            <p class="bodyText">
+              Esprintar es muy cansado. Cada 15 segundos esprintando, haz una tirada contra HT. Si fallas, pierdes 1 Punto
+              de Fatiga. Si bajas por debajo de 1/3 de tus PF, tu Velocidad de Movimiento se reduce a la mitad.
+            </p>
+            <p class="bodyText mt-2">
+              Para recorrer largas distancias hay que controlar el ritmo, y por ello la velocidad en estos casos es la
+              mitad
+              que la velocidad de sprint. A cambio, es menos cansado: la tirada contra HT se hace cada minuto, en vez de
+              cada 15 segundos.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Nadar'">
+            <p class="bodyText">
+              En la mayoría de los casos no hace falta tirar para nadar, a menos que sean situaciones excepcionales, como
+              aguas bravas o cruzando una extensión de agua a la carrera huyendo de algo o alguien. En esos casos, hay que
+              tirar contra la habilidad de <a #DUMMYLINK #SKILLS href="/">Nadar</a> al entrar al agua, y cada 5 minutos
+              después. Si fallas, empiezas a
+              ahogarte, pierdes 1 PF y debes tirar de nuevo cada 5 segundos hasta que tengas éxito en una tirada, te
+              rescaten, o llegues a 0 PF y te ahogues. Si tienes éxito en esta tirada, recuperas el control y vuelves a
+              tirar cada 5 minutos.
+            </p>
+            <p class="bodyText">
+              La mayoría de criaturas terrestres tienen una velocidad <i>máxima</i> nadando igual a su Velocidad de
+              Movimiento / 5 (redondeando hacia abajo), y una velocidad mínima de 1 metro/segundo. Si nadas a velocidad
+              máxima, la tirada de PF se hace cada minuto, en vez de cada 5.
+            </p>
+            <p class="bodyText">
+              Si caes por debajo de 1/3 Puntos de Fatiga, tu velocidad de nado se reduce a la mitad.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Lazar cosas'" [stylesOverrides]="'mb-0'">
+            <p class="bodyText">
+              Puedes lanzar cualquier cosa que seas capaz de levantar (ver "Levantar peso"). Tirar un objeto en combate
+              (tenga intención de ser un ataque o no) requiere una tirada de Ataque. Puedes tirar objetos que pesen hasta
+              2
+              x BL kg con una mano (algo más pesado requiere dos manos). Tira contra DX-3 si apuntas a un objetivo
+              concreto,
+              o contra DX si sólo apuntas a un área general.
+            </p>
+            <p class="bodyText">
+              Normalmente, para evitar tener que interrumpir la partida para hacer matemáticas, el DM permitirá cualquier
+              lanzamiento que considere razonable. Pero si es <i>estrictamente necesario</i> saber la distancia máxima a
+              la
+              que un personaje puede lanzar algo, se puede usar el siguiente procedimiento:
+            </p>
+            <ul class="bodyText text-base list-disc ml-4 mt-4">
+              <li>
+                Divide el peso del objeto por tu BL para encontrar el "ratio".
+              </li>
+              <li>
+                Busca ese ratio en la columna "Ratio de la siguiente tabla". Si ese resultado está entre dos valores en la
+                tabla, usa el mayor.
+              </li>
+              <li>
+                Anota el "modificador de distancia" de ese ratio.
+              </li>
+              <li>
+                Multiplica tu ST por el modificador de distancia anterior. El resultado es la distancia máxima en metros
+                que
+                tu personaje podrá lanzar ese objeto.
+              </li>
+            </ul>
+  
+            <div class="flex">
+              <table class="m3-4 mt-2 w-96 mr-10 table table-xs pb-0">
+                <thead>
+                  <tr>
+                    <th>Ratio</th>
+                    <th>Modificador de distancia</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>0.1</td>
+                    <td>3.5</td>
+                  </tr>
+                  <tr>
+                    <td>0.2</td>
+                    <td>2.5</td>
+                  </tr>
+                  <tr>
+                    <td>0.3</td>
+                    <td>2</td>
+                  </tr>
+                  <tr>
+                    <td>0.4</td>
+                    <td>1.5</td>
+                  </tr>
+                  <tr>
+                    <td>0.8</td>
+                    <td>1</td>
+                  </tr>
+                  <tr>
+                    <td>1</td>
+                    <td>0.8</td>
+                  </tr>
+                  <tr>
+                    <td>2</td>
+                    <td>0.6</td>
+                  </tr>
+                  <tr>
+                    <td>3</td>
+                    <td>0.4</td>
+                  </tr>
+                </tbody>
+              </table>
+              <table class="m3-4 mt-2 w-96 table table-xs pb-0">
+                <thead>
+                  <tr>
+                    <th>Ratio</th>
+                    <th>Modificador de distancia</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>4</td>
+                    <td>0.3</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>0.25</td>
+                  </tr>
+                  <tr>
+                    <td>6</td>
+                    <td>0.2</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>0.15</td>
+                  </tr>
+                  <tr>
+                    <td>12</td>
+                    <td>0.1</td>
+                  </tr>
+                  <tr>
+                    <td>20</td>
+                    <td>0.06</td>
+                  </tr>
+                  <tr>
+                    <td>24</td>
+                    <td>0.05</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </app-rules-section>
+        </app-rules-section>
+  
+        <app-rules-section [sectionTitle]="'Acciones mentales'" [pageRef]="'L24'">
+          <app-rules-section [sectionTitle]="'Detectar'">
+            <p class="bodyText">
+              Las tiradas de Detección ("Sense" en libros oficiales) son una grupo de tiradas que se hacen cuando se
+              intenta
+              usar uno de los sentidos para detectar o percibir algo. Incluye tiradas de Visión, de Oído, y de
+              Gusto/Olfato.
+              Para todas estas tiradas se usa el atributo secundario "Percepción", pero puede ser que determinados efectos
+              influyan o modifiquen una tirada en concreto pero las otras no, con lo que es importante mantener una
+              distinción entre las tres.
+            </p>
+            <p class="bodyText mt-2">
+              Una tirada de Detección exitosa significa que te das cuenta de algo, pero en ocasiones el DM puede exigir
+              una
+              segunda tirada para <i>entender</i> qué es lo que has percibido (por ejemplo, para darte cuenta de que ese
+              "canto de pájaro" es en realidad el aviso que una tribu primitiva de cazadores se hace entre sí para
+              coordinar
+              una emboscada). Esta tirada es contra IQ para detalles que cualquiera podría deducir, o contra una habilidad
+              apropiada si es necesario ser un experto para entenderlo.
+            </p>
+            <p class="bodyText mt-2">
+              Si tienes la ventaja <a #DUMMYLINK #ADVANTAGE href="/">"Sentido de Peligro"</a> y fallas una tirada de
+              Detección o comprensión para notar
+              algo peligroso, el DM hará secretamente una tirada de Percepción por ti. Si tiene éxito, percibirás el
+              peligro de todos modos.
+            </p>
+  
+            <app-rules-section [sectionTitle]="'Visión'">
+              <p class="bodyText">
+                Haz una tirada de Visión siempre que sea importante que veas algo.
+                Cuando intentes detectar algo que está deliberadamente oculto, el DM puede tratar esta tirada como una
+                tirada enfrentada contra una habilidad de ocultamiento (<a #DUMMYLINK #SKILLS href="/">Camuflaje</a>, <a
+                  #DUMMYLINK #SKILLS href="/">Ocultar</a>, etc), y puede permitir —o
+                requerir— que una habilidad como Observación o Búsqueda reemplace a Percepción para la tirada.
+              </p>
+            </app-rules-section>
+  
+            <app-rules-section [sectionTitle]="'Oído'">
+              <p class="bodyText">
+                Haz una tirada de Oído siempre que sea importante que oigas algo.
+                El DM a menudo requerirá una tirada de comprensión adicional para entender una conversación, sobre todo si
+                es en un idioma extranjero
+              </p>
+              <p class="bodyText">
+                Cuando intentes oír a alguien que está intentando moverse silenciosamente, el DM puede tratar esta tirada
+                como una tirada enfrentada contra su habilidad de <a #DUMMYLINK #SKILLS href="/">Sigilo</a>. Si estás
+                intentando escuchar de forma <i>activa</i>, el DM puede permitirte utilizar la habilidad de <a #DUMMYLINK
+                  #SKILLS href="/">Observación</a> en vez de Percepción.
+              </p>
+            </app-rules-section>
+  
+            <app-rules-section [sectionTitle]="'Gusto/Olfato'">
+              <p class="bodyText">
+                Son dos caras de la misma moneda. Haz una tirada de Gusto para detectar sabores, y Olfato para detectar
+                olores.
+              </p>
+            </app-rules-section>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Influenciar'">
+            <p class="bodyText">
+              Una tirada de Influencia es un intento <i>deliberado</i> de conseguir una reacción positiva de un NPC (ver
+              "Tiradas de reacción"). Un personaje con una habilidad apropiada (a decisión del DM) puede utilizarla en
+              lugar de una tirada de reacción corriente. Ejemplos de habilidades apropiadas generalmente son
+              <a #DUMMYLINK #SKILLS href="/">Diplomacia</a>, <a #DUMMYLINK #SKILLS href="/">Engatusar</a>,
+              <a #DUMMYLINK #SKILLS href="/">Intimidación</a>, <a #DUMMYLINK #SKILLS href="/">Saber-hacer</a>, o
+              <a #DUMMYLINK #SKILLS href="/">Callejería</a>, aunque el DM puede permitir una habilidad especialmente
+              apropiada en una situación determinada (por ejemplo, <a #DUMMYLINK #SKILLS href="/">Arquitectura</a> para
+              intentar ganarse el favor de un arquitecto influyente).
+            </p>
+            <p class="bodyText mt-2">
+              Haz una tirada enfrentada con la habilidad que vas a usar para influenciar contra la Voluntad del NPC. Si
+              tienes éxito, consigues una reacción Buena del NPC. Pero si fallas, el NPC se resiente de tu intento de
+              manipulación, y la reacción es Mala (Muy Mala si has usado Intimidación).
+            </p>
+            <p class="bodyText">
+              <i>Excepción:</i> Si usas Diplomacia, además de tu tirada de influencia, el DM también hace una tirada de
+              reacción como siempre, y la reacción del NPC será el resultado más favorable para los jugadores.
+            </p>
+          </app-rules-section>
+  
+          <app-rules-section [sectionTitle]="'Voluntad'">
+            <p class="bodyText">
+              El DM puede pedir una tirada contra tu Voluntad cuando te enfrentes a situaciones especialmente estresantes
+              o grandes distracciones. En un éxito puedes actuar con normalidad, pero en un fallo te dejas llevar por el
+              miedo, te distraes, te derrumbas ante la presión, etc.
+            </p>
+  
+            <h2 class="font-titleFont text-3xl mt-6">Tirada de Miedo</h2>
+            <p class="bodyText">
+              Es una tirada de Voluntad específica para situaciones especialmente aterradoras. No se hacen tiradas de
+              Miedo para cosas "ordinarias" que asustan, sino para eventos inusuales y especialmente aterradores que
+              podrían aturdir o incluso dejar cicatrices mentales permanentes.
+            </p>
+            <p class="bodyText">
+              Se añaden todos los modificadores pertinentes a la tirada de Miedo. En un fallo, debes tirar 3d y añadirle
+              el margen de fallo y comparar el resultado con la <a #DUMMYLINK #TABLES href="/">tabla de miedo</a> para ver
+              qué te ocurre.
+            </p>
+          </app-rules-section>
+        </app-rules-section>
+      </app-rules-section>
+    </div>
+  </app-info-section>
+</div>
+
+<app-books-reference-popup />
