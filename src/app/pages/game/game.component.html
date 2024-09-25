@@ -1117,41 +1117,6 @@
             </ul>
           </app-rules-section>
         </app-rules-section>
-
-        <app-rules-section [sectionTitle]="'Daño y heridas'" [pageRef]="'L29'">
-          <p class="bodyText">
-            Si tu ataque tiene éxito y el objetivo falla su tirada de defensa (si la tuviera), tu ataque acierta y
-            generalmente hará daño, para lo cual tienes que hacer una <i>tirada de daño</i>. Tu arma determina la
-            cantidad de dados que tendrás que tirar, y una vez lo hagas, al resultado se le resta la Resistencia al Daño
-            (DR) que el objetivo pudiera tener.
-          </p>
-          <p class="bodyText mt-2">
-            Normalmente, tú haces tus propias tiradas, y el DM hace las del resto de personajes no jugables. Las tiradas
-            se expresan como una cantidad de dados, a veces con un modificador (por ejemplo, "1d+2" significa que tiras
-            un dado de 6 caras y le sumas 2 al resultado). Independientemente de quien las haga, la responsabilidad de
-            calcular el daño será del DM.
-          </p>
-          <p class="bodyText mt-2">
-            Si es un arma a distancia, tiene una estadística relacionada con la distancia al objetivo. 1/2D, o Mitad de
-            Rango, indica la distancia (en metros) para que el ataque haga su daño completo: si el objetivo está a una
-            distancia igual o mayor a la de la Mitad de Rango, el daño se divide entre 2, redondeando hacia abajo, antes
-            de aplicar DR.
-          </p>
-          <p class="bodyText mt-2">
-            La DR de <b>fuentes diferentes</b> es aditiva generalmente, a menos que se especifique lo contrario. Es
-            decir, tener una DR natural de 2 junto a una armadura de DR4 significa que tu total de DR es 6.
-          </p>
-          <p class="bodyText mt-2">
-            Todo el daño que sobre tras restar DR, se multiplica dependiendo del tipo de daño. El daño tras esta
-            multiplicación determina los HP que pierde el objetivo. Se redondea hacia abajo, pero si hay algo de daño
-            que sobra tras aplicar la DR del objetivo, el daño mínimo que recibe es 1.
-          </p>
-          <ul class="bodyText text-base list-disc ml-4 mt-4">
-            <li>Perforante pequeño (pi-): x0.5</li>
-            <li>Perforante grande (pi+) y cortante (cut): x1.5</li>
-            <li>Empalador (imp): x2</li>
-          </ul>
-        </app-rules-section>
       </app-rules-section>
 
       <app-rules-section [sectionTitle]="'Acciones'" [pageRef]="'L22'">
@@ -1581,6 +1546,116 @@
               qué te ocurre.
             </p>
           </app-rules-section>
+        </app-rules-section>
+      </app-rules-section>
+
+      <app-rules-section [sectionTitle]="'Daño, heridas y otros peligros'" [pageRef]="'L29'">
+        <app-rules-section [sectionTitle]="'Daño de combate'">
+          <p class="bodyText">
+            Si tu ataque tiene éxito y el objetivo falla su tirada de defensa (si la tuviera), tu ataque acierta y
+            generalmente hará daño, para lo cual tienes que hacer una <i>tirada de daño</i>. Tu arma determina la
+            cantidad de dados que tendrás que tirar, y una vez lo hagas, al resultado se le resta la Resistencia al Daño
+            (DR) que el objetivo pudiera tener.
+          </p>
+          <p class="bodyText mt-2">
+            Normalmente, tú haces tus propias tiradas, y el DM hace las del resto de personajes no jugables. Las tiradas
+            se expresan como una cantidad de dados, a veces con un modificador (por ejemplo, "1d+2" significa que tiras
+            un dado de 6 caras y le sumas 2 al resultado). Independientemente de quien las haga, la responsabilidad de
+            calcular el daño será del DM.
+          </p>
+          <p class="bodyText mt-2">
+            Si es un arma a distancia, tiene una estadística relacionada con la distancia al objetivo. 1/2D, o Mitad de
+            Rango, indica la distancia (en metros) para que el ataque haga su daño completo: si el objetivo está a una
+            distancia igual o mayor a la de la Mitad de Rango, el daño se divide entre 2, redondeando hacia abajo, antes
+            de aplicar DR.
+          </p>
+          <p class="bodyText mt-2">
+            La DR de <b>fuentes diferentes</b> es aditiva generalmente, a menos que se especifique lo contrario. Es
+            decir, tener una DR natural de 2 junto a una armadura de DR4 significa que tu total de DR es 6.
+          </p>
+          <p class="bodyText mt-2">
+            Todo el daño que sobre tras restar DR, se multiplica dependiendo del tipo de daño. El daño tras esta
+            multiplicación determina los HP que pierde el objetivo. Se redondea hacia abajo, pero si hay algo de daño
+            que sobra tras aplicar la DR del objetivo, el daño mínimo que recibe es 1.
+          </p>
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>Perforante pequeño (pi-): x0.5</li>
+            <li>Perforante grande (pi+) y cortante (cut): x1.5</li>
+            <li>Empalador (imp): x2</li>
+          </ul>
+        </app-rules-section>
+        <app-rules-section [sectionTitle]="'Pérdida de HP'">
+          <p class="bodyText mt-2">
+            Toda herida y pérdida de HP puede llegar a dejar inconsciente o incluso matar a cualquiera, por pequeña que
+            sea. Pero al contrario que muchos otros juegos tradicionales, llegar a 0HP no significa muerte
+            automáticamente. De hecho, en GURPS, lo más normal no es morir: es caer inconsciente. No obstante, es muy
+            fácil caer inconsciente si se afronta un conflicto sin pensar y "a lo loco".
+          </p>
+          <p class="bodyText">
+            Estos son los efectos que ocurren cuando un personaje baja a 0HP o menos:
+          </p>
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li><b>0HP o menos:</b>Estás en peligro de caer inconsciente. Al principio de tu siguiente turno, haz una
+              tirada de HT con un penalizador de -1 por cada múltiplo de HP que estés por debajo de 0HP. Si fallas, caes
+              inconsciente. Si tienes éxito puedes actuar con normalidad, pero debes repetir esta tirada en cada turno.
+              Si eliges no hacer nada en tu turno y no has intentado tiradas de defensa entre tu anterior turno y este,
+              no hace falta que hagas esta tirada.</li>
+            <li><b>-1 x HP:</b>Además de lo anterior, debes hacer una tirada de HT inmediatamente depsués de sobrepasar
+              este umbral. En un fallo por más de 2, tu personaje muere. En un fallo por 1 o 2, tu personaje sufre una
+              herida mortal (ver más abajo). Debes repetir esta tirada por cada múltiplo de HP negativo.</li>
+            <li><b>-5 x HP:</b>Tu personaje ha sufrido una cantidad de daño insostenible para cualquier humanoide
+              normal. Tu personaje muere inmediatamente.</li>
+            <li><b>-10 x HP</b>Destrucción completa del cuerpo. 200 puntos de daño por heridas con flechas pueden
+              significar una masa irreconocible; 200 puntos de daño por fuego deja un montón de cenizas, etc.</li>
+          </ul>
+
+          <h2 class="font-titleFont text-3xl mt-6">Heridas mortales</h2>
+          <p class="bodyText mt-2">
+            Una herida mortal es lo que implica: peligro serio de morir. Si tu personaje no estaba inconsciente antes,
+            puede o puede que no lo esté ahora (depende de la situación). Si el personaje sufre más daños después y
+            tienes que intentar una nueva tirada de HT y la fallas, el personaje muere.
+          </p>
+          <p class="bodyText mt-2">
+            Estando herido de muerte, debes hacer una tirada de HT cada media hora para evitar morir. En un éxito, el
+            personaje aguanta otra media hora más (aprox), hasta la siguiente tirada de HT.
+          </p>
+          <p class="bodyText">
+            En un éxito crítico, logras aguantar heroicamente: ya no estás herido de muerte y no tienes que seguir
+            tirando HT cada media hora (pero sigues incapacitado). También puedes recuperarte de una herida de muerte
+            con un éxito en HT en el momento en el que recibas tratamiento médico o mágico, incluso si tu HP sigue
+            siendo menor que 0.
+          </p>
+          <p class="bodyText mt-2">
+            Al recuperarte de una herida mortal, haz otra tirada de HT. En un fallo crítico, el DM puede aplicar alguna
+            consecuencia apropiada a la herida sufrida (por ejemplo, una terrible cicatriz que intimida y dificulta las
+            interacciones sociales).
+          </p>
+
+          <h2 class="font-titleFont text-3xl mt-6">Muerte</h2>
+          <p class="bodyText mt-2">
+            Si tu personaje muere, sigue llevando un registro de su HP negativo. Hay formas de volver de la muerte
+            siempre que no llegues a -10 x HP (pero los personajes, en este mundo ficticio, NO lo saben! No actúes
+            con tu personaje con conocimiento que tú tienes como persona en el mundo real pero que tu personaje no
+            tendría en su mundo!).
+          </p>
+          <p class="bodyText">
+            Una cabeza cortada o un cuello rebanado mata a cualquiera, sin importar HP o HT. Si un personaje
+            <i><b>indefenso</b></i> o <i><b>inconsciente</b></i> sufre un ataque obviamente letal como esos, muere. Sin
+            importar
+            tiradas de HT; asume que su HP baja automáticamente a -5 x HP. Esto no se aplica a objetivos que simplemente
+            no saben que van a ser víctimas de tal ataque: si te acercas sigilosamente a un guardia por la espalda y le
+            intentas cortar el cuello, no lo matas automáticamente. Es un ataque sorpresa y en ese primer turno, la
+            víctima no tiene derecho a actuar: haz un Ataque Completo! Puede incluso que en ese primer ataque sorpresa
+            causes tanto daño que el objetivo queda incapacitado al instante (y susceptible de ser rematado). Pero no es
+            una muerte automática.
+          </p>
+          <p class="bodyText mt-2">
+            Cuando un personaje o un NPC muere, y siempre que no muera por una causa tremenda y repentina (como caerse
+            por un acantilado o ser aplastado por una roca gigante), tiene derecho a una última acción. Puede ser un
+            último ataque desesperado (nada que necesite más de un turno para llevarse a cabo), o un discurso dramático,
+            o lo que quieras.
+            y conmovedor.
+          </p>
         </app-rules-section>
       </app-rules-section>
     </div>
