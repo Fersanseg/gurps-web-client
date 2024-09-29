@@ -1657,7 +1657,7 @@
             y conmovedor.
           </p>
         </app-rules-section>
-        <app-rules-section [sectionTitle]="'Recuperación'">
+        <app-rules-section [sectionTitle]="'Recuperación'" [pageRef]="'L30'">
           <h2 class="font-titleFont text-3xl mt-6">Recuperarse de la inconsciencia</h2>
           <p class="bodyText mt-2">
             Muchas cosas pueden dejarte inconsciente. Depende del GM decidir si realmente estás inconsciente o
@@ -1688,19 +1688,108 @@
             En un éxito, recuperas 1HP.
           </p>
 
-
           <h2 class="font-titleFont text-3xl mt-6">Primeros auxilios</h2>
           <p class="bodyText mt-2">
-            La habilidad de <a #DUMMYLINK #SKILLS href="/">Primeros Auxilios</a> permite tratar heridas de dos formas: aplicar vendajes y tratar el shock. Un personaje no puede recibir tratamiento más de una vez: una víctima herida no se va a recuperar antes por tener más vendas puestas.
+            La habilidad de <a #DUMMYLINK #SKILLS href="/">Primeros Auxilios</a> permite tratar heridas de dos formas:
+            aplicar vendajes y tratar el shock. Un personaje no puede recibir tratamiento más de una vez: una víctima
+            herida no se va a recuperar antes por tener más vendas puestas.
           </p>
           <p class="bodyText">
-            Aplicar vendajes es un proceso de un minuto en el que el médico aplica presión, pone un torniquete para parar una hemorragia, o cualquier otro tratamiento similarmente rápido y de emergencia que sea apropiado. Esto recupera 1HP.
+            Aplicar vendajes es un proceso de un minuto en el que el médico aplica presión, pone un torniquete para
+            parar una hemorragia, o cualquier otro tratamiento similarmente rápido y de emergencia que sea apropiado.
+            Esto recupera 1HP.
           </p>
           <p class="bodyText">
-            Tratar el shock es más complicado. Tras aplicar el primer vendaje inicial, el médico puede tomarse tiempo adicional para poner un vendaje más elaborado y efectivo, mantener a la víctima cómoda, resguardada del frío, tranquila y quieta, etc. Tras 30 minutos, el médico puede hacer su tirada de HT. En un éxito, la víctima recupera 1d-2 HP. En un éxito crítico, recupera 4HP. Esta tirada ya incluye el 1HP que se recupera por el vendaje de emergencia, y por tanto, en un éxito la víctima recupera siempre un mínimo de 1HP.
+            Tratar el shock es más complicado. Tras aplicar el primer vendaje inicial, el médico puede tomarse tiempo
+            adicional para poner un vendaje más elaborado y efectivo, mantener a la víctima cómoda, resguardada del
+            frío, tranquila y quieta, etc. Tras 30 minutos, el médico puede hacer su tirada de HT. En un éxito, la
+            víctima recupera 1d-2 HP. En un éxito crítico, recupera 4HP. Esta tirada ya incluye el 1HP que se recupera
+            por el vendaje de emergencia, y por tanto, en un éxito la víctima recupera siempre un mínimo de 1HP.
           </p>
           <p class="bodyText">
-            En un fallo crítico, la víctima pierde 2HP en vez de recuperar nada. 
+            En un fallo crítico, la víctima pierde 2HP en vez de recuperar nada.
+          </p>
+        </app-rules-section>
+        <app-rules-section [sectionTitle]="'Fatiga'" [pageRef]="'L31'">
+          <p class="bodyText mt-2">
+            Correr o nadar largas distancias puede provocar pérdida de Puntos de Fatiga (FP). De la misma forma que las
+            heridas representan trauma físico y pérdida de vitalidad y descuentan HP, la fatiga representa la pérdida de
+            energía y fuerzas y descuenta FP.
+          </p>
+          <p class="bodyText">
+            Por simplificar, no vamos a tener en cuenta los efectos de estar cansado, sólo los casos más extremos en los
+            que haya riesgo real de caerse del cansancio:
+          </p>
+
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>
+              <b>0 FP o menos: </b>Estás al borde del desmayo. Si sufres más fatiga después de estar en este estado,
+              también pierdes 1HP por cada FP perdido. Para hacer algo aparte de hablar o descansar debes hacer una
+              tirada exitosa de Voluntad. Si fallas esta tirada te desmayas y no puedes hacer nada hasta que te
+              recuperes
+              por encima de 0 FP.
+            </li>
+            <li>
+              <b>-1 x FP:</b>Caes inconsciente automáticamente, pero por lo demás, funciona igual que con 0 FP o menos.
+              Tus FP no pueden bajar de este punto: toda pérdida de FP se traduce en pérdida de HP (además de la pérdida
+              de HP normal por tener menos de 0 FP).
+            </li>
+          </ul>
+
+          <p class="bodyText mt-2">
+            Actividades y sus costes de FP:
+          </p>
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>
+              <b>Combate: </b> Participar en un combate es muy cansado cuando uno lucha por su vida. En todo combate que
+              dure más de 10 segundos, y a menos que uno no haga ningún ataque ni defensa en todo el combate, los
+              supervivientes pierden 1 FP más un número de FP igual al penalizador por llevar carga pesada (ver
+              Equipameinto).
+            </li>
+            <li>
+              <b>Sobreesfuerzo: </b>Llevar una carga mayor que "ultra-pesada", tirar o empujar de algo súper pesado etc,
+              cuesta 1 FP por segundo.
+            </li>
+            <li>
+              <b>Correr y nadar: </b>Cada 15 minutos de sprint, o cada minuto de carrera o nado, requiere una tirada de
+              HT para evitar perder 1FP.
+            </li>
+            <li>
+              <b>Inanición: </b>Un humanoide normal necesita 3 comidas al día. Pierdes 1 FP al final del día por cada
+              comida que te pierdas.
+            </li>
+            <li>
+              <b>Deshidratación: </b>Un humanoide normal necesita 2 litros de agua al día, 3 en climas cálidos, 5 en
+              climas extremos como un desierto. Si bebes menos de lo que necesitas pierdes 1FP cada 8 horas. Si bebes
+              menos de 1 litro al día, pierdes 1FP y 1HP al día adicionales. Puedes recuperar todos los FP perdidos por
+              deshidratación tras un día de descanso con acceso abundante a suministros de agua.
+            </li>
+            <li>
+              <b>Insomnio: </b>Si llevas más de lo normal despierto (16 horas para un humano), pierdes 1FP y otro más
+              cada 4 horas que sigas sin ir a dormir.
+              <br>
+              Si pierdes más de la mitad de tus FP por insomnio, debes hacer una tirada de Voluntad cada 2 horas que
+              permanezcas inactivo (p. ej. montando guardia). En un fallo te duermes hasta que te despierten o duermas 8
+              horas. En un éxito consigues no dormirte, pero sufres un -2 a tiradas relacionadas con DX, IQ, y
+              autocontrol.
+            </li>
+          </ul>
+
+          <h2 class="font-titleFont text-3xl mt-6">Recuperarse de la fatiga</h2>
+          <p class="bodyText mt-2">
+            Recuperas FP descansando. Puedes leer, hablar, meditar o algo por el estilo, pero cualquier cosa más activa
+            que eso impide descansar correctamente (incluso un paseo ligero).
+          </p>
+          <p class="bodyText">
+            Se recupera 1 FP por cada 10 minutos de descanso, y uno adicional si se toma una comida decente mientras se
+            descansa (una comida sustanciosa, nada de raciones de viaje).
+          </p>
+          <p class="bodyText">
+            Algunas drogas, pociones mágicas, hechizos etc, también pueden recuperar FP.
+          </p>
+          <p class="bodyText">
+            Los FP perdidos por insomnio, inanición y deshidratación sólo se pueden recuperar durmiendo un mínimo de 8
+            horas (recupera 1 FP + 1FP por hora a partir de las 8), comiendo, o bebiendo como se indica anteriormente.
           </p>
         </app-rules-section>
       </app-rules-section>
