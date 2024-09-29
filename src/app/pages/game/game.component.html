@@ -1657,6 +1657,52 @@
             y conmovedor.
           </p>
         </app-rules-section>
+        <app-rules-section [sectionTitle]="'Recuperación'">
+          <h2 class="font-titleFont text-3xl mt-6">Recuperarse de la inconsciencia</h2>
+          <p class="bodyText mt-2">
+            Muchas cosas pueden dejarte inconsciente. Depende del GM decidir si realmente estás inconsciente o
+            simplemente incapacitado por completo debido al dolor y las lesiones, pero de cualquier manera, no puedes
+            hacer nada. Te recuperas de la siguiente manera:
+          </p>
+          <ul class="bodyText text-base list-disc ml-4 mt-4">
+            <li>
+              Si tienes 1HP o más, te despiertas automáticamente en unos 15 minutos.
+            </li>
+            <li>
+              Con 0 HP o menos (pero más de -1 x HP), haz una tirada de HT para despertarte cada hora. En un éxito,
+              puedes actuar con normalidad.
+            </li>
+            <li>
+              Por debajo de -1 x HP, la situación es crítica. Tienes derecho a una única tirada de HT para despertarte a
+              las 12 horas de caer inconsciente. Si tienes éxito puedes actuar con normalidad. Pero si no, no puedes
+              despertar a menos que recibas tratamiento médico o mágico (si tienes éxito en una tirada de HT cada vez
+              que recuperes HP de esta manera, te despiertas). Pero hasta que recibas tratamiento médico, debes seguir
+              haciendo tiradas de HT cada 12 horas. Si fallas, tu personaje muere.
+            </li>
+          </ul>
+
+          <h2 class="font-titleFont text-3xl mt-6">Recuperación natural</h2>
+          <p class="bodyText mt-2">
+            Descansar y no hacer esfuerzos recupera HP perdidos, a menos que la pérdida haya sido por daño que no pueda
+            curarse naturalmente. Al final de cada día de descanso con una alimentación adecuada, haz una tirada de HT.
+            En un éxito, recuperas 1HP.
+          </p>
+
+
+          <h2 class="font-titleFont text-3xl mt-6">Primeros auxilios</h2>
+          <p class="bodyText mt-2">
+            La habilidad de <a #DUMMYLINK #SKILLS href="/">Primeros Auxilios</a> permite tratar heridas de dos formas: aplicar vendajes y tratar el shock. Un personaje no puede recibir tratamiento más de una vez: una víctima herida no se va a recuperar antes por tener más vendas puestas.
+          </p>
+          <p class="bodyText">
+            Aplicar vendajes es un proceso de un minuto en el que el médico aplica presión, pone un torniquete para parar una hemorragia, o cualquier otro tratamiento similarmente rápido y de emergencia que sea apropiado. Esto recupera 1HP.
+          </p>
+          <p class="bodyText">
+            Tratar el shock es más complicado. Tras aplicar el primer vendaje inicial, el médico puede tomarse tiempo adicional para poner un vendaje más elaborado y efectivo, mantener a la víctima cómoda, resguardada del frío, tranquila y quieta, etc. Tras 30 minutos, el médico puede hacer su tirada de HT. En un éxito, la víctima recupera 1d-2 HP. En un éxito crítico, recupera 4HP. Esta tirada ya incluye el 1HP que se recupera por el vendaje de emergencia, y por tanto, en un éxito la víctima recupera siempre un mínimo de 1HP.
+          </p>
+          <p class="bodyText">
+            En un fallo crítico, la víctima pierde 2HP en vez de recuperar nada. 
+          </p>
+        </app-rules-section>
       </app-rules-section>
     </div>
   </app-info-section>
