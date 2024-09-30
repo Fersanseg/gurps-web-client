@@ -1575,7 +1575,7 @@
           </p>
           <p class="bodyText mt-2">
             Todo el daño que sobre tras restar DR, se multiplica dependiendo del tipo de daño. El daño tras esta
-            multiplicación determina los HP que pierde el objetivo. Se redondea hacia abajo, pero si hay algo de daño
+            multiplicación determina los PV que pierde el objetivo. Se redondea hacia abajo, pero si hay algo de daño
             que sobra tras aplicar la DR del objetivo, el daño mínimo que recibe es 1.
           </p>
           <ul class="bodyText text-base list-disc ml-4 mt-4">
@@ -1584,28 +1584,28 @@
             <li>Empalador (imp): x2</li>
           </ul>
         </app-rules-section>
-        <app-rules-section [sectionTitle]="'Pérdida de HP'">
+        <app-rules-section [sectionTitle]="'Pérdida de PV'">
           <p class="bodyText mt-2">
-            Toda herida y pérdida de HP puede llegar a dejar inconsciente o incluso matar a cualquiera, por pequeña que
-            sea. Pero al contrario que muchos otros juegos tradicionales, llegar a 0HP no significa muerte
+            Toda herida y pérdida de PV puede llegar a dejar inconsciente o incluso matar a cualquiera, por pequeña que
+            sea. Pero al contrario que muchos otros juegos tradicionales, llegar a 0PV no significa muerte
             automáticamente. De hecho, en GURPS, lo más normal no es morir: es caer inconsciente. No obstante, es muy
             fácil caer inconsciente si se afronta un conflicto sin pensar y "a lo loco".
           </p>
           <p class="bodyText">
-            Estos son los efectos que ocurren cuando un personaje baja a 0HP o menos:
+            Estos son los efectos que ocurren cuando un personaje baja a 0PV o menos:
           </p>
           <ul class="bodyText text-base list-disc ml-4 mt-4">
-            <li><b>0HP o menos:</b>Estás en peligro de caer inconsciente. Al principio de tu siguiente turno, haz una
-              tirada de HT con un penalizador de -1 por cada múltiplo de HP que estés por debajo de 0HP. Si fallas, caes
+            <li><b>0PV o menos:</b>Estás en peligro de caer inconsciente. Al principio de tu siguiente turno, haz una
+              tirada de HT con un penalizador de -1 por cada múltiplo de PV que estés por debajo de 0PV. Si fallas, caes
               inconsciente. Si tienes éxito puedes actuar con normalidad, pero debes repetir esta tirada en cada turno.
               Si eliges no hacer nada en tu turno y no has intentado tiradas de defensa entre tu anterior turno y este,
               no hace falta que hagas esta tirada.</li>
-            <li><b>-1 x HP:</b>Además de lo anterior, debes hacer una tirada de HT inmediatamente depsués de sobrepasar
+            <li><b>-1 x PV:</b>Además de lo anterior, debes hacer una tirada de HT inmediatamente depsués de sobrepasar
               este umbral. En un fallo por más de 2, tu personaje muere. En un fallo por 1 o 2, tu personaje sufre una
-              herida mortal (ver más abajo). Debes repetir esta tirada por cada múltiplo de HP negativo.</li>
-            <li><b>-5 x HP:</b>Tu personaje ha sufrido una cantidad de daño insostenible para cualquier humanoide
+              herida mortal (ver más abajo). Debes repetir esta tirada por cada múltiplo de PV negativo.</li>
+            <li><b>-5 x PV:</b>Tu personaje ha sufrido una cantidad de daño insostenible para cualquier humanoide
               normal. Tu personaje muere inmediatamente.</li>
-            <li><b>-10 x HP</b>Destrucción completa del cuerpo. 200 puntos de daño por heridas con flechas pueden
+            <li><b>-10 x PV</b>Destrucción completa del cuerpo. 200 puntos de daño por heridas con flechas pueden
               significar una masa irreconocible; 200 puntos de daño por fuego deja un montón de cenizas, etc.</li>
           </ul>
 
@@ -1622,7 +1622,7 @@
           <p class="bodyText">
             En un éxito crítico, logras aguantar heroicamente: ya no estás herido de muerte y no tienes que seguir
             tirando HT cada media hora (pero sigues incapacitado). También puedes recuperarte de una herida de muerte
-            con un éxito en HT en el momento en el que recibas tratamiento médico o mágico, incluso si tu HP sigue
+            con un éxito en HT en el momento en el que recibas tratamiento médico o mágico, incluso si tu PV sigue
             siendo menor que 0.
           </p>
           <p class="bodyText mt-2">
@@ -1633,16 +1633,16 @@
 
           <h2 class="font-titleFont text-3xl mt-6">Muerte</h2>
           <p class="bodyText mt-2">
-            Si tu personaje muere, sigue llevando un registro de su HP negativo. Hay formas de volver de la muerte
-            siempre que no llegues a -10 x HP (pero los personajes, en este mundo ficticio, NO lo saben! No actúes
+            Si tu personaje muere, sigue llevando un registro de su PV negativo. Hay formas de volver de la muerte
+            siempre que no llegues a -10 x PV (pero los personajes, en este mundo ficticio, NO lo saben! No actúes
             con tu personaje con conocimiento que tú tienes como persona en el mundo real pero que tu personaje no
             tendría en su mundo!).
           </p>
           <p class="bodyText">
-            Una cabeza cortada o un cuello rebanado mata a cualquiera, sin importar HP o HT. Si un personaje
+            Una cabeza cortada o un cuello rebanado mata a cualquiera, sin importar PV o HT. Si un personaje
             <i><b>indefenso</b></i> o <i><b>inconsciente</b></i> sufre un ataque obviamente letal como esos, muere. Sin
             importar
-            tiradas de HT; asume que su HP baja automáticamente a -5 x HP. Esto no se aplica a objetivos que simplemente
+            tiradas de HT; asume que su PV baja automáticamente a -5 x PV. Esto no se aplica a objetivos que simplemente
             no saben que van a ser víctimas de tal ataque: si te acercas sigilosamente a un guardia por la espalda y le
             intentas cortar el cuello, no lo matas automáticamente. Es un ataque sorpresa y en ese primer turno, la
             víctima no tiene derecho a actuar: haz un Ataque Completo! Puede incluso que en ese primer ataque sorpresa
@@ -1666,26 +1666,26 @@
           </p>
           <ul class="bodyText text-base list-disc ml-4 mt-4">
             <li>
-              Si tienes 1HP o más, te despiertas automáticamente en unos 15 minutos.
+              Si tienes 1PV o más, te despiertas automáticamente en unos 15 minutos.
             </li>
             <li>
-              Con 0 HP o menos (pero más de -1 x HP), haz una tirada de HT para despertarte cada hora. En un éxito,
+              Con 0 PV o menos (pero más de -1 x PV), haz una tirada de HT para despertarte cada hora. En un éxito,
               puedes actuar con normalidad.
             </li>
             <li>
-              Por debajo de -1 x HP, la situación es crítica. Tienes derecho a una única tirada de HT para despertarte a
+              Por debajo de -1 x PV, la situación es crítica. Tienes derecho a una única tirada de HT para despertarte a
               las 12 horas de caer inconsciente. Si tienes éxito puedes actuar con normalidad. Pero si no, no puedes
               despertar a menos que recibas tratamiento médico o mágico (si tienes éxito en una tirada de HT cada vez
-              que recuperes HP de esta manera, te despiertas). Pero hasta que recibas tratamiento médico, debes seguir
+              que recuperes PV de esta manera, te despiertas). Pero hasta que recibas tratamiento médico, debes seguir
               haciendo tiradas de HT cada 12 horas. Si fallas, tu personaje muere.
             </li>
           </ul>
 
           <h2 class="font-titleFont text-3xl mt-6">Recuperación natural</h2>
           <p class="bodyText mt-2">
-            Descansar y no hacer esfuerzos recupera HP perdidos, a menos que la pérdida haya sido por daño que no pueda
+            Descansar y no hacer esfuerzos recupera PV perdidos, a menos que la pérdida haya sido por daño que no pueda
             curarse naturalmente. Al final de cada día de descanso con una alimentación adecuada, haz una tirada de HT.
-            En un éxito, recuperas 1HP.
+            En un éxito, recuperas 1PV.
           </p>
 
           <h2 class="font-titleFont text-3xl mt-6">Primeros auxilios</h2>
@@ -1697,23 +1697,23 @@
           <p class="bodyText">
             Aplicar vendajes es un proceso de un minuto en el que el médico aplica presión, pone un torniquete para
             parar una hemorragia, o cualquier otro tratamiento similarmente rápido y de emergencia que sea apropiado.
-            Esto recupera 1HP.
+            Esto recupera 1PV.
           </p>
           <p class="bodyText">
             Tratar el shock es más complicado. Tras aplicar el primer vendaje inicial, el médico puede tomarse tiempo
             adicional para poner un vendaje más elaborado y efectivo, mantener a la víctima cómoda, resguardada del
             frío, tranquila y quieta, etc. Tras 30 minutos, el médico puede hacer su tirada de HT. En un éxito, la
-            víctima recupera 1d-2 HP. En un éxito crítico, recupera 4HP. Esta tirada ya incluye el 1HP que se recupera
-            por el vendaje de emergencia, y por tanto, en un éxito la víctima recupera siempre un mínimo de 1HP.
+            víctima recupera 1d-2 PV. En un éxito crítico, recupera 4PV. Esta tirada ya incluye el 1PV que se recupera
+            por el vendaje de emergencia, y por tanto, en un éxito la víctima recupera siempre un mínimo de 1PV.
           </p>
           <p class="bodyText">
-            En un fallo crítico, la víctima pierde 2HP en vez de recuperar nada.
+            En un fallo crítico, la víctima pierde 2PV en vez de recuperar nada.
           </p>
         </app-rules-section>
         <app-rules-section [sectionTitle]="'Fatiga'" [pageRef]="'L31'">
           <p class="bodyText mt-2">
             Correr o nadar largas distancias puede provocar pérdida de Puntos de Fatiga (FP). De la misma forma que las
-            heridas representan trauma físico y pérdida de vitalidad y descuentan HP, la fatiga representa la pérdida de
+            heridas representan trauma físico y pérdida de vitalidad y descuentan PV, la fatiga representa la pérdida de
             energía y fuerzas y descuenta FP.
           </p>
           <p class="bodyText">
@@ -1724,15 +1724,15 @@
           <ul class="bodyText text-base list-disc ml-4 mt-4">
             <li>
               <b>0 FP o menos: </b>Estás al borde del desmayo. Si sufres más fatiga después de estar en este estado,
-              también pierdes 1HP por cada FP perdido. Para hacer algo aparte de hablar o descansar debes hacer una
+              también pierdes 1PV por cada FP perdido. Para hacer algo aparte de hablar o descansar debes hacer una
               tirada exitosa de Voluntad. Si fallas esta tirada te desmayas y no puedes hacer nada hasta que te
               recuperes
               por encima de 0 FP.
             </li>
             <li>
               <b>-1 x FP:</b>Caes inconsciente automáticamente, pero por lo demás, funciona igual que con 0 FP o menos.
-              Tus FP no pueden bajar de este punto: toda pérdida de FP se traduce en pérdida de HP (además de la pérdida
-              de HP normal por tener menos de 0 FP).
+              Tus FP no pueden bajar de este punto: toda pérdida de FP se traduce en pérdida de PV (además de la pérdida
+              de PV normal por tener menos de 0 FP).
             </li>
           </ul>
 
@@ -1761,7 +1761,7 @@
             <li>
               <b>Deshidratación: </b>Un humanoide normal necesita 2 litros de agua al día, 3 en climas cálidos, 5 en
               climas extremos como un desierto. Si bebes menos de lo que necesitas pierdes 1FP cada 8 horas. Si bebes
-              menos de 1 litro al día, pierdes 1FP y 1HP al día adicionales. Puedes recuperar todos los FP perdidos por
+              menos de 1 litro al día, pierdes 1FP y 1PV al día adicionales. Puedes recuperar todos los FP perdidos por
               deshidratación tras un día de descanso con acceso abundante a suministros de agua.
             </li>
             <li>
@@ -1791,6 +1791,244 @@
             Los FP perdidos por insomnio, inanición y deshidratación sólo se pueden recuperar durmiendo un mínimo de 8
             horas (recupera 1 FP + 1FP por hora a partir de las 8), comiendo, o bebiendo como se indica anteriormente.
           </p>
+        </app-rules-section>
+
+        <app-rules-section [sectionTitle]="'Otros peligros'" [pageRef]="'L31'">
+          <app-rules-section [sectionTitle]="'Frío'">
+            <p class="bodyText mt-2">
+              Haz una tirada de HT cada 30 minutos en condiciones heladas normales (para un humano corriente, esto es
+              temperatura por debajo de 0 grados). Con viento leve, la tirada es cada 15 minutos, o cada 10 en vientos
+              fuertes.
+            </p>
+            <p class="bodyText">
+              Un fallo cuesta 1 FP. Recuperarse de FP perdido por frío requiere descansar en un refugio adecuado y
+              cálido.
+            </p>
+            <p class="bodyText">
+              Modificadores a la tirada:
+            </p>
+            <ul class="bodyText text-base list-disc ml-4 mt-4">
+              <li>
+                <b>Ropa ligera o sin ropa: </b>-5
+              </li>
+              <li>
+                <b>Ropa de invierno: </b>+0
+              </li>
+              <li>
+                <b>Ropa ártica: </b>+5
+              </li>
+              <li>
+                <b>Ropa calefactada: </b>+10
+              </li>
+              <li>
+                <b>Ropa mojada: </b>-5 adicional
+              </li>
+              <li>
+                <b>Cada 10 grados por debajo de 0: </b>-1
+              </li>
+            </ul>
+          </app-rules-section>
+          <app-rules-section [sectionTitle]="'Caídas'">
+            <table class="mt-2 table table-xs max-w-[14rem]">
+              <thead>
+                <tr>
+                  <th>Distancia</th>
+                  <th>Daño</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1 metro</td>
+                  <td>1d</td>
+                </tr>
+                <tr>
+                  <td>2 metros</td>
+                  <td>1d+1</td>
+                </tr>
+                <tr>
+                  <td>3 metros</td>
+                  <td>1d+2</td>
+                </tr>
+                <tr>
+                  <td>4 metros</td>
+                  <td>2d-1</td>
+                </tr>
+                <tr>
+                  <td>5 metros</td>
+                  <td>2d</td>
+                </tr>
+                <tr>
+                  <td>10 metros</td>
+                  <td>3d</td>
+                </tr>
+                <tr>
+                  <td>15 metros</td>
+                  <td>3d+2</td>
+                </tr>
+                <tr>
+                  <td>20 metros</td>
+                  <td>4d</td>
+                </tr>
+                <tr>
+                  <td>25 metros</td>
+                  <td>4d+2</td>
+                </tr>
+                <tr>
+                  <td>30 metros</td>
+                  <td>5d</td>
+                </tr>
+                <tr>
+                  <td>35 metros</td>
+                  <td>5d+2</td>
+                </tr>
+                <tr>
+                  <td>40 metros</td>
+                  <td>6d-1</td>
+                </tr>
+                <tr>
+                  <td>45 metros</td>
+                  <td>6d</td>
+                </tr>
+                <tr>
+                  <td>50 metros</td>
+                  <td>6d+2</td>
+                </tr>
+                <tr>
+                  <td>60 metros</td>
+                  <td>7d</td>
+                </tr>
+                <tr>
+                  <td>70 metros</td>
+                  <td>7d+2</td>
+                </tr>
+                <tr>
+                  <td>80 metros</td>
+                  <td>8d+1</td>
+                </tr>
+                <tr>
+                  <td>100 metros</td>
+                  <td>9d+1</td>
+                </tr>
+              </tbody>
+            </table>
+          </app-rules-section>
+          <app-rules-section [sectionTitle]="'Enfermedad'" [pageRef]="'L32'">
+            <p class="bodyText mt-2">
+              Lo importante que se debe saber sobre una enfermedad en particular es:
+            </p>
+            <ul class="bodyText text-base list-disc ml-4 mt-4">
+              <li>
+                <b>Tirada de Resistencia: </b>Es la tirada de HT para evitar la enfermedad. La mayoría de las
+                enfermedades
+                permiten una tirada de HT hasta HT-6. Si se tiene éxito, la víctima no contrae la enfermedad. Si falla,
+                la contrae, pero tendrá tiradas adicionales, una por "ciclo", para deshacerse de la enfermedad.
+              </li>
+              <li>
+                <b>Retraso: </b>Es el período de incubación, el tiempo entre la exposición inicial a la enfermedad y la
+                aparición de los primeros síntomas en aquellos que no logran resistir. Este tiempo es de 24 horas para
+                una enfermedad "genérica", pero puede variar considerablemente para enfermedades reales.
+              </li>
+              <li>
+                <b>Daño: </b>Los efectos de la enfermedad en términos de juego. Generalmente, es 1 punto de daño tóxico,
+                pero
+                podría ser mayor —hasta 1d— para enfermedades virulentas. La Resistencia al Daño no protege contra
+                la enfermedad. Los síntomas (fiebre, estornudos, tos, manchas, sarpullido, etc.) aparecen después de que
+                el sujeto comience a sufrir daño. El daño causado por la enfermedad no sanará de forma natural hasta que
+                la víctima haga su tirada de HT para recuperarse.
+              </li>
+              <li>
+                <b>Ciclos: </b>Una enfermedad inflige daño a su víctima a intervalos regulares hasta que haga una tirada
+                de HT
+                o se complete un número máximo de ciclos. El intervalo "predeterminado" entre tiradas de HT es de un
+                día. El número de ciclos varía según la letalidad de la enfermedad; por ejemplo, una enfermedad
+                potencialmente mortal podría infligir solo 1 HP por ciclo, pero durar entre 20-30 ciclos.
+              </li>
+            </ul>
+            <p class="bodyText mt-2">
+              Una vez que los síntomas de una enfermedad se hacen evidentes, identifícala con una tirada de
+              <a #DUMMYLINK #SKILLS href="/">Diagnóstico</a>. Esto no puede identificar una enfermedad totalmente nueva,
+              pero una buena tirada podría
+              proporcionar suficiente información para permitir el tratamiento.
+            </p>
+            <p class="bodyText">
+              Los remedios apropiados (hierbas, medicamentos, etc) pueden otorgar un bono a las tiradas cíclicas de
+              HT para deshacerse de ciertas enfermedades.
+            </p>
+          </app-rules-section>
+          <app-rules-section [sectionTitle]="'Fuego'">
+            <p class="bodyText mt-2">
+              Si pasas parte de un turno en un incendio (por ejemplo, corriendo a través de las llamas), recibes 1d-3 de
+              daño por quemaduras. Si pasas todo un turno en un incendio de intensidad normal, o si estás en llamas,
+              recibes 1d-1 de daño por segundo. Los incendios muy intensos infligen más daño; por ejemplo, el metal
+              fundido o un horno infligirían 3d por segundo.
+            </p>
+            <p class="bodyText">
+              La exposición continua a un incendio puede resultar en un calor intenso que puede fatigarte rápidamente,
+              incluso si las llamas por sí mismas no pueden superar tu RD. Consulta Calor (más abajo).
+            </p>
+          </app-rules-section>
+          <app-rules-section [sectionTitle]="'Calor'">
+            <p class="bodyText mt-2">
+              En un clima caluroso ordinario, no experimentarás efectos negativos si te mantienes en la sombra y no te
+              mueves mucho. Pero si estás activo en temperaturas que superen los 10° superiores a tu zona de confort, o
+              más de 30°C para los humanos, debes hacer una tirada de HT cada 30 minutos. Un fallo te cuesta 1 FP. En
+              caso de fallo crítico, sufres un golpe de calor: pierdes 1d FP. Como de costumbre, si tus FP bajan de 0,
+              comienzas a perder 1 HP por cada FP. No puedes recuperar FP o HP perdidos por el calor hasta que te
+              traslades a un entorno más fresco.
+            </p>
+            <p class="bodyText">
+              Además, a temperaturas de hasta 30° por encima de tu zona de confort (40-50°C para humanos), pierdes 1 FP
+              extra siempre que pierdas FP debido al esfuerzo o la deshidratación. A temperaturas de hasta 60° por
+              encima de tu zona de confort (50-70°C para humanos), esto se convierte en 2 FP extra.
+            </p>
+          </app-rules-section>
+          <app-rules-section [sectionTitle]="'Veneno'">
+            <p class="bodyText mt-2">
+              Las cosas importantes que debes saber sobre un veneno en particular son:
+            </p>
+            <ul class="bodyText text-base list-disc ml-4 mt-4">
+              <li>
+                <b>Retraso: </b>La mayoría de los venenos requieren desde unos pocos segundos hasta varias horas para
+                hacer
+                efecto. Esto es casi siempre cierto para los agentes digestivos.
+              </li>
+              <li>
+                <b>Resistencia: </b>Algunos venenos permiten a la víctima hacer una tirada de HT para resistir. Realiza
+                esta
+                tirada una vez que haya pasado el retraso, si lo hay. A menudo hay un modificador: un veneno leve podría
+                requerir una tirada de HT+2, mientras que uno casi imposible de resistir podría requerir una tirada de
+                HT-8. Un rango típico es de HT a HT-4. La RD nunca afecta esta tirada.
+                <br>
+                Si te encuentras en un ambiente venenoso (como una nube de gas o una atmósfera tóxica) y logras tu
+                tirada inicial de HT, debes volver a tirar una vez por segundo hasta que el veneno te afecte o salgas
+                del área. Si el veneno tiene un retraso, tira después de cada periodo de retraso.
+              </li>
+              <li>
+                <b>Efectos: </b>El efecto más común del veneno es daño tóxico o de fatiga. Los venenos leves podrían
+                infligir
+                solo 1 HP o FP; los más graves podrían infligir 1d o más. La RD no tiene efecto en este daño. Estas
+                pérdidas de HP y FP se curan de manera normal.
+              </li>
+            </ul>
+          </app-rules-section>
+          <app-rules-section [sectionTitle]="'Ahogarse'">
+            <p class="bodyText mt-2">
+              Si no tienes nada de aire, pierdes 1 FP por segundo. Si te estás ahogando tras fallar una tirada de
+              <a #DUMMYLINK #SKILLS href="/">Nadar</a>, puedes conseguir algo de aire, pero también inhalas agua: tira
+              contra Nadar cada cinco segundos;
+              fallar cuesta 1 FP (ver Nadar, más arriba).
+            </p>
+            <p class="bodyText">
+              Con 0 FP, debes hacer una tirada de Voluntad cada segundo o quedar inconsciente. Independientemente de tus
+              FP o HP, mueres después de cuatro minutos sin aire.
+            </p>
+            <p class="bodyText">
+              Si logras respirar aire limpio antes de morir, dejas de perder FP y comienzas a recuperarlos a la tasa
+              habitual (ver Recuperarse de la fatiga). Si estás inconsciente, despertarás una vez que tengas 1 FP.
+              Si te estabas ahogando, un rescatador también debe hacer una tirada de <a #DUMMYLINK #SKILLS href="/">Primeros Auxilios</a> para sacar el
+              agua de tus pulmones y salvarte.
+            </p>
+          </app-rules-section>
         </app-rules-section>
       </app-rules-section>
     </div>
